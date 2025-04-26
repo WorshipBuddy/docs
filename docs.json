@@ -17,8 +17,15 @@
             "group": "Get Started",
             "pages": [
               "introduction",
-              "quickstart",
-              "development"
+              "mac",
+              "windows",
+              "linux",
+              "projects",
+              "project",
+              "shows",
+              "views",
+              "editing",
+              "items"
             ]
           },
           {
