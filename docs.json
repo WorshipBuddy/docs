@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "PresenterBuddy",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
@@ -16,16 +16,106 @@
           {
             "group": "Get Started",
             "pages": [
-              "introduction",
-              "mac",
-              "windows",
-              "linux",
-              "projects",
-              "project",
-              "shows",
-              "views",
-              "editing",
-              "items"
+              "introduction"
+            ]
+          },
+          {
+            "group": "Installation",
+            "pages": [
+              "installation/mac",
+              "installation/windows",
+              "installation/linux"
+            ]
+          },
+          {
+            "group": "Schedule",
+            "pages": [
+              "schedules/schedules",
+              "schedules/schedule"
+            ]
+          },
+          {
+            "group": "Show",
+            "pages": [
+              "show/shows",
+              "show/views",
+              "show/editing",
+              "show/items",
+              "show/chords",
+              "show/groups",
+              "show/layouts",
+              "show/tools",
+              "show/slide_actions"
+            ]
+          },
+          {
+            "group": "Drawer",
+            "pages": [
+              "drawer/drawer",
+              "drawer/media",
+              "drawer/overlays",
+              "drawer/templates",
+              "drawer/scripture",
+              "drawer/calendar"
+            ]
+          },
+          {
+            "group": "Outputs",
+            "pages": [
+              "outputs/output",
+              "outputs/NDI®",
+              "outputs/Multiple_outputs",
+              "outputs/styles"
+            ]
+          },
+          {
+            "group": "Remote",
+            "pages": [
+              "remote/connecting",
+              "remote/remoteShow",
+              "remote/stageShow",
+              "remote/controlShow",
+              "remote/outputShow",
+              "remote/bitfocus_Companion"
+            ]
+          },
+          {
+            "group": "Cloud",
+            "pages": [
+              "cloud/drive_API",
+              "cloud/integrations"
+            ]
+          },
+          {
+            "group": "Actions",
+            "pages": [
+              "actions/MIDI",
+              "actions/importing",
+              "actions/exporting"
+            ]
+          },
+          {
+            "group": "Advanced",
+            "pages": [
+              "advanced/mirrors",
+              "advanced/data_Storage",
+              "advanced/troubleshooting"
+            ]
+          },
+          {
+            "group": "Tips",
+            "pages": [
+              "tips/styling",
+              "tips/keyboard_Shortcuts",
+              "tips/FAQ"
+            ]
+          },
+          {
+            "group": "Formats",
+            "pages": [
+              "formats/.show",
+              "formats/.project",
+              "formats/.fsb"
             ]
           },
           {

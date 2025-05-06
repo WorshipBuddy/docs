@@ -1,0 +1,45 @@
+Add different actions that will execute when a slide is activated.
+
+Right click on a slide to add an action. All the actions of a slide will show as a little icon on the slide, click on that to remove the action.
+
+Here is a short summary of all the different actions:
+
+# Start action
+Start many different useful actions, incuding ones to clear the active layer. Here is a short list of some of them:
+
+- Start show: Trigger another show when a slide with this action is played.
+- Start timer: This will start a selected timer when the slide is activated.
+- Change output style: Change the style of the output with a slide click.
+- Send MIDI out: This will send out a selected MIDI signal when the slide is activated.
+- Clear actions: Clear background layer, overlays, audio or stop active timers.
+
+# Activate on MIDI signal
+Start the exact selected slide when receiving a specified MIDI input signal.
+
+# Next slide timer
+Set a value in seconds to automatically change to the next slide starting when the slide is activated. Setting to 0 will never change slide.
+
+# Go to start
+When the slide is outputted it will go back to the start of the show when the next slide button is triggered. You can still click on the slides after directly to play them.
+
+# Next on media finished
+This will automatically play the next slide when a video background, audio or timer has ended. This triggers even when the video is set to "loop".
+
+# Animate
+Add custom animations for text or items, on the selected slides.
+
+# Emitters
+In the bottom right you can click "Manage emitters" to create emitters used to send OSC/HTTP messages, this way you can set up message templates that can be used with the "Emit data" action. For one emitter you must set the receiver signal location. Then it's ready to be used, but adding message templates can be useful. If the "Value" field is empty you can add a custom value to that later, if not it will be fixed to the set value. If the type is OSC the "Name" input can be set to anything.
+
+# FAQ
+Q: How to play a specific slide?
+
+A: An action can be set to play a slide by name or index on the currently selected show. If you need a specific show, you might have to set an action to change the show as well. But you can also right click a slide, and use the activate by MIDI signal if you want to activate a slide using a MIDI signal.
+
+Q: What is the purpose of "Toggle action"?
+
+A: This is only needed if the action has a "Custom activation", that you only want to use in some occasions, so you can turn on/off this action using another action triggered from a slide.
+
+Q: What is ID, and how to use it?
+
+A: They are a unique identifier for the specific item, you can find them in the stored app data file location. Should be used in specific scenarios. But it's recommended to just use the "select by name" instead.
