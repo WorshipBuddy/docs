@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "willow",
-  "name": "PresenterBuddy",
+  "name": "WorshipBuddy",
   "colors": {
     "primary": "#0c245e",
     "light": "#b5c4ff",
@@ -11,111 +11,146 @@
   "navigation": {
     "tabs": [
       {
+        "tab": "ScheduleBuddy",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "ScheduleBuddy/Get Started/introduction"
+            ]
+          },
+          {
+            "group": "Setup",
+            "pages": [
+              "ScheduleBuddy/Setup/create_org",
+              "ScheduleBuddy/Setup/create_team",
+              "ScheduleBuddy/Setup/create_services",
+              "ScheduleBuddy/Setup/add_people"
+            ]
+          },
+          {
+            "group": "Scheduling",
+            "pages": [
+              "ScheduleBuddy/Scheduling/scheduling",
+              "ScheduleBuddy/Scheduling/warnings",
+              "ScheduleBuddy/Scheduling/export" 
+            ]
+          },
+          {
+            "group": "Day-to-Day",
+            "pages": [
+              "ScheduleBuddy/Day-to-Day/dashboard",
+              "ScheduleBuddy/Day-to-Day/app"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "PresenterBuddy",
         "groups": [
           {
             "group": "Get Started",
             "pages": [
-              "introduction"
+              "PresenterBuddy/introduction"
             ]
           },
           {
             "group": "Installation",
             "pages": [
-              "installation/mac",
-              "installation/windows",
-              "installation/linux"
+              "PresenterBuddy/installation/mac",
+              "PresenterBuddy/installation/windows",
+              "PresenterBuddy/installation/linux"
             ]
           },
           {
             "group": "Schedule",
             "pages": [
-              "schedules/schedules",
-              "schedules/schedule"
+              "PresenterBuddy/schedules/schedules",
+              "PresenterBuddy/schedules/schedule"
             ]
           },
           {
             "group": "Show",
             "pages": [
-              "show/shows",
-              "show/views",
-              "show/editing",
-              "show/items",
-              "show/chords",
-              "show/groups",
-              "show/layouts",
-              "show/tools",
-              "show/slide_actions"
+              "PresenterBuddy/show/shows",
+              "PresenterBuddy/show/views",
+              "PresenterBuddy/show/editing",
+              "PresenterBuddy/show/items",
+              "PresenterBuddy/show/chords",
+              "PresenterBuddy/show/groups",
+              "PresenterBuddy/show/layouts",
+              "PresenterBuddy/show/tools",
+              "PresenterBuddy/show/slide_actions"
             ]
           },
           {
             "group": "Drawer",
             "pages": [
-              "drawer/drawer",
-              "drawer/media",
-              "drawer/overlays",
-              "drawer/templates",
-              "drawer/scripture",
-              "drawer/calendar"
+              "PresenterBuddy/drawer/drawer",
+              "PresenterBuddy/drawer/media",
+              "PresenterBuddy/drawer/overlays",
+              "PresenterBuddy/drawer/templates",
+              "PresenterBuddy/drawer/scripture",
+              "PresenterBuddy/drawer/calendar"
             ]
           },
           {
             "group": "Outputs",
             "pages": [
-              "outputs/output",
-              "outputs/NDI®",
-              "outputs/Multiple_outputs",
-              "outputs/styles"
+              "PresenterBuddy/outputs/output",
+              "PresenterBuddy/outputs/NDI®",
+              "PresenterBuddy/outputs/Multiple_outputs",
+              "PresenterBuddy/outputs/styles"
             ]
           },
           {
             "group": "Remote",
             "pages": [
-              "remote/connecting",
-              "remote/remoteShow",
-              "remote/stageShow",
-              "remote/controlShow",
-              "remote/outputShow",
-              "remote/bitfocus_Companion"
+              "PresenterBuddy/remote/connecting",
+              "PresenterBuddy/remote/remoteShow",
+              "PresenterBuddy/remote/stageShow",
+              "PresenterBuddy/remote/controlShow",
+              "PresenterBuddy/remote/outputShow",
+              "PresenterBuddy/remote/bitfocus_Companion"
             ]
           },
           {
             "group": "Cloud",
             "pages": [
-              "cloud/drive_API",
-              "cloud/integrations"
+              "PresenterBuddy/cloud/drive_API",
+              "PresenterBuddy/cloud/integrations"
             ]
           },
           {
             "group": "Actions",
             "pages": [
-              "actions/MIDI",
-              "actions/importing",
-              "actions/exporting"
+              "PresenterBuddy/actions/MIDI",
+              "PresenterBuddy/actions/importing",
+              "PresenterBuddy/actions/exporting"
             ]
           },
           {
             "group": "Advanced",
             "pages": [
-              "advanced/mirrors",
-              "advanced/data_Storage",
-              "advanced/troubleshooting"
+              "PresenterBuddy/advanced/mirrors",
+              "PresenterBuddy/advanced/data_Storage",
+              "PresenterBuddy/advanced/troubleshooting"
             ]
           },
           {
             "group": "Tips",
             "pages": [
-              "tips/styling",
-              "tips/keyboard_Shortcuts",
-              "tips/FAQ"
+              "PresenterBuddy/tips/styling",
+              "PresenterBuddy/tips/keyboard_Shortcuts",
+              "PresenterBuddy/tips/FAQ"
             ]
           },
           {
             "group": "Formats",
             "pages": [
-              "formats/.show",
-              "formats/.project",
-              "formats/.fsb"
+              "PresenterBuddy/formats/.show",
+              "PresenterBuddy/formats/.project",
+              "PresenterBuddy/formats/.fsb"
             ]
           }
         ]
