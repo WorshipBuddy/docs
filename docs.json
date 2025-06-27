@@ -11,6 +11,47 @@
   "navigation": {
     "tabs": [
       {
+        "tab": "WorshipBuddy",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "WorshipBuddy/Get Started/introduction",
+              "WorshipBuddy/Get Started/user_accounts"
+            ]
+          },
+          {
+            "group": "Songbook",
+            "pages": [
+              "WorshipBuddy/Songbook/language",
+              "WorshipBuddy/Songbook/search",
+              "WorshipBuddy/Songbook/songbook"
+            ]
+          },
+          {
+            "group": "Music Library",
+            "pages": [
+              "WorshipBuddy/Music Library/music_player"
+            ]
+          },
+          {
+            "group": "Sets",
+            "pages": [
+              "WorshipBuddy/Sets/sets",
+              "WorshipBuddy/Sets/create_set",
+              "WorshipBuddy/Sets/join_set",
+              "WorshipBuddy/Sets/saved_sets"
+            ]
+          },
+          {
+            "group": "Settings",
+            "pages": [
+              "WorshipBuddy/Settings/settings"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "ScheduleBuddy",
         "groups": [
           {
@@ -154,6 +195,17 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "FAQ",
+        "groups": [
+          {
+            "group": "WorshipBuddy",
+            "pages": [
+              "FAQ/WB/FAQs"
+            ]
+          }
+        ]
       }
     ],
     "global_DISABLED": {
@@ -185,6 +237,14 @@
       {
         "label": "Support",
         "href": "https://worshipbuddy.atlassian.net/servicedesk/customer/portal/1/group/1/create/1"
+      },
+      {
+        "label": "Features Request",
+        "href": "https://worshipbuddy.canny.io/"
+      },
+      {
+        "label": "Donate",
+        "href": "https://worshipbuddy.org/donate"
       }
     ],
     "primary": {
