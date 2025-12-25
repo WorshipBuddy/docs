@@ -1,19 +1,109 @@
 # Scheduling Services
-There are two ways to schedule users to services. 
-- Bulk scheduling by pressing "Schedule Team Members"
-- By clicking on a specific service
+There are several ways to schedule users to services in ScheduleBuddy. Choose the method that works best for your workflow.
 
-Below are the steps for either option:
+## Scheduling Methods
 
-## Bulk Scheduling
-1. Go to the "Services" page
-2. Press on "Schedule Team Members". Here you'll see three services at a time. You can go to the next group of three by pressing the arrows on either side.
-3. For each team, select users to schedule; changes are saved automatically
+### 1. Bulk Scheduling (Recommended for Multiple Services)
 
-You can schedule all your services from this page and it will auto save all your changes.
+Bulk scheduling allows you to schedule people across multiple services at once, with automatic saving.
 
-## Service Specific
-1. Go to the "Services" page
-2. Select the specific service you would like to edit
-3. For each team, select the users you'd like to schedule. This **does not** auto save
-4. Press "Update Service"
+**Steps:**
+1. Go to the **Services** page
+2. Click **"Schedule Team Members"** button
+3. You'll see three services at a time in a grid layout
+4. Use the arrow buttons (← →) to navigate between groups of services
+5. For each service and team:
+   - Select users from the dropdown for each position
+   - Changes are **automatically saved** as you make them
+6. Continue navigating through services until all are scheduled
+
+<Info>
+**Tip**: Bulk scheduling is great when you're scheduling many services at once. The auto-save feature means you don't need to remember to save each service.
+</Info>
+
+**Bulk Scheduling Features:**
+- Auto-save functionality
+- See multiple services side-by-side
+- Easy navigation between service groups
+- Color-coded warnings for conflicts and unavailability
+
+### 2. Service-Specific Scheduling
+
+Schedule people for a single service at a time with more detailed control.
+
+**Steps:**
+1. Go to the **Services** page
+2. Click on the specific service card you want to schedule
+3. A detailed popup will appear
+4. For each team in the service:
+   - Expand the team section
+   - Select users from dropdowns for each position
+5. Click **"Update Service"** to save your changes
+
+<Warning>
+**Note**: Unlike bulk scheduling, service-specific scheduling does NOT auto-save. You must click "Update Service" to save your changes.
+</Warning>
+
+**When to Use Service-Specific:**
+- Scheduling a single service
+- Making detailed adjustments to one service
+- Reviewing and updating existing assignments
+
+### 3. Auto-Scheduling
+
+Let ScheduleBuddy automatically assign people based on availability and positions. See the [Auto-Scheduling documentation](/ScheduleBuddy/Scheduling/auto-scheduling) for details.
+
+## Understanding Scheduling Warnings
+
+When scheduling, you may see color-coded indicators in the selection dropdowns:
+
+- **Red highlighting** - User has a conflict (already scheduled elsewhere on the same date)
+- **Yellow highlighting** - User has marked this date as unavailable
+- **Blue highlighting (Fatigue)** - User has been scheduled frequently recently (light to dark blue indicates increasing fatigue levels)
+- **Hover for details** - Hover over highlighted names to see the specific reason
+
+<Info>
+**Tip**: Always check warnings, but remember they're informational. You can still schedule someone even if they're highlighted (for example, if the conflict is acceptable or fatigue is acceptable for that person).
+</Info>
+
+## Viewing Availability While Scheduling
+
+Availability information is shown directly in the selection area when scheduling:
+
+- When you open a dropdown to select a person for a position, you'll see:
+  - **Available** - People who can serve (no highlighting)
+  - **Unavailable** - Highlighted in yellow if they've marked this date as unavailable
+  - **Fatigue** - Highlighted in blue shades (light to dark) if they've been scheduled frequently recently
+  - **Conflicts** - Highlighted in red if they have scheduling conflicts
+
+- The status text next to each person's name indicates their availability state
+- People are automatically sorted with available people first, then by fatigue level, then unavailable, then conflicts
+
+<Info>
+**Tip**: You can see availability directly in the selection dropdowns - no need for a separate view. This makes it easy to choose who to schedule while seeing their availability status at a glance.
+</Info>
+
+## Scheduling Best Practices
+
+1. **Check availability first** - Use the availability view to see who's free
+2. **Balance workloads** - Try to distribute assignments fairly across team members
+3. **Respect unavailability** - Only schedule people on unavailable dates if absolutely necessary
+4. **Communicate** - Let people know when they're scheduled, especially for new assignments
+5. **Review conflicts** - Pay attention to warnings and resolve conflicts when possible
+6. **Use bulk scheduling for efficiency** - When scheduling many services, bulk scheduling saves time
+
+## Editing Existing Assignments
+
+To change who's scheduled for a service:
+
+1. Open the service using either bulk scheduling or service-specific scheduling
+2. Change the selections in the dropdown menus
+3. Save your changes (auto-save for bulk, "Update Service" for service-specific)
+
+## Removing Assignments
+
+To remove someone from a service:
+
+1. Open the service for scheduling
+2. For the position where they're assigned, select an empty option or "-" from the dropdown
+3. Save your changes

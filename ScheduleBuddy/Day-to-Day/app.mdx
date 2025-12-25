@@ -1,34 +1,501 @@
-## Getting Started with ScheduleBuddy's App
+# ScheduleBuddy Mobile App
 
-### 1. Download the App
+The ScheduleBuddy mobile app brings all the scheduling features of ScheduleBuddy to your iOS or Android device, allowing you to manage your schedule, set availability, and handle scheduling tasks on the go.
+
+## Getting Started
+
+### Download the App
+
 You can download the ScheduleBuddy app from the following links:  
 - <a href="https://apps.apple.com/ca/app/schedulebuddy/id6747605543?uo=2">Apple App Store</a>  
 - <a href="https://play.google.com/store/apps/details?id=org.worshipbuddycompany.ScheduleBuddyApp&pcampaignid=web_share">Google Play Store</a>  
----
-### 2. Open the App & Begin Login
-1. Launch the ScheduleBuddy app on your device.
-2. On the login screen, enter your **email address**.
-3. Tap **Request One-Time Password (OTP)**.
----
-### 3. Retrieve Your OTP
-- Check your email inbox for a message from **ScheduleBuddy**.
-- The email will contain your **6-digit OTP**.
-- Enter the OTP in the app and tap **Submit**.
 
-#### If You Don’t Have an Account Yet
-If this is your first time logging in to a WorshipBuddy app:
-1. You’ll be prompted to **create an account**.
-2. Enter your **First Name**.
-2. Enter your **Last Name**.
-4. Enter the name of your **local church**.
-5. Tap **Submit** to finish setting up your account.
----
-### 4. Join Your Organization
-1. Once verified, press the **+** icon on the top right of the screen.
-2. Enter the **Organization ID** provided by your admin.
-3. Tap **Join** — you’ll now see your organization’s schedule.
----
-### 5. Start Using ScheduleBuddy
-With your account set up, you can:
-- Set your **availability** so your team knows when you’re free.
-- See **upcoming services** and your assigned positions.
+### Login & Authentication
+
+ScheduleBuddy uses email-based authentication with one-time passwords (OTP) for secure login.
+
+#### Requesting Your OTP
+
+1. Launch the ScheduleBuddy app on your device
+2. On the login screen, enter your **email address**
+3. Tap **Request One-Time Password (OTP)**
+
+<Info>
+**Note**: During the OTP process, you can:
+- Tap **Edit Email** to change your email address and request a new OTP
+- Tap **Resend OTP** if you didn't receive the code (or use Edit Email to request a new one)
+</Info>
+
+#### Verifying Your OTP
+
+1. Check your email inbox for a message from **ScheduleBuddy**
+2. The email will contain your **6-digit OTP**
+3. Enter the OTP in the app
+4. Tap **Submit**
+
+#### Creating a New Account
+
+If this is your first time logging in to any WorshipBuddy app:
+
+1. After entering your OTP, you'll be prompted to **create an account**
+2. Enter your **First Name**
+3. Enter your **Last Name**
+4. Enter the name of your **local church**
+5. Tap **Submit** to finish setting up your account
+
+#### Demo Mode
+
+You can try ScheduleBuddy without creating an account by tapping **Try Demo** on the login screen. This will log you into a demo organization where you can explore the app's features.
+
+<Warning>
+Demo mode data is temporary. When you exit and return to the app, demo data is cleared. Create an account to save your organization data permanently.
+</Warning>
+
+### Dashboard
+
+After logging in, you'll see the **Dashboard** screen, which displays all organizations you belong to.
+
+#### Viewing Organizations
+
+Each organization is displayed as a card showing:
+- Organization name
+- Organization ID
+
+Tap any organization card to open it and access its features.
+
+#### Joining an Organization
+
+To join a new organization:
+
+1. Tap the **+** icon in the top right corner of the Dashboard
+2. Enter the **Organization ID** provided by your organization's admin
+3. Tap **Join**
+
+Once joined, the organization will appear in your Dashboard.
+
+#### Accessing Settings
+
+Tap the **⚙️ Settings** icon in the top left corner of the Dashboard to access your account settings, notification preferences, and more.
+
+## Navigation & Permissions
+
+### Tab Navigation
+
+When you open an organization, you'll see a bottom tab navigation bar with the following tabs (availability depends on your permissions):
+
+- **My Schedule** - Your personal schedule (visible to everyone)
+- **Services** - All services in the organization (visible to everyone)
+- **Scheduler** - Scheduling interface (visible to Owners, Org Admins, Schedulers, and Team Admins)
+- **Teams** - Team management (visible to Owners, Org Admins, Schedulers, and Team Admins)
+- **People** - People management (visible to Owners, Org Admins, and Team Admins)
+
+<Info>
+Tabs are automatically shown or hidden based on your permissions in the organization. If you don't see a tab, you don't have permission to access that feature.
+</Info>
+
+### Permissions Overview
+
+- **Owner** - Full access to all features
+- **Org Admin** - Can manage organization settings, teams, people, and scheduling
+- **Team Admin** - Can manage specific teams and schedule for those teams
+- **Scheduler** - Can schedule people for specific teams
+- **Viewer** - Read-only access to assigned teams (see team assignments but cannot schedule)
+
+## My Schedule
+
+The **My Schedule** tab shows your personal schedule, including services where you're assigned or where you have team permissions.
+
+### Viewing Your Schedule
+
+Your schedule displays:
+- **Past services** (last 30 days) - displayed at the top in a muted style
+- **Upcoming services** - displayed below a divider line
+
+The app automatically scrolls to the first upcoming service when you open the schedule.
+
+### Service Details
+
+Each service card shows:
+- Service name and date
+- Full date and time
+- Location (if specified)
+- All teams and positions for teams you have access to
+- Your assignments highlighted with a blue border and bold text
+
+Tap any service card to view detailed information in a modal, including all team assignments for teams you're part of.
+
+### Setting Your Availability
+
+To mark dates when you're unavailable:
+
+1. Tap **Set Your Unavailability** button at the top of the My Schedule screen
+2. A calendar will appear
+3. Tap dates you're unavailable - they'll be marked in red
+4. Tap a red date again to remove the unavailability mark
+5. Tap **Save** when finished
+
+<Info>
+Unavailability dates are synced with the web app and affect scheduling warnings when admins assign you to services.
+</Info>
+
+## Services Screen
+
+The **Services** screen shows all services in the organization (past 30 days and all upcoming services).
+
+### Viewing Services
+
+Services are displayed in chronological order with:
+- Past services shown in a muted style
+- A divider line separating past and upcoming
+- Auto-scrolling to the first upcoming service
+
+Each service card displays:
+- Service name
+- Date and time range
+- Location
+
+### Creating Services (Owners & Org Admins Only)
+
+1. Tap **Add Service** button at the top
+2. Fill in the service details:
+   - **Service Name** (required)
+   - **Location** (defaults to organization address)
+   - **Start Date & Time** - Tap to open date/time picker
+   - **End Date & Time** - Tap to open date/time picker
+3. Select teams to assign to this service (checkboxes)
+4. Optionally enable **This service recurs** for recurring services
+5. Tap **Create Service**
+
+### Recurring Services
+
+When creating a new service, you can make it recurring:
+
+1. Enable **This service recurs** toggle
+2. Set **Repeat every** X week(s)
+3. Select weekdays when the service occurs (Sun, Mon, Tue, etc.)
+4. Set **End after** X occurrences (maximum 20)
+
+<Info>
+Recurring services create individual service instances for each occurrence. You can edit or delete each occurrence separately.
+</Info>
+
+### Editing Services (Owners & Org Admins Only)
+
+1. Tap any service card to open the edit modal
+2. Modify the service details
+3. Tap **Update Service**
+
+### Deleting Services (Owners & Org Admins Only)
+
+1. Open a service for editing
+2. Tap **Delete** button
+3. Confirm deletion
+
+### Viewing Availability
+
+To see who's available or unavailable for a service:
+
+1. Tap the **Availability** button on any service card (Owners & Org Admins only)
+2. A modal opens showing:
+   - **Available** tab - People who are available for this service date
+   - **Unavailable** tab - People who have marked this date as unavailable
+3. Filter by position using the position dropdown
+4. View counts for each category
+
+## Scheduler Screen
+
+The **Scheduler** screen (available to Owners, Org Admins, Schedulers, and Team Admins) allows you to assign people to positions for upcoming services.
+
+### Navigation
+
+The Scheduler displays one service at a time:
+- **Swipe left/right** to navigate between services
+- Use **◀** and **▶** arrows in the header to navigate
+- A counter shows current position (e.g., "1 / 5")
+
+### Assigning People
+
+For each service, you'll see:
+- Service name, date, time, and location
+- All teams assigned to the service
+- Positions for each team
+- Current assignments (if any)
+
+To assign someone:
+
+1. Tap the dropdown/box next to a position
+2. A modal opens showing eligible people (people who have this position assigned)
+3. People are sorted by availability status:
+   - **Available** people (no issues)
+   - **Fatigue** indicators (blue highlighting - shows recent scheduling frequency)
+   - **Unavailable** (yellow highlighting - marked unavailable for this date)
+   - **Team Conflict** (red highlighting - conflict with team assignment rules)
+4. Tap a person to assign them
+5. Tap **— Clear —** to remove an assignment
+
+### Scheduling Warnings
+
+The scheduler uses color coding to help you make informed scheduling decisions:
+
+- **Red highlighting** - Team conflict (person already assigned to another team that doesn't allow cross-team assignment, or position conflicts)
+- **Yellow highlighting** - Person has marked this date as unavailable
+- **Blue highlighting** - Fatigue indicator (person has been scheduled frequently in the past 4 weeks for the same team/service)
+
+<Info>
+Fatigue scoring considers:
+- Same team assignments (higher weight)
+- Same service name (bonus weight)
+- Recency (more recent = higher weight)
+- 4-week lookback period
+</Info>
+
+### Pull to Refresh
+
+Pull down on the Scheduler screen to refresh service data and see the latest assignments.
+
+## Teams Screen
+
+The **Teams** screen (available to Owners, Org Admins, Schedulers, and Team Admins) allows you to view and manage teams in your organization.
+
+### Viewing Teams
+
+Each team card displays:
+- Team name
+- Number of positions
+- Position names and quantities
+- Assignment rules (can be assigned with other teams, or independent)
+- Description (if set)
+
+### Creating Teams (Owners & Org Admins Only)
+
+1. Tap **Create Team** button
+2. Fill in team details:
+   - **Team Name** (required)
+   - **Description** (optional)
+   - Enable **Allow assignment with other teams** if members can serve on multiple teams simultaneously
+3. Add positions:
+   - Enter **Position Name**
+   - Set **Quantity** (how many people needed for this position)
+   - Enable **Allow assignment with other positions** if a person can hold multiple positions on this team
+   - Tap **×** to remove a position
+   - Tap **Add Position** to add more
+4. Tap **Create**
+
+<Warning>
+At least one position with a name is required to create a team.
+</Warning>
+
+### Editing Teams
+
+Team Admins can edit teams they have Admin permissions for. Owners and Org Admins can edit any team.
+
+1. Tap a team card to open the edit modal
+2. Modify team details
+3. Tap **Update**
+
+### Deleting Teams (Owners & Org Admins Only)
+
+1. Open a team for editing
+2. Tap **Delete** button
+3. Confirm deletion
+
+<Warning>
+Deleting a team removes it from all services. This action cannot be undone.
+</Warning>
+
+## People Screen
+
+The **People** screen (available to Owners, Org Admins, and Team Admins) shows all people in your organization.
+
+### Viewing People
+
+Each person card displays:
+- Name and role badge (Owner, Admin, or Member)
+- Email address
+- Positions assigned
+- Teams they're part of
+- Phone number (if provided)
+
+### Searching People
+
+Use the search bar at the top to search by:
+- First or last name
+- Email address
+- Phone number
+- Position name
+- Team name
+
+### Adding People (Owners & Org Admins Only)
+
+1. Tap **Add Person** button
+2. Fill in person details:
+   - **Email** (required)
+   - **First Name** (required)
+   - **Last Name** (required)
+   - **Phone** (optional)
+3. Assign positions by checking the appropriate boxes
+4. Set team permissions using the dropdowns (Viewer, Scheduler, Admin, or none)
+5. Toggle **Org Admin** if this person should be an organization administrator
+6. Tap **Add Person**
+
+<Info>
+When you add a person, they'll receive an invitation email to join the organization.
+</Info>
+
+### Editing People
+
+Owners and Org Admins can edit any person. Team Admins can edit people in teams they manage.
+
+1. Tap a person card to open the edit modal
+2. Modify person details
+3. Change positions or team permissions
+4. Tap **Update**
+
+### Viewing Person Details
+
+While editing a person, tap **View More Details** to see:
+
+- **Basic Information**: Email, phone, address, gender, birthday, marital status, anniversary
+- **Positions & Teams**: All assigned positions and team memberships
+- **Family Relations**: Related family members in the organization
+- **Service Participation Analytics**:
+  - Total assignments
+  - Number of teams active in
+  - Number of positions held
+  - Calendar view showing scheduled dates (blue) and unavailable dates (red)
+
+### Transferring Ownership (Owners Only)
+
+1. Open a person for editing
+2. Tap **Transfer** button
+3. Confirm ownership transfer
+
+<Warning>
+Transferring ownership gives full control of the organization to the selected person. This action cannot be undone.
+</Warning>
+
+### Deleting People (Owners & Org Admins Only)
+
+1. Open a person for editing
+2. Tap **Delete** button
+3. Confirm deletion
+
+## Settings
+
+Access Settings from the Dashboard by tapping the **⚙️** icon in the top left corner.
+
+### Notification Settings
+
+#### Schedule Reminders
+
+Configure when you receive push notifications about upcoming services:
+
+1. In Settings, find the **Schedule Reminder** section
+2. Use **-** and **+** buttons to adjust days before service
+3. Options:
+   - **0 days** - Remind on the morning of the service
+   - **1-30+ days** - Remind X days before the service
+
+<Info>
+Notifications are automatically set up when you first log in. Make sure to allow notifications when prompted by your device.
+</Info>
+
+### Profile Information
+
+The Settings screen displays your:
+- Profile name (initials in a circle avatar)
+- Email address
+
+### Support & Links
+
+Quick access to:
+- **WorshipBuddy.org** - Main website
+- **Support Center** - Get help and submit tickets
+- **Feature Requests** - Suggest new features
+- **Donate** - Support the project
+
+### Account Management
+
+#### Sign Out
+
+1. Tap **Sign Out**
+2. Confirm to sign out
+
+This will clear your local session and return you to the login screen.
+
+#### Delete Account
+
+1. Tap **Delete Account**
+2. Read the warning message
+3. Confirm deletion
+
+<Warning>
+Deleting your account permanently removes all your data. This action cannot be undone.
+</Warning>
+
+### Developer Tools (Hidden)
+
+Developer tools can be accessed by tapping the version number at the bottom of Settings seven times. This reveals:
+- **View App Info** - App version and build number
+- **Test API Connection** - Check API connectivity
+- **Storage Info** - View local storage details
+- **Clear Cache** - Clear all local data and sign out
+
+## Tips & Best Practices
+
+### Setting Availability
+
+- Set your unavailability as soon as you know you can't serve on specific dates
+- Update your calendar regularly to help schedulers make informed decisions
+- Remember that unavailability affects all services on that date
+
+### Using the Scheduler
+
+- Check color warnings before assigning people:
+  - Avoid red (conflicts) unless you intentionally want to override
+  - Consider yellow (unavailable) - respect people's unavailability
+  - Use blue (fatigue) as a guide - it's informational, not a hard limit
+- Use pull-to-refresh to see the latest changes from other schedulers
+- Swipe between services to quickly schedule multiple services
+
+### Managing Teams
+
+- Set clear assignment rules when creating teams
+- Use descriptions to explain team purpose and requirements
+- Consider position quantities carefully - these determine how many people are needed
+
+### Managing People
+
+- Use search to quickly find people when managing large organizations
+- Check person details to understand their service participation patterns
+- Review analytics to identify scheduling trends and potential issues
+
+## Troubleshooting
+
+### Can't See Certain Tabs
+
+If you don't see the Scheduler, Teams, or People tabs, you don't have the necessary permissions. Contact your organization's Owner or Admin to request appropriate permissions.
+
+### Not Receiving Notifications
+
+1. Check your device's notification settings for ScheduleBuddy
+2. Verify notification reminder settings in the Settings screen
+3. Make sure you've allowed notifications when prompted
+
+### Organization Not Appearing
+
+1. Verify you've joined the organization using the correct Organization ID
+2. Check with the organization admin that your email was added correctly
+3. Try signing out and signing back in
+
+### Can't Join Organization
+
+- Double-check the Organization ID is correct
+- Ensure you're not already a member (check your Dashboard)
+- Contact the organization admin if issues persist
+
+### Data Not Syncing
+
+- Pull down to refresh on any screen to sync latest data
+- Sign out and sign back in if data appears stale
+- Check your internet connection

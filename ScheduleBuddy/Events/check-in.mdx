@@ -1,0 +1,243 @@
+---
+title: 'Check-In System'
+description: 'Check in registrants using QR codes and manage check-in data'
+---
+
+# Check-In System
+
+ScheduleBuddy's check-in system uses QR codes to quickly and securely check in registrants at your events. QR codes are automatically generated and sent in registration confirmation emails.
+
+## Overview
+
+The check-in system includes:
+- **QR Code Generation** - Automatic QR code generation for each registrant
+- **QR Code Verification** - Secure verification using hash-based validation
+- **Registration Scanner** - Web-based scanner for checking in registrants
+- **Check-In Logs** - Complete log of all check-ins
+- **Export** - Export check-in data for reporting
+
+## How QR Codes Work
+
+When a registrant registers for your event, a unique QR code is automatically generated and included in their confirmation email. Each QR code contains:
+- Event ID
+- Registration ID
+- Registrant ID (required for unique identification)
+- Registrant name and email
+- Verification hash for security
+
+### QR Code Security
+
+QR codes include a verification hash that ensures:
+- The QR code hasn't been tampered with
+- The QR code is valid for this specific event
+- The registrant information matches the registration
+
+The verification hash is calculated using:
+- Event ID
+- Registration ID
+- Registrant ID
+- First name
+- Last name
+- Email
+- Event start date
+
+### QR Code Format
+
+QR codes are generated as images embedded in confirmation emails. Registrants can:
+- View the QR code on their phone
+- Print the QR code and bring it to the event
+- Present the QR code at check-in
+
+## Enabling QR Code Scanning
+
+QR code scanning is enabled by default for events. It can be configured in the event's check-in settings:
+
+1. Open your event
+2. Go to **Event Settings** → **Check-In Settings**
+3. Ensure **"QR Scan"** is enabled in check-in methods
+4. Save the settings
+
+<Info>
+**Note**: If QR scan is not enabled, QR codes will still be generated in confirmation emails, but the scanner won't be available for check-in.
+</Info>
+
+## Registration Scanner
+
+The Registration Scanner is a web-based tool for checking in registrants using their QR codes.
+
+### Accessing the Scanner
+
+1. Navigate to `/registration-scanner/?org={org_id}&event={event_id}`
+2. The scanner will load with two modes:
+   - **QR Scan Mode** - Scan QR codes using your device's camera
+   - **Manual Entry Mode** - Manually enter registrant information
+
+### Using QR Scan Mode
+
+1. Click **"QR Scan"** mode
+2. Allow camera permissions when prompted
+3. Point your device's camera at the registrant's QR code
+4. The scanner will automatically:
+   - Detect and read the QR code
+   - Verify the QR code's validity
+   - Check if the registrant is already checked in
+   - Check in the registrant if valid and not already checked in
+5. You'll see a confirmation message with registrant information
+
+### Using Manual Entry Mode
+
+If QR scanning isn't available or you need to check someone in manually:
+
+1. Click **"Manual Entry"** mode
+2. Enter the registrant's email address
+3. Click **"Check In"**
+4. The system will find the registrant and check them in
+
+### Scanner Features
+
+The registration scanner includes:
+- **Station ID** - Optional field to identify which check-in station is being used
+- **Scanner Name** - Required field to identify who is performing the check-in
+- **Check-In Confirmation** - Shows registrant name and confirmation message
+- **Already Checked In** - Indicates if someone has already been checked in
+- **Check-In Log** - View recently checked-in registrants
+
+<Info>
+**Tip**: The scanner works best on mobile devices with cameras. For desktop use, you can still use manual entry mode.
+</Info>
+
+## Check-In Process
+
+When a QR code is scanned or a registrant is manually checked in:
+
+1. **Verification** - The system verifies:
+   - The QR code is valid (hash verification)
+   - The registrant exists in the event registrations
+   - The registrant_id is present (required)
+   - The event matches
+
+2. **Duplicate Check** - The system checks if the registrant is already checked in:
+   - If already checked in, it returns "Already checked in" with the check-in timestamp
+   - If not checked in, it proceeds to create a check-in log
+
+3. **Check-In Log Creation** - A check-in log entry is created with:
+   - Event ID
+   - Registration ID
+   - Registrant ID (required for unique identification)
+   - First name and last name
+   - Station ID (if provided)
+   - Checked in by (scanner name)
+   - Check-in type: "arrival"
+   - Method: "qr_scan" or "manual"
+   - Check-in timestamp (ISO datetime)
+   - Checked out: false (initial state)
+
+4. **Confirmation** - A success message is returned with:
+   - Check-in confirmation
+   - Registrant ID
+   - Check-in timestamp
+
+## Check-In Logs
+
+All check-ins are logged in the event's check-in logs. Each log entry includes:
+- **Event ID** - Reference to the event
+- **Registration ID** - Reference to the registration
+- **Registrant ID** - Unique identifier for the registrant (required)
+- **First Name / Last Name** - Registrant's name
+- **Station ID** - Optional check-in station identifier
+- **Checked In By** - Email or name of person who checked them in
+- **Check-In Type** - Type of check-in (currently "arrival")
+- **Method** - How they were checked in ("qr_scan" or "manual")
+- **Checked In At** - Timestamp of check-in (ISO datetime)
+- **Checked Out** - Whether they have been checked out (boolean)
+- **Checked Out At** - Timestamp of check-out (if applicable)
+
+### Viewing Check-In Logs
+
+To view check-in logs:
+1. Open your event
+2. Go to the **Check-In** tab in the event dashboard
+3. View the list of check-ins with:
+   - Registrant information
+   - Check-in time
+   - Station and scanner information
+   - Check-out status
+
+## Check-Out
+
+The check-in system supports checking out registrants as well. To check someone out:
+1. Find the registrant in the check-in logs
+2. Click **"Check Out"** or use the checkout feature
+3. The system will update the check-in log with:
+   - Checked out: true
+   - Checked out at: timestamp
+
+<Info>
+**Note**: Check-out functionality may vary depending on your event configuration. Some events may only track check-in, while others track both check-in and check-out.
+</Info>
+
+## Exporting Check-In Data
+
+You can export check-in data for reporting or analysis.
+
+### Check-In Export
+
+1. Go to the Check-In tab in your event dashboard
+2. Click **"Export"** or **"Export Check-In Data"**
+3. Choose export format (CSV, Excel)
+4. The export includes:
+   - All check-in log entries
+   - Registrant information
+   - Check-in timestamps
+   - Station and scanner information
+   - Check-out status
+   - Registration details
+
+## Best Practices
+
+1. **Test the scanner** - Before the event, test the registration scanner to ensure it works on your devices
+2. **Train staff** - Make sure check-in staff know how to use the scanner
+3. **Have backup** - Keep manual entry as a backup if QR scanning fails
+4. **Monitor check-ins** - Regularly check the check-in logs during the event
+5. **Use stations** - Use station IDs to track which check-in points are busiest
+6. **Print backup** - Have registrants print QR codes as backup in case phones die
+7. **Secure scanner access** - Only give scanner access to trusted staff
+8. **Export regularly** - Export check-in data periodically as backup
+9. **Check duplicates** - The system prevents duplicate check-ins, but monitor for any issues
+10. **Verify QR codes** - Ensure QR codes are clear and not damaged when scanning
+
+## Troubleshooting
+
+**QR code not scanning:**
+- Ensure camera permissions are granted
+- Make sure the QR code is clear and well-lit
+- Try manual entry mode as a backup
+- Verify the QR code hasn't been damaged
+
+**"Invalid QR code" error:**
+- The QR code may be for a different event
+- The QR code may have been tampered with
+- The registrant may have been removed from the event
+
+**"Registrant not found" error:**
+- Verify the registrant is registered for the event
+- Check that the registrant_id is present (required)
+- Ensure the registration is active
+
+**"Already checked in" message:**
+- The registrant has already been checked in
+- The system shows when they were checked in
+- If this is an error, you can check them out and check them in again
+
+**Scanner not working on mobile:**
+- Ensure you're using a modern browser with camera support
+- Grant camera permissions when prompted
+- Try refreshing the page
+- Use manual entry mode as a backup
+
+**Check-in not saving:**
+- Verify you have proper permissions for the event
+- Check your internet connection
+- Ensure the event is active
+- Try refreshing and checking in again
+

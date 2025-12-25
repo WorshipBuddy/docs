@@ -1,0 +1,249 @@
+---
+title: 'Housing Management'
+description: 'Manage housing locations and assign guests to hosts for your events'
+---
+
+# Housing Management
+
+ScheduleBuddy's housing management system helps you coordinate accommodations for your events. You can create housing locations, assign guests to hosts, track occupancy, and provide host dashboards.
+
+## Overview
+
+Housing management includes:
+- **Housing Locations** - Create and manage housing locations (houses, rooms, dormitories)
+- **Assignments** - Assign registrants (guests) to housing locations
+- **Host Dashboard** - Dashboard for hosts to view their assigned guests
+- **Occupancy Tracking** - Automatic tracking of current occupancy
+- **Bulk Assignment** - Assign multiple guests at once
+- **Export** - Export housing assignments
+
+## Setting Up Housing
+
+Housing is managed at the event level. To set up housing for an event:
+
+1. Open your event
+2. Go to the **Housing** tab in the event dashboard
+3. Start by creating housing locations, then assign guests
+
+## Housing Locations
+
+Housing locations represent places where guests can stay (houses, rooms, dormitories, etc.).
+
+### Creating a Housing Location
+
+1. In the Housing tab, click **"+ Add Location"** or go to the Locations section
+2. Fill in the location details:
+
+   **Basic Information:**
+   - **Name** - Location identifier (e.g., "Smith House", "Room 201")
+   - **Location Type** - Type of location: "house", "room", or "dormitory"
+   - **Room Type** - Optional: "single", "double", "shared", "family", or "dormitory"
+   - **Address** - Full address of the location
+   - **Phone** - Contact phone number (optional)
+
+   **Capacity:**
+   - **Capacity** - Maximum number of guests
+   - **Overbook Limit** - Maximum overbooking allowed (optional, as percentage or count)
+
+   **Host Information:**
+   - **Host Name** - Name of the host
+   - **Host Email** - Host's email address
+   - **Host Phone** - Host's phone number (optional)
+   - **Share with Host** - Whether to share guest information with the host
+   - **Host Requires Account** - Whether the host needs a ScheduleBuddy account
+   - **Host Account Email** - If host has an account, their email
+
+   **Details:**
+   - **Amenities** - List of amenities (e.g., "parking", "bathroom", "kitchen")
+   - **Gender Restriction** - Optional: "male", "female", "mixed", or leave blank
+   - **Accessible** - Whether the location has accessibility accommodations
+   - **Check-In Date** - Earliest check-in date (ISO date)
+   - **Check-Out Date** - Latest check-out date (ISO date)
+   - **Cost Per Night** - Cost per night (optional, for tracking purposes)
+   - **Notes** - Additional notes about the location
+
+3. Click **"Save"** to create the location
+
+### Editing a Housing Location
+
+1. Find the location in the Locations list
+2. Click the edit icon (pencil) on the location card
+3. Update the fields you want to change
+4. Click **"Save"** to update
+
+### Deleting a Housing Location
+
+1. Find the location in the Locations list
+2. Click the delete icon (trash) on the location card
+3. Confirm the deletion
+
+<Warning>
+**Note**: Deleting a location will remove it, but existing assignments to that location will remain. You may want to reassign guests before deleting a location.
+</Warning>
+
+### Occupancy Tracking
+
+The system automatically tracks current occupancy for each location:
+- **Current Occupancy** - Automatically calculated based on assignments
+- **Capacity** - Maximum number of guests set when creating the location
+- The system counts unique registrant IDs assigned to each location
+
+Occupancy is updated automatically when:
+- New assignments are created
+- Assignments are updated (if location_id or registrant_ids change)
+- Assignments are deleted
+
+## Assigning Guests
+
+You can assign registrants (guests) to housing locations.
+
+### Individual Assignment
+
+1. In the Housing tab, go to the Assignments section
+2. Click **"+ Assign Housing"** or find a registrant
+3. Select the registrant(s):
+   - You can select a single registrant or multiple registrants from the same registration
+   - Use **registrant_ids** to specify which registrants to assign
+4. Choose a housing location from the dropdown
+5. Set additional details:
+   - **Check-In Date** - When guests will check in (ISO date)
+   - **Check-Out Date** - When guests will check out (ISO date)
+   - **Party Together** - Whether party members should stay together (default: true)
+   - **Special Needs** - Special accommodation notes
+   - **Cost** - Total cost for this assignment (optional)
+6. Click **"Save"** to create the assignment
+
+### Bulk Assignment
+
+To assign multiple registrants to the same location at once:
+
+1. Go to the Assignments section
+2. Click **"Bulk Assign"** or **"Bulk Actions"**
+3. Select multiple registrants by their **registrant_ids**
+4. Select the **location_id** for the housing location
+5. Optionally set:
+   - **Party Together** - Whether to group registrants by their registration (default: true)
+   - Check-in/check-out dates
+   - Special needs
+6. Click **"Assign"** to assign all selected registrants
+
+<Info>
+**Tip**: If "Party Together" is enabled, registrants from the same registration will be grouped into a single assignment. If disabled, each registrant gets their own assignment.
+</Info>
+
+### Assignment Details
+
+Each housing assignment includes:
+- **Registration ID** - Reference to the event registration
+- **Registrant IDs** - List of registrant IDs assigned (required for unique identification)
+- **Location ID** - Reference to the housing location
+- **Check-In Date** - Expected check-in date
+- **Check-Out Date** - Expected check-out date
+- **Checked In** - Physical check-in status (boolean)
+- **Checked In At** - Timestamp of physical check-in
+- **Checked Out** - Physical check-out status (boolean)
+- **Checked Out At** - Timestamp of physical check-out
+- **Party Together** - Whether party members should stay together
+- **Special Needs** - Special accommodation notes
+- **Cost** - Total cost for the assignment
+
+### Editing Assignments
+
+1. Find the assignment in the Assignments list
+2. Click the edit icon
+3. Update the fields you want to change:
+   - Change the location
+   - Update check-in/check-out dates
+   - Modify special needs
+   - Update cost
+4. Click **"Save"** to update
+
+<Info>
+**Note**: When you change the location_id or registrant_ids in an assignment, the system automatically recalculates occupancy for all locations.
+</Info>
+
+### Deleting Assignments
+
+1. Find the assignment in the Assignments list
+2. Click the delete icon
+3. Confirm the deletion
+
+When you delete an assignment, the system automatically recalculates occupancy for all locations.
+
+## Host Dashboard
+
+Hosts can access a special dashboard to view their assigned guests and location information.
+
+### Accessing the Host Dashboard
+
+1. Navigate to `/host-dashboard/?org={org_id}&event={event_id}&location={location_id}`
+2. The dashboard will show:
+   - Location information (name, address, capacity, current occupancy)
+   - List of assigned guests
+   - Guest contact information (if shared with host)
+   - Check-in/check-out dates
+   - Special needs and notes
+
+<Info>
+**Tip**: Share the host dashboard URL with hosts so they can view their assigned guests and location details on their mobile devices.
+</Info>
+
+### Host Information Sharing
+
+When creating a housing location, you can control what information is shared with the host:
+- **Share with Host** - Enable to share guest information with the host
+- If enabled, hosts can see guest names, contact information, check-in dates, and special needs
+- If disabled, hosts will only see location information, not guest details
+
+## Exporting Housing Data
+
+You can export housing assignments for reporting or coordination.
+
+### Housing Export
+
+1. Go to the Housing tab
+2. Click **"Export"** or **"Export Data"**
+3. Choose export format (CSV, Excel)
+4. The export includes:
+   - All housing locations
+   - All assignments
+   - Guest information
+   - Location details
+   - Occupancy information
+   - Check-in/check-out dates
+
+## Best Practices
+
+1. **Create locations early** - Set up housing locations before registration opens
+2. **Set accurate capacity** - Include all beds/spaces available at each location
+3. **Use descriptive names** - Name locations clearly (e.g., "Smith House - Main Floor")
+4. **Set check-in/check-out dates** - Help coordinate timing with hosts
+5. **Track special needs** - Document accessibility requirements or special accommodations
+6. **Share host dashboards** - Give hosts access to their dashboards for guest information
+7. **Monitor occupancy** - Regularly check occupancy to avoid overbooking
+8. **Use bulk assignment** - Save time by assigning multiple guests to the same location
+9. **Document amenities** - List amenities to help match guests to suitable locations
+10. **Export regularly** - Export housing data as backup before the event
+
+## Troubleshooting
+
+**Location capacity exceeded:**
+- Check current occupancy vs capacity
+- Some locations may have an overbook limit set
+- Consider creating additional locations or adjusting assignments
+
+**Can't assign guest:**
+- Verify the guest is registered for the event
+- Check that the location has available capacity
+- Ensure the location exists and is active
+
+**Occupancy not updating:**
+- The system recalculates occupancy automatically when assignments change
+- Refresh the page to see updated occupancy
+- Verify assignments are using valid location_id and registrant_ids
+
+**Host dashboard not showing guests:**
+- Check that "Share with Host" is enabled on the location
+- Verify guests are assigned to that location
+- Ensure the location_id in the URL is correct
+

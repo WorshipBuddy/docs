@@ -57,7 +57,9 @@
           {
             "group": "Get Started",
             "pages": [
-              "ScheduleBuddy/Get Started/introduction"
+              "ScheduleBuddy/Get Started/introduction",
+              "ScheduleBuddy/Get Started/login-account",
+              "ScheduleBuddy/Get Started/user-organizations"
             ]
           },
           {
@@ -65,23 +67,56 @@
             "pages": [
               "ScheduleBuddy/Setup/create_org",
               "ScheduleBuddy/Setup/create_team",
+              "ScheduleBuddy/Setup/editing-teams",
+              "ScheduleBuddy/Setup/add_people",
+              "ScheduleBuddy/Setup/managing-people",
+              "ScheduleBuddy/Setup/user-relations",
               "ScheduleBuddy/Setup/create_services",
-              "ScheduleBuddy/Setup/add_people"
+              "ScheduleBuddy/Setup/permissions"
+            ]
+          },
+          {
+            "group": "Events",
+            "pages": [
+              "ScheduleBuddy/Events/introduction",
+              "ScheduleBuddy/Events/creating-events",
+              "ScheduleBuddy/Events/registration-forms",
+              "ScheduleBuddy/Events/registration-responses",
+              "ScheduleBuddy/Events/event-services",
+              "ScheduleBuddy/Events/event-dashboard",
+              "ScheduleBuddy/Events/public-registration",
+              "ScheduleBuddy/Events/transportation",
+              "ScheduleBuddy/Events/housing",
+              "ScheduleBuddy/Events/meals",
+              "ScheduleBuddy/Events/check-in"
             ]
           },
           {
             "group": "Scheduling",
             "pages": [
               "ScheduleBuddy/Scheduling/scheduling",
+              "ScheduleBuddy/Scheduling/auto-scheduling",
+              "ScheduleBuddy/Scheduling/service-views",
+              "ScheduleBuddy/Scheduling/advanced-services",
               "ScheduleBuddy/Scheduling/warnings",
-              "ScheduleBuddy/Scheduling/export" 
+              "ScheduleBuddy/Scheduling/export"
             ]
           },
           {
             "group": "Day-to-Day",
             "pages": [
               "ScheduleBuddy/Day-to-Day/dashboard",
+              "ScheduleBuddy/Day-to-Day/availability",
               "ScheduleBuddy/Day-to-Day/app"
+            ]
+          },
+          {
+            "group": "Settings & Integrations",
+            "pages": [
+              "ScheduleBuddy/Setup/organization-settings",
+              "ScheduleBuddy/Setup/worshipbuddy-integration",
+              "ScheduleBuddy/Setup/music-albums",
+              "ScheduleBuddy/Setup/biblebuddy-integration"
             ]
           }
         ]

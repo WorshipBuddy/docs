@@ -1,0 +1,190 @@
+---
+title: 'Understanding Permissions'
+description: 'User roles and permission levels in ScheduleBuddy'
+---
+
+# User Permissions and Roles
+
+ScheduleBuddy uses a role-based permission system to control who can do what in your organization. Understanding these roles helps you assign appropriate access levels to team members.
+
+## Permission Levels
+
+There are several permission levels, from highest to lowest:
+
+1. **Owner**
+2. **Organization Admin**
+3. **Team Admin**
+4. **Scheduler**
+5. **Viewer**
+6. **Member** (default, no special permissions)
+
+## Owner
+
+The Owner is the person who created the organization. There is only one Owner per organization.
+
+**Can:**
+- Everything an Organization Admin can do, PLUS:
+- Transfer ownership to another member
+- Delete the organization (if applicable)
+
+**Cannot:**
+- Remove themselves as Owner (must transfer ownership first)
+
+<Info>
+**Tip**: The Owner role should typically stay with the organization's primary administrator or leader.
+</Info>
+
+## Organization Admin
+
+Organization Admins have almost complete access to the organization.
+
+**Can:**
+- View and edit all teams, users, services, and assignments
+- Create, edit, and delete services
+- Schedule anyone to any service
+- Manage all teams (create, edit, delete)
+- Add/remove users from the organization
+- Assign team and org-level roles
+- View and edit anyone's availability
+- Access all settings (except ownership transfer)
+- Access calendar exports
+- Manage WorshipBuddy and BibleBuddy integrations (if applicable)
+
+**Cannot:**
+- Transfer organization ownership
+- Delete the organization (Owner only)
+
+<Info>
+**Tip**: Organization Admins are great for trusted leaders who need broad access but shouldn't have ownership control.
+</Info>
+
+## Team Admin
+
+Team Admins have administrative control over specific teams they're assigned to.
+
+**Can:**
+- Edit team details for their assigned teams (name, description, positions)
+- Assign people to positions in their teams
+- View and edit availability for their team members
+- View calendar filtered to their teams
+- Schedule people for their teams
+- Access groups that contain their teams
+
+**Cannot:**
+- Create or delete services
+- Edit teams they're not assigned to
+- Add/remove users from the organization
+- See or modify other teams
+- Access organization settings
+- Create new teams
+
+<Info>
+**Tip**: Team Admins are perfect for ministry leaders who manage specific teams but don't need organization-wide access.
+</Info>
+
+## Scheduler
+
+Schedulers can assign people to services but have limited editing capabilities.
+
+**Can:**
+- Assign people to positions in their teams for existing services
+- View their team's availability
+- See services where their team is assigned
+- Use the bulk scheduling interface
+
+**Cannot:**
+- Create, edit, or delete services
+- Change team names or permissions
+- Add/remove users
+- Edit team details
+- Access settings
+
+<Info>
+**Tip**: Schedulers are great for volunteers who help with scheduling but don't need to manage team structure.
+</Info>
+
+## Viewer
+
+Viewers have read-only access to specific teams on the Services page.
+
+**Can:**
+- View the Dashboard
+- View the Services page
+- See services where their assigned teams are scheduled
+- View team assignments (positions and who's assigned) in read-only format for their teams
+- See service details (date, time, location) for services involving their teams
+
+**Cannot:**
+- Access the Teams page
+- Access the People page
+- Make any changes or schedule people
+- Edit services or teams
+- Export schedules
+- Use auto-scheduling
+
+<Info>
+**Note**: Viewer permissions are useful for people who need to see information but shouldn't make changes.
+</Info>
+
+## Member (Default)
+
+Members have basic access with no special permissions.
+
+**Can:**
+- View their personal schedule
+- Set their availability
+- View services they're scheduled for
+
+**Cannot:**
+- Access team management
+- Schedule others
+- Edit services
+- Access settings
+
+<Info>
+**Note**: All users can view services they're personally scheduled for, regardless of permissions.
+</Info>
+
+## Assigning Permissions
+
+### Organization-Level Permissions
+
+Only Owners and Organization Admins can assign organization-level roles:
+
+1. Go to the **People** page
+2. Click on the person you want to modify
+3. In the permissions section, check **"Organization Admin"** if applicable
+4. Click **"Update Person"**
+
+### Team-Level Permissions
+
+Owners and Organization Admins can assign team permissions:
+
+1. Go to the **People** page
+2. Click on the person
+3. In **Team Permissions**, select teams and assign permission levels:
+   - **Admin** - Team Admin access
+   - **Scheduler** - Can schedule for that team
+   - **Viewer** - Read-only access
+4. Click **"Update Person"**
+
+## Permission Best Practices
+
+1. **Principle of least privilege** - Give people only the permissions they need
+2. **Start with lower permissions** - You can always increase permissions later
+3. **Review regularly** - Periodically review who has what permissions
+4. **Use Team Admins** - Delegate team management to Team Admins rather than making everyone Organization Admins
+5. **Document permissions** - Keep track of who has what access for your records
+
+## Permission Visibility
+
+Navigation and features are automatically hidden or shown based on permissions:
+
+- **Settings** - Only visible to Owners and Organization Admins
+- **Teams** - Visible to Owners, Admins, Team Admins, and Schedulers
+- **People** - Visible to Owners, Admins, and Team Admins
+- **Groups** - Available in the system but not currently documented
+- **WorshipBuddy/BibleBuddy** - Visible based on access control settings
+
+Users will only see features they have permission to use.
+

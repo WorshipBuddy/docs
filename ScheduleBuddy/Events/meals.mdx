@@ -1,0 +1,190 @@
+---
+title: 'Meals Management'
+description: 'Manage meal periods and track attendance for event meals'
+---
+
+# Meals Management
+
+ScheduleBuddy's meals management system helps you organize meals for your events. You can create meal periods, track attendance, and manage menu planning.
+
+## Overview
+
+Meals management includes:
+- **Meal Periods** - Create meal periods (breakfast, lunch, dinner, snacks)
+- **Attendance Tracking** - Track who attended which meals
+- **Menu Items** - Plan menu items for meal periods (optional)
+- **Export** - Export meal attendance data
+
+## Setting Up Meals
+
+Meals are managed at the event level. To set up meals for an event:
+
+1. Open your event
+2. Go to the **Meals** tab in the event dashboard
+3. Start by creating meal periods
+
+## Meal Periods
+
+Meal periods represent individual meal times during your event (breakfast, lunch, dinner, snacks, etc.).
+
+### Creating a Meal Period
+
+1. In the Meals tab, click **"+ Add Meal Period"** or go to the Meal Periods section
+2. Fill in the meal period details:
+
+   **Basic Information:**
+   - **Name** - Meal name (e.g., "Breakfast", "Lunch", "Dinner", "Welcome Dinner")
+   - **Date** - Date of the meal (ISO date, YYYY-MM-DD format)
+   - **Start Time** - When the meal service begins (ISO time, HH:MM format)
+   - **End Time** - When the meal service ends (ISO time, HH:MM format)
+   - **Location** - Where the meal is served (optional, can be different from event location)
+
+   **Capacity & Tracking:**
+   - **Capacity** - Maximum number of attendees (optional)
+   - **Allow Multiple Attendance** - Whether the same meal can be attended multiple times on different days (default: false)
+
+   **Additional:**
+   - **Kitchen Notes** - Private notes for kitchen staff (optional, not visible to registrants)
+
+3. Click **"Save"** to create the meal period
+
+### Editing a Meal Period
+
+1. Find the meal period in the Meal Periods list
+2. Click the edit icon (pencil) on the meal period card
+3. Update the fields you want to change
+4. Click **"Save"** to update
+
+### Deleting a Meal Period
+
+1. Find the meal period in the Meal Periods list
+2. Click the delete icon (trash) on the meal period card
+3. Confirm the deletion
+
+<Warning>
+**Note**: Deleting a meal period will remove it, but existing attendance records will remain. You may want to export attendance data before deleting a meal period.
+</Warning>
+
+## Tracking Attendance
+
+You can track which registrants attended which meals.
+
+### Recording Attendance
+
+1. In the Meals tab, go to the Attendance section
+2. Find the meal period you want to record attendance for
+3. Click **"Record Attendance"** or **"Mark Attendance"**
+4. Select registrants who attended the meal:
+   - You can select by registration_id and registrant_email
+   - The system identifies registrants by their email address
+5. Set attendance status:
+   - **Attended** - Mark as true if they attended, false if they didn't
+   - **Attended At** - Timestamp of when they attended (ISO datetime)
+   - **Attended By** - Email of the staff member who marked the attendance
+6. Optionally add:
+   - **Dietary Restrictions** - Dietary restrictions or allergies (from registration answers)
+   - **Special Requests** - Special meal requests beyond allergies
+7. Click **"Save"** to record attendance
+
+### Attendance Details
+
+Each attendance record includes:
+- **Registration ID** - Reference to the event registration
+- **Registrant Email** - Email of the registrant (used to identify them)
+- **Meal Period ID** - Reference to the meal period
+- **Attended** - Whether they actually attended (boolean)
+- **Attended At** - Timestamp of attendance (ISO datetime)
+- **Attended By** - Email of user/staff who marked attendance
+- **Dietary Restrictions** - List of dietary restrictions
+- **Special Requests** - Special meal requests
+
+### Updating Attendance
+
+1. Find the attendance record in the Attendance list
+2. Click the edit icon
+3. Update the attendance status or other fields
+4. Click **"Save"** to update
+
+<Info>
+**Note**: If you record attendance for the same registrant and meal period again, the system will update the existing record rather than creating a duplicate.
+</Info>
+
+### Multiple Attendance
+
+If "Allow Multiple Attendance" is enabled for a meal period:
+- The same meal can be attended multiple times on different dates
+- Each attendance is tracked separately by date
+- Useful for meals that repeat daily (e.g., breakfast each day of a multi-day event)
+
+## Menu Planning (Optional)
+
+You can optionally plan menu items for meal periods.
+
+### Menu Items
+
+Menu items represent food items that will be served during a meal period.
+
+1. Go to the Meals tab
+2. Find a meal period
+3. Click **"Menu Items"** or **"Plan Menu"**
+4. Add menu items:
+   - **Name** - Name of the menu item
+   - **Description** - Description of the item (optional)
+   - **Dietary Tags** - Tags like "vegetarian", "gluten-free", "vegan", "dairy-free", etc.
+5. Save the menu items
+
+Menu items help with:
+- Planning what to serve
+- Communicating menu to registrants
+- Tracking dietary accommodations
+
+## Exporting Meal Data
+
+You can export meal attendance data for reporting or coordination with kitchen staff.
+
+### Meals Export
+
+1. Go to the Meals tab
+2. Click **"Export"** or **"Export Attendance"**
+3. Choose export format (CSV, Excel)
+4. The export includes:
+   - All meal periods
+   - All attendance records
+   - Registrant information
+   - Attendance status and timestamps
+   - Dietary restrictions and special requests
+
+## Best Practices
+
+1. **Create meal periods early** - Set up all meal periods before the event
+2. **Use clear names** - Name meals descriptively (e.g., "Welcome Dinner - Day 1", "Breakfast - Day 2")
+3. **Set accurate times** - Use start and end times to help coordinate service
+4. **Track capacity** - Set capacity limits to help kitchen staff plan
+5. **Record attendance promptly** - Mark attendance during or immediately after meals for accuracy
+6. **Document dietary restrictions** - Track dietary restrictions to ensure accommodations are met
+7. **Use kitchen notes** - Add private notes for kitchen staff about special requirements
+8. **Enable multiple attendance** - For multi-day events with repeated meals, enable multiple attendance
+9. **Export regularly** - Export attendance data for backup and reporting
+10. **Coordinate with kitchen** - Share exported data with kitchen staff for meal planning
+
+## Troubleshooting
+
+**Can't record attendance:**
+- Verify the registrant is registered for the event
+- Check that the registrant_email matches the registration
+- Ensure the meal period exists and is active
+
+**Attendance not saving:**
+- The system updates existing records if attendance is recorded again for the same registrant and meal period
+- Check that registration_id and registrant_email are correct
+- Verify the meal_period_id exists
+
+**Duplicate attendance records:**
+- The system prevents duplicates by checking registration_id, registrant_email, and meal_period_id
+- If you see duplicates, one may have incorrect data
+
+**Menu items not showing:**
+- Menu items are optional and separate from attendance tracking
+- Ensure you're viewing the correct meal period
+- Check that menu items have been created for that meal period
+

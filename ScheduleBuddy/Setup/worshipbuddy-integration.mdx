@@ -1,0 +1,328 @@
+---
+title: 'WorshipBuddy Integration'
+description: 'Connect ScheduleBuddy with WorshipBuddy to organize audio files from Google Drive for playlist playback'
+---
+
+# WorshipBuddy Integration
+
+ScheduleBuddy integrates with WorshipBuddy to help you organize audio files from Google Drive into albums. These albums appear in WorshipBuddy's playlist screen where they can be streamed.
+
+## What is WorshipBuddy Integration?
+
+The WorshipBuddy integration allows you to:
+
+- Browse Google Drive folders to find audio files
+- Organize audio files into albums
+- Make albums available in WorshipBuddy's playlist screen for audio playback
+- Control who in your organization can access and manage albums
+
+<Info>
+**Note**: Currently, the integration only supports Google Drive. Audio files must be stored in publicly accessible Google Drive folders.
+</Info>
+
+## Access Requirements
+
+To access WorshipBuddy integration settings, you must be:
+- An **Owner** of the organization, OR
+- An **Organization Admin**, OR
+- A user who has been granted access through WorshipBuddy Access Control
+
+## Setting Up Access Control
+
+Owners and Admins can control who has access to WorshipBuddy features.
+
+### Access Control Options
+
+1. **Owner/Admin Access** - Owners and Organization Admins always have access
+2. **Team-Based Access** - Allow specific teams to access WorshipBuddy
+3. **Individual Access** - Allow specific users to access WorshipBuddy
+
+### Granting Team Access
+
+1. Go to **Settings** → **WorshipBuddy** section
+2. In the "Access Control" area, select teams that should have access
+3. All members of selected teams will gain access
+4. Choose the access level (View Only or Edit)
+5. Click **"Save Access Control"** to apply changes
+
+### Granting Individual Access
+
+1. Go to **Settings** → **WorshipBuddy** section
+2. In the "Access Control" area, select individual users
+3. Choose the access level (View Only or Edit)
+4. Click **"Save Access Control"** to apply changes
+
+<Info>
+**Tip**: "View Only" allows users to see albums but not make changes. "Edit" allows users to create, modify, and delete albums.
+</Info>
+
+## Songbook ID (Optional)
+
+You can link a WorshipBuddy Songbook ID to your organization:
+
+1. Go to **Settings** → **WorshipBuddy** section
+2. Enter your Songbook ID in the "Songbook ID" field
+3. Click **"Save Songbook Settings"**
+
+<Info>
+**Note**: The Songbook ID links your organization to a specific WorshipBuddy songbook. This is optional and separate from the album organization feature. This will be required in the future if you want users in your organization to find pulic albums from other organizations within the same songbook ID.
+</Info>
+
+## Organizing Audio Files with Albums
+
+Albums are collections of audio files that will appear in WorshipBuddy's playlist screen for playback.
+
+### Creating an Album
+
+1. In the WorshipBuddy settings page, find the **"Org Music Albums"** section
+2. Click **"+ Create Album"**
+3. Enter an album name
+4. Optionally add a cover image URL (must be from Google Drive, and the file must be named exactly "Album Cover" in PNG format)
+5. Click **"Save Album"**
+
+### Adding Audio Files to Albums
+
+You can add audio files from Google Drive to albums using the file explorer:
+
+1. **Paste a Google Drive folder URL** in the file explorer field
+2. Click **"Explore"** to view the folder contents
+3. **Drag and drop** audio files or folders onto an album card
+4. For folders, you'll be asked:
+   - **Live Sync** - If enabled, new audio files added to the folder will automatically appear in the album
+   - **Flatten** - If the folder contains nested folders, choose whether to flatten the structure
+
+<Info>
+**Tip**: Audio files are identified by their file extensions (mp3, m4a, wav, ogg, flac, aac, wma). Only audio files will be playable in WorshipBuddy.
+</Info>
+
+### File Explorer
+
+The file explorer lets you browse Google Drive folders:
+
+1. Paste a **public Google Drive folder URL** in the explorer field
+2. Click **"Explore"** to load folder contents
+3. Navigate into folders by clicking on them
+4. Use the breadcrumb navigation to go back
+5. Drag files or folders from the explorer onto albums
+
+<Warning>
+**Important**: Google Drive folders must be set to "Anyone with the link" for the explorer to access them. Private folders will not work.
+</Warning>
+
+### Editing Albums
+
+To edit an album:
+
+1. Click the edit icon (pencil) on the album card
+2. Update the album name or cover image URL
+3. Click **"Save Album"**
+
+### Deleting Albums
+
+To delete an album:
+
+1. Click the delete icon (trash) on the album card
+2. Confirm the deletion
+
+<Warning>
+**Warning**: Deleting an album removes it from WorshipBuddy. The audio files in Google Drive are not deleted.
+</Warning>
+
+## How Albums Appear in WorshipBuddy
+
+Once you've created albums and added audio files:
+
+1. Albums appear in WorshipBuddy's playlist screen
+2. Audio files can be played directly from WorshipBuddy
+3. Albums are accessible to organization members based on your access control settings
+
+<Info>
+**Note**: Albums are shared with your organization members who use signed into WorshipBuddy. They need access to the ScheduleBuddy org to see the albums in WorshipBuddy from the org.
+</Info>
+
+## Best Practices
+
+1. **Use public Google Drive folders** - Make sure folders are set to "Anyone with the link"
+2. **Organize by purpose** - Create separate albums for different types of music (e.g., "Sunday Service Music", "Special Events")
+3. **Use descriptive album names** - Name albums clearly so they're easy to find in WorshipBuddy
+4. **Enable live sync for active folders** - If you regularly add new files to a folder, enable live sync so they automatically appear
+5. **Review access regularly** - Periodically review who has access and adjust as needed
+
+## Troubleshooting
+
+**Can't see WorshipBuddy in navigation:**
+- Check that you're an Owner, Admin, or have been granted individual/team access
+- Ask your organization's Owner or Admin to grant you access
+
+**File explorer can't access folder:**
+- Make sure the Google Drive folder is set to "Anyone with the link"
+- Verify the folder URL is correct (should be a Google Drive folder URL)
+- Only Google Drive folders are currently supported
+
+**Audio files not appearing in WorshipBuddy:**
+- Verify the files are audio file types (mp3, m4a, wav, etc.)
+- Check that albums have been saved successfully
+- Ensure the songbook ID is correctly linked (if using)
+
+**Can't edit albums:**
+- Check your access level - you may only have "View Only" access
+- Only Owners, Admins, or users with "Edit" access can modify albums
+
+## Music Albums Feature
+
+The Music Albums feature is a core part of the WorshipBuddy integration. It allows you to organize audio files from cloud storage into albums that appear in WorshipBuddy's playlist screen.
+
+### Key Features
+
+- **Multiple Cloud Sources** - Connect to Google Drive, Dropbox, OneDrive, or SoundCloud
+- **Folder Exploration** - Browse folder structures to find audio files
+- **Live Sync** - Automatically sync folders so new files appear in albums
+- **Drag and Drop** - Easy file and folder management
+- **Album Reordering** - Control the order albums appear in WorshipBuddy
+
+### Getting Started with Music Albums
+
+See the [Music Albums](/ScheduleBuddy/Setup/music-albums) documentation for detailed information on:
+- Creating and managing albums
+- Connecting cloud storage folders
+- Adding files and folders to albums
+- Live sync configuration
+- Album access control
+
+## Google Drive Integration Details
+
+### Folder Access Requirements
+
+For Google Drive integration to work:
+- Folders must be set to **"Anyone with the link"** sharing
+- Private folders will not be accessible
+- Only folders, not individual files, can be browsed in the explorer
+
+### File Explorer Features
+
+The file explorer allows you to:
+- Browse Google Drive folder structures
+- Navigate into subfolders
+- View audio files with their names and types
+- Drag and drop files/folders onto albums
+- See breadcrumb navigation for easy navigation back
+
+### Supported Audio Formats
+
+The system automatically detects audio files by extension:
+- MP3, M4A, WAV, OGG, FLAC, AAC, WMA
+
+Only audio files are processed - other file types are ignored.
+
+## Access Control Details
+
+### Access Levels
+
+**View Only:**
+- Users can see albums in WorshipBuddy
+- Users can play audio files
+- Users cannot create, edit, or delete albums
+- Users cannot add files to albums
+
+**Edit:**
+- All "View Only" permissions
+- Users can create new albums
+- Users can edit album names and details
+- Users can add files and folders to albums
+- Users can delete albums (Owners/Admins only)
+- Users can reorder albums
+
+### Team-Based Access
+
+When you grant team-based access:
+- All current members of the team gain access
+- New members added to the team automatically gain access
+- Members removed from the team lose access
+- Access level (View Only or Edit) applies to all team members
+
+### Individual Access
+
+When you grant individual access:
+- Only the specified user gains access
+- Access persists regardless of team membership
+- You can grant different access levels to different users
+- Access must be removed manually if needed
+
+## Album Organization
+
+### Best Practices for Album Structure
+
+1. **Organize by Purpose** - Create separate albums for different contexts:
+   - "Sunday Service Music"
+   - "Special Events"
+   - "Holiday Music"
+   - "Worship Sets"
+
+2. **Use Descriptive Names** - Name albums clearly:
+   - Avoid generic names like "Album 1"
+   - Use names that indicate content or purpose
+   - Consider including dates for time-sensitive albums
+
+3. **Manage Folder Structure** - In cloud storage:
+   - Keep folder structures organized
+   - Use consistent naming conventions
+   - Group related files together
+
+4. **Regular Maintenance** - Periodically:
+   - Review and update albums
+   - Remove unused albums
+   - Update file contents as needed
+
+## Advanced Features
+
+### Live Sync Configuration
+
+Live sync keeps albums synchronized with cloud storage folders:
+- **When to Use**: For folders where you regularly add new music
+- **How It Works**: System periodically checks folders for new files
+- **Benefits**: New files automatically appear in albums
+- **Considerations**: Requires folders to remain accessible and public
+
+### Flatten vs Preserve Structure
+
+When adding folders to albums:
+- **Flatten**: All audio files from nested folders appear at the album level
+- **Preserve**: Folder structure is maintained within the album
+
+Choose based on:
+- How you want files organized in WorshipBuddy
+- Whether you need folder structure context
+- Your workflow preferences
+
+### Album Cover Images
+
+You can add cover images to albums:
+- Must be from Google Drive
+- File must be named exactly "Album Cover"
+- Must be in PNG format
+- Appears in WorshipBuddy's album display
+
+## Integration with WorshipBuddy App
+
+### How Albums Appear
+
+1. Albums created in ScheduleBuddy appear in WorshipBuddy's playlist screen
+2. Order matches the order set in ScheduleBuddy
+3. Access control determines which albums users can see
+4. Audio files are streamed directly from cloud storage
+
+### User Experience
+
+For users in WorshipBuddy:
+- Albums are organized and easy to browse
+- Audio files play directly from the app
+- No need to download files locally
+- Access is controlled by ScheduleBuddy permissions
+
+### Requirements
+
+For albums to appear in WorshipBuddy:
+- Users must be signed into WorshipBuddy
+- Users must have access to the ScheduleBuddy organization
+- Albums must have at least one audio file
+- Cloud storage folders must remain accessible

@@ -1,7 +1,52 @@
-When scheduling, you may notice a user highlighted red or yellow. 
+# Scheduling Warnings
 
-When a user is highlighted red, that means there is a conflict with the user you have scheduled. It may be that they are already scheduled on the same team or they may be scheduled on a different team.
+When scheduling, you may notice users highlighted in different colors in the selection dropdowns. These color-coded indicators help you make informed scheduling decisions.
 
-When a user is highlighted yellow, that means they have indicated that they are unavailable that day.
+## Warning Colors
 
-If you are unsure why the user is highlighted a color, you can hover over the user and a tooltip will explain the reason.
+### Red Highlighting
+A user highlighted in **red** indicates a **conflict**. This means they are already scheduled for another service or position on the same date. It may be that they are already scheduled on the same team or they may be scheduled on a different team.
+
+<Warning>
+**Warning**: Scheduling someone with a red conflict means they'll be double-booked. Only do this if the conflict is acceptable (for example, if one of the teams allows assignment with other teams).
+</Warning>
+
+### Yellow Highlighting
+A user highlighted in **yellow** means they have indicated that they are **unavailable** that day. They've marked this date in their availability calendar as unavailable.
+
+<Info>
+**Tip**: You can still schedule someone who's unavailable, but consider whether it's necessary. They may have a good reason for marking themselves unavailable.
+</Info>
+
+### Blue Highlighting (Fatigue)
+A user highlighted in **blue** indicates **fatigue** - they have been scheduled frequently in recent services. The shade of blue indicates the level of fatigue:
+
+- **Light blue** - Minimal fatigue (scheduled a few times recently)
+- **Medium blue** - Moderate fatigue
+- **Dark blue** - High fatigue (scheduled many times recently)
+- **Very dark blue** - Very high fatigue (scheduled very frequently)
+
+Fatigue is calculated based on how many times a person has been scheduled in recent services, with more recent assignments weighted more heavily.
+
+<Info>
+**Tip**: Fatigue indicators help you balance workloads and avoid over-scheduling the same people repeatedly. Consider scheduling people with lower fatigue levels to distribute work more evenly.
+</Info>
+
+## Viewing Warning Details
+
+If you are unsure why a user is highlighted in a particular color, you can:
+
+- **Hover over the user's name** in the dropdown to see a tooltip explaining the specific reason
+- **Look at the status text** next to their name (e.g., "Unavailable", "Fatigue", "Team Conflict")
+- The status indicators are sorted to show available people first, making it easy to find people without warnings
+
+## Priority of Indicators
+
+When a user has multiple issues, the most severe indicator is shown:
+
+1. **Red (Conflicts)** - Highest priority
+2. **Yellow (Unavailable)** - Medium priority
+3. **Blue (Fatigue)** - Lower priority (informational)
+4. **No highlighting** - Available and no issues
+
+This priority system ensures you see the most critical warnings first.

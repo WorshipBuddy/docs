@@ -1,0 +1,212 @@
+---
+title: 'User Relations'
+description: 'Track family relationships and connections between people in your organization'
+---
+
+# User Relations
+
+ScheduleBuddy can track relationships between people in your organization (family members, spouses, parent-child relationships, etc.). This helps you manage family connections, coordinate scheduling, and maintain organization records.
+
+## Overview
+
+User relations allow you to:
+- **Add Relationships** - Define relationships between users (husband/wife, parent/child, sibling, etc.)
+- **Automatic Reciprocals** - The system automatically creates reciprocal relationships
+- **View Relationships** - See relationships in user profiles
+- **Remove Relationships** - Remove relationships when needed
+
+## Relationship Types
+
+ScheduleBuddy supports various relationship types:
+
+### Spousal Relations
+- **husband** → **wife**
+- **wife** → **husband**
+- **spouse** → **spouse** (symmetric)
+
+### Parent-Child Relations
+- **father** → **child**
+- **mother** → **child**
+- **parent** → **child**
+- **son** → **parent**
+- **daughter** → **parent**
+- **child** → **parent**
+
+### Sibling Relations
+- **brother** → **sibling**
+- **sister** → **sibling**
+- **sibling** → **sibling** (symmetric)
+
+### Grandparent-Grandchild Relations
+- **grandfather** → **grandchild**
+- **grandmother** → **grandchild**
+- **grandparent** → **grandchild**
+- **grandson** → **grandparent**
+- **granddaughter** → **grandparent**
+- **grandchild** → **grandparent**
+
+### Aunt/Uncle Relations
+- **aunt** → **niece/nephew**
+- **uncle** → **niece/nephew**
+- **niece** → **aunt/uncle**
+- **nephew** → **aunt/uncle**
+
+### Cousin Relations
+- **cousin** → **cousin** (symmetric)
+
+### In-Law Relations
+- **father-in-law** → **son-in-law/daughter-in-law**
+- **mother-in-law** → **son-in-law/daughter-in-law**
+- **son-in-law** → **father-in-law/mother-in-law**
+- **daughter-in-law** → **father-in-law/mother-in-law**
+- **brother-in-law** → **brother-in-law/sister-in-law**
+- **sister-in-law** → **brother-in-law/sister-in-law**
+
+### Generic
+- **related** - Generic relationship type (used as fallback)
+
+## Adding a Relationship
+
+To add a relationship between two users:
+
+1. Go to **People** → Find the person you want to add a relationship to
+2. Open their profile or detail view
+3. Find the **Relations** or **Family** section
+4. Click **"+ Add Relation"** or **"Add Family Member"**
+5. Select the related person by their email address
+6. Choose the relationship type (how this person is related to them)
+7. Click **"Save"** or **"Add Relation"**
+
+### Example
+
+If John (john@example.com) wants to add his wife Jane (jane@example.com):
+1. Go to John's profile
+2. Click "+ Add Relation"
+3. Enter Jane's email: jane@example.com
+4. Select relationship type: "wife"
+5. Save
+
+The system will automatically:
+- Add Jane as John's wife
+- Add John as Jane's husband (reciprocal relationship)
+
+## Reciprocal Relationships
+
+ScheduleBuddy automatically creates reciprocal relationships when you add a relation:
+
+- When you add "John is Jane's husband", the system automatically adds "Jane is John's wife"
+- When you add "Alice is Bob's mother", the system automatically adds "Bob is Alice's child"
+- When you add "Charlie is Dave's brother", the system automatically adds "Dave is Charlie's sibling"
+
+<Info>
+**Note**: Reciprocal relationships are created automatically using a mapping system. The system determines the appropriate reciprocal type based on the relationship you specify.
+</Info>
+
+### Reciprocal Mapping
+
+The system uses a mapping to determine reciprocal relationships:
+
+| Your Relation | Their Reciprocal Relation |
+|--------------|---------------------------|
+| husband | wife |
+| wife | husband |
+| spouse | spouse |
+| father/mother/parent | child |
+| son/daughter/child | parent |
+| brother/sister/sibling | sibling |
+| grandfather/grandmother/grandparent | grandchild |
+| grandson/granddaughter/grandchild | grandparent |
+| aunt/uncle | niece/nephew |
+| niece/nephew | aunt/uncle |
+| cousin | cousin |
+| father-in-law/mother-in-law | son-in-law/daughter-in-law |
+| son-in-law/daughter-in-law | father-in-law/mother-in-law |
+| brother-in-law/sister-in-law | brother-in-law/sister-in-law |
+
+## Viewing Relationships
+
+Relationships appear in user profiles. To view relationships:
+
+1. Go to **People**
+2. Find and open a person's profile
+3. Look for the **Relations** or **Family** section
+4. You'll see:
+   - List of all their relationships
+   - Related person's name and email
+   - Relationship type
+   - Links to view related person's profile
+
+### Relationship Display
+
+Relationships are displayed showing:
+- **Related Person** - Name and email of the related person
+- **Relationship Type** - How they're related (e.g., "Wife", "Child", "Sibling")
+- **Profile Link** - Link to view the related person's profile
+
+## Removing a Relationship
+
+To remove a relationship:
+
+1. Go to the person's profile
+2. Find the **Relations** or **Family** section
+3. Find the relationship you want to remove
+4. Click the delete/remove icon or **"Remove Relation"**
+5. Confirm the removal
+
+<Info>
+**Note**: When you remove a relationship, the reciprocal relationship is also automatically removed. For example, if you remove "John is Jane's husband", the system also removes "Jane is John's wife".
+</Info>
+
+## Requirements
+
+To add a relationship:
+- Both users must exist in the organization
+- Both users must be in the same organization
+- You must have permission to edit user information
+- You cannot add a relationship to yourself
+
+## Use Cases
+
+User relations are useful for:
+
+1. **Family Coordination** - Track family members for scheduling and coordination
+2. **Communication** - Send messages to families or groups of related people
+3. **Scheduling** - Consider family relationships when creating schedules
+4. **Records** - Maintain accurate organizational records
+5. **Permissions** - Use relationships for permission and access control (if configured)
+
+## Best Practices
+
+1. **Be consistent** - Use the same relationship types consistently (e.g., always use "spouse" or always use "husband"/"wife")
+2. **Use specific types** - Use specific relationship types (e.g., "mother" instead of "parent") when possible for clarity
+3. **Verify emails** - Ensure email addresses are correct before adding relationships
+4. **Review regularly** - Periodically review relationships to keep them accurate
+5. **Remove outdated relations** - Remove relationships when they're no longer applicable
+6. **Document changes** - Keep records of relationship changes if needed for your organization
+
+## Troubleshooting
+
+**Can't add relationship:**
+- Verify both users exist in the organization
+- Check that both users are in the same organization
+- Ensure you have permission to edit user information
+- Verify email addresses are correct
+
+**Reciprocal relationship not created:**
+- The system automatically creates reciprocal relationships
+- If you don't see a reciprocal, check the related person's profile
+- Verify the relationship was saved successfully
+
+**Relationship already exists:**
+- Each user can only have one relationship entry with another user
+- To change a relationship type, remove the existing relationship first, then add it again with the new type
+
+**Can't find relationship section:**
+- Not all organizations may have this feature enabled
+- Check with your organization owner or admin
+- The feature may be available in person detail views depending on your organization's configuration
+
+**Wrong relationship type:**
+- Remove the incorrect relationship
+- Add it again with the correct relationship type
+
