@@ -115,7 +115,6 @@
             "pages": [
               "ScheduleBuddy/Setup/organization-settings",
               "ScheduleBuddy/Setup/worshipbuddy-integration",
-              "ScheduleBuddy/Setup/music-albums",
               "ScheduleBuddy/Setup/biblebuddy-integration"
             ]
           }
