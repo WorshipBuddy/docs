@@ -1,0 +1,309 @@
+---
+title: 'Announcements'
+description: 'Create and manage organization-wide announcements'
+---
+
+# Announcements
+
+Announcements allow you to communicate important information to all members of your organization. You can create rich, formatted announcements with text, headings, buttons, links, and more.
+
+## Overview
+
+Announcements help you:
+
+- **Broadcast Information** - Share news, updates, and important messages
+- **Rich Formatting** - Use headings, text, buttons, links, and cards
+- **Scheduled Publishing** - Set when announcements go live and expire
+- **Status Management** - Draft, publish, and archive announcements
+
+## Announcement Status
+
+Announcements can have three statuses:
+
+- **Draft** - Not visible to members, still being created
+- **Published** - Live and visible to organization members
+- **Archived** - No longer visible, kept for records
+
+<Info>
+**Note**: Only one announcement can be live (published and within its time window) at a time. If you publish a new announcement, make sure to archive or expire the previous one.
+</Info>
+
+## Creating Announcements
+
+To create an announcement:
+
+1. Navigate to the **Organizations** section
+2. Click the **"Announcements"** sub-tab
+3. Click **"Create Announcement"** or **"New"** button
+4. Build your announcement using components (see below)
+5. Set scheduling options (optional)
+6. Set status to **Draft** or **Published**
+6. Save the announcement
+
+## Announcement Components
+
+Announcements are built using components. Each component has a type and data. Available components include:
+
+### Heading
+
+Display a heading with customizable size and alignment.
+
+**Options:**
+- **Text** - The heading text
+- **Size** - Small, Medium, or Large
+- **Alignment** - Left, Center, or Right
+- **Color** - Text color (optional)
+
+### Text
+
+Display paragraph text.
+
+**Options:**
+- **Text** - The text content
+- **Alignment** - Left, Center, or Right
+- **Color** - Text color (optional)
+
+### Button
+
+A clickable button that links to a URL.
+
+**Options:**
+- **Text** - Button label
+- **Link/URL** - Where the button links to
+- **Button Background Color** - Background color
+- **Button Text Color** - Text color
+
+### Link
+
+A text link to a URL.
+
+**Options:**
+- **Text** - Link text
+- **URL/Link** - Where the link goes
+- **Color** - Link color
+
+### Divider
+
+A horizontal line to separate sections.
+
+### Spacer
+
+Empty space to add spacing between components.
+
+**Options:**
+- **Height** - Height of the spacer in pixels
+
+### Card
+
+A card container with title and content.
+
+**Options:**
+- **Title** - Card title
+- **Content** - Card body text
+- **Background Color** - Card background
+- **Padding** - Internal padding
+- **Border Radius** - Corner rounding
+
+### List
+
+A bulleted or numbered list.
+
+**Options:**
+- **Items** - List of items to display
+- **List Type** - Bullet or Number
+
+## Building Announcements
+
+When creating an announcement, you'll add components in order. The announcement displays components from top to bottom.
+
+### Adding Components
+
+1. Click **"Add Component"** or use the component selector
+2. Choose a component type
+3. Fill in the component's data/options
+4. The component is added to your announcement
+5. Repeat to add more components
+
+### Reordering Components
+
+Components can typically be reordered by:
+- Dragging components up or down
+- Using up/down arrows
+- Moving components in the component list
+
+### Editing Components
+
+1. Click on a component to edit it
+2. Modify the component's data
+3. Save changes
+
+### Removing Components
+
+1. Select the component
+2. Click **"Remove"** or the delete icon
+3. Confirm removal
+
+## Scheduling Announcements
+
+You can schedule when announcements go live and expire:
+
+### Go Live Time
+
+Set when the announcement should become visible:
+
+- **Immediately** - No go live time (visible as soon as published)
+- **Scheduled** - Set a specific date and time
+
+### Expire Time
+
+Set when the announcement should stop being visible:
+
+- **Never** - Announcement stays live until archived
+- **Scheduled** - Set a specific date and time
+
+<Info>
+**Note**: The expire time must be after the go live time. If you set an expire time without a go live time, the announcement will be live immediately until it expires.
+</Info>
+
+### Live Announcement Rules
+
+An announcement is considered "live" when:
+
+1. Status is **Published**
+2. Current time is **after** go live time (if set)
+3. Current time is **before** expire time (if set)
+
+Only one announcement can be live at a time. If you try to publish a second announcement while one is live, you'll need to archive or expire the first one.
+
+## Viewing Announcements
+
+Organization members see announcements in:
+
+- **Mobile App** - Home tab shows the current live announcement
+- **Web Interface** - Dashboard or announcements section
+
+### Announcement Display
+
+Live announcements are displayed with:
+
+- All components rendered in order
+- Buttons and links are clickable
+- Formatting is preserved
+- Responsive layout for mobile and desktop
+
+<Info>
+**Note**: Only the currently live announcement is shown. Draft and archived announcements are not visible to regular members.
+</Info>
+
+## Managing Announcements
+
+### Editing Announcements
+
+To edit an announcement:
+
+1. Navigate to the **Organizations** section
+2. Click the **"Announcements"** sub-tab
+3. Find the announcement you want to edit in the sidebar
+4. Click on it to open the editor
+5. Modify components, scheduling, or status
+6. Save changes
+
+<Warning>
+**Note**: If you edit a live announcement, changes take effect immediately. Members will see the updated version right away.
+</Warning>
+
+### Publishing Announcements
+
+To publish an announcement:
+
+1. Edit the announcement
+2. Set status to **Published**
+3. Configure go live time (if needed)
+4. Save
+
+<Info>
+**Tip**: If another announcement is currently live, you'll need to archive it first or set its expire time to before your new announcement's go live time.
+</Info>
+
+### Archiving Announcements
+
+To archive an announcement:
+
+1. Edit the announcement
+2. Set status to **Archived**
+3. Save
+
+Archived announcements:
+- Are no longer visible to members
+- Are kept in your announcement list
+- Can be viewed and edited (but won't be live)
+- Can be republished later if needed
+
+### Deleting Announcements
+
+To delete an announcement:
+
+1. Find the announcement
+2. Click **"Delete"**
+3. Confirm deletion
+
+<Warning>
+**Warning**: Deleting an announcement permanently removes it. This cannot be undone.
+</Warning>
+
+## Best Practices
+
+### Content
+
+1. **Keep It Concise** - Announcements should be brief and to the point
+2. **Use Clear Headings** - Help people quickly understand the message
+3. **Include Actions** - Use buttons or links when you want people to do something
+4. **Update Regularly** - Keep announcements current and relevant
+
+### Scheduling
+
+1. **Plan Ahead** - Create announcements in advance and schedule them
+2. **Set Expire Times** - Don't let outdated announcements stay live
+3. **One at a Time** - Remember only one announcement can be live
+4. **Test First** - Create as Draft, review, then publish
+
+### Formatting
+
+1. **Use Components Wisely** - Don't overload with too many components
+2. **Maintain Hierarchy** - Use headings to structure content
+3. **Add Spacing** - Use spacers and dividers for readability
+4. **Test on Mobile** - Check how announcements look on mobile devices
+
+## Permissions
+
+To create, edit, or delete announcements, you must be:
+
+- **Owner** of the organization, OR
+- **Organization Admin**
+
+Regular members can only view live announcements, not create or edit them.
+
+## Troubleshooting
+
+**Announcement not showing:**
+- Check that status is **Published**
+- Verify current time is after go live time (if set)
+- Verify current time is before expire time (if set)
+- Make sure no other announcement is currently live
+- Try refreshing the page or app
+
+**Can't publish second announcement:**
+- Only one announcement can be live at a time
+- Archive or expire the current live announcement first
+- Or set the current announcement's expire time to before the new one's go live time
+
+**Components not displaying correctly:**
+- Check that component data is filled in correctly
+- Verify URLs are valid (for buttons and links)
+- Test on different devices/browsers
+- Check for formatting issues in text content
+
+**Button/link not working:**
+- Verify the URL is correct and includes http:// or https://
+- Test the URL in a browser first
+- Some URLs may not work in mobile apps (use web links instead)

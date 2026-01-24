@@ -1,0 +1,314 @@
+---
+title: 'Groups'
+description: 'Organize people into groups for communication and management'
+---
+
+# Groups
+
+Groups allow you to organize people in your organization for targeted communication, management, and coordination. You can create manual groups by selecting specific people and teams, or automatic groups that dynamically include people based on rules.
+
+## Overview
+
+Groups in ChurchBuddy help you:
+
+- **Organize Members** - Group people by role, team, age, or other criteria
+- **Targeted Communication** - Send emails to specific groups
+- **Automatic Management** - Use rules to automatically include/exclude people
+- **Flexible Organization** - Combine manual selection with automatic rules
+
+## Group Types
+
+ChurchBuddy supports two types of groups:
+
+### Manual Groups
+
+Manual groups are created by explicitly selecting:
+- **Individual Users** - Select specific people by email
+- **Teams** - Include all members of selected teams
+
+Manual groups require you to manually add or remove members when your organization changes.
+
+### Automatic Groups
+
+Automatic groups use rules to dynamically determine membership. People are automatically included or excluded based on criteria you define. Rules are evaluated each time the group is accessed, so membership updates automatically as people's information changes.
+
+<Info>
+**Tip**: Automatic groups are great for categories that change frequently, like "All Youth" (age-based) or "All Worship Team Members" (position-based). Manual groups work well for fixed committees or special teams.
+</Info>
+
+## Creating a Group
+
+To create a new group:
+
+1. Go to **People** → **Groups** (or access Groups from your organization menu)
+2. Click **"Create Group"**
+3. Enter a **Group Name** (required)
+4. Optionally add a **Description**
+5. Choose **Group Type**:
+   - **Manual Group** - Select people and teams manually
+   - **Automatic Group** - Use rules to determine membership
+6. Configure the group based on type (see sections below)
+7. Click **"Create"**
+
+## Manual Groups
+
+### Adding Members to Manual Groups
+
+For manual groups, you can add members in two ways:
+
+#### Individual Users
+
+1. In the **"Add Users"** section, check the boxes next to people you want to include
+2. All checked users will be added to the group
+
+#### Teams
+
+1. In the **"Add Teams"** section, check the boxes next to teams you want to include
+2. All members of selected teams will be included in the group
+3. If someone is on multiple selected teams, they'll only appear once in the group
+
+<Info>
+**Note**: When you add a team to a group, all current members of that team are included. If someone joins or leaves the team later, you'll need to manually update the group membership.
+</Info>
+
+### Editing Manual Groups
+
+To add or remove members from a manual group:
+
+1. Open the group
+2. Click **"Edit"**
+3. Check or uncheck users/teams as needed
+4. Click **"Save"**
+
+## Automatic Groups
+
+Automatic groups use rules to determine membership. All rules are combined with **AND logic**, meaning a person must match **ALL rules** to be included in the group.
+
+### Creating Rules
+
+When creating an automatic group, you'll add one or more rules. Each rule has three parts:
+
+1. **Field** - What to check (age, gender, position, team, etc.)
+2. **Operator** - How to compare (equals, greater than, has, etc.)
+3. **Value** - What to compare against
+
+### Available Fields
+
+You can create rules based on:
+
+- **Age** - Person's age
+- **Gender** - Male or Female
+- **Marital Status** - Single, Married, Divorced, Widowed
+- **Position** - Positions the person holds
+- **Team** - Teams the person is part of
+- **Org Admin** - Whether the person is an organization admin
+
+### Operators by Field
+
+Different fields support different operators:
+
+#### Age
+- **Equals** - Age equals a specific number
+- **Greater than** - Age is greater than a number
+- **Less than** - Age is less than a number
+- **Between** - Age is between two numbers (min and max)
+
+#### Gender / Marital Status
+- **Equals** - Matches exactly
+- **Not equals** - Does not match
+
+#### Position
+- **Has** - Person has this position
+- **Does not have** - Person does not have this position
+
+#### Team
+- **Is in** - Person is in this team
+- **Is not in** - Person is not in this team
+
+#### Org Admin
+- **Is** - Person is an organization admin (true/false)
+
+### Rule Examples
+
+**Example 1: All Youth (Ages 13-18)**
+- Field: Age
+- Operator: Between
+- Value: 13-18
+
+**Example 2: All Worship Team Members**
+- Field: Position
+- Operator: Has
+- Value: Worship Leader (or any worship position)
+
+**Example 3: All Married Women**
+- Rule 1:
+  - Field: Gender
+  - Operator: Equals
+  - Value: Female
+- Rule 2:
+  - Field: Marital Status
+  - Operator: Equals
+  - Value: Married
+
+**Example 4: All Non-Admin Team Leaders**
+- Rule 1:
+  - Field: Org Admin
+  - Operator: Is
+  - Value: No
+- Rule 2:
+  - Field: Position
+  - Operator: Has
+  - Value: Team Leader
+
+### Adding Multiple Rules
+
+To add multiple rules:
+
+1. Create your first rule
+2. Click **"Add Rule"**
+3. Configure the new rule
+4. Repeat as needed
+
+<Info>
+**Remember**: All rules use AND logic. A person must match ALL rules to be included. If you need OR logic (match any rule), create separate groups.
+</Info>
+
+### Editing Automatic Groups
+
+To modify an automatic group:
+
+1. Open the group
+2. Click **"Edit"**
+3. Add, modify, or remove rules
+4. Click **"Save"**
+
+The group membership will automatically update based on the new rules.
+
+## Group Admins
+
+You can assign group admins who can manage the group. Group admins can:
+
+- Edit group details
+- Add/remove members (for manual groups)
+- Modify rules (for automatic groups)
+- Delete the group
+
+### Assigning Group Admins
+
+1. When creating or editing a group, find the **"Group Admins"** section
+2. Select users by email to make them group admins
+3. Save the group
+
+<Info>
+**Note**: Group admins don't need to be Organization Admins or Team Admins. They only have permissions for the specific group they're assigned to.
+</Info>
+
+## Viewing Groups
+
+To view all groups:
+
+1. Go to **People** → **Groups**
+2. You'll see a list of all groups with:
+   - Group name
+   - Group type (Manual or Automatic)
+   - Number of members
+
+### Viewing Group Details
+
+Click on any group to see:
+
+- **Description** (if set)
+- **Group Type** (Manual or Automatic)
+- **Rules** (for automatic groups)
+- **Teams** (for manual groups)
+- **Members** - Complete list of all members
+
+<Info>
+**Note**: For automatic groups, the member list is calculated when you view the group. It reflects the current state of your organization based on the rules.
+</Info>
+
+
+## Best Practices
+
+### When to Use Manual Groups
+
+- **Fixed Committees** - Groups that don't change often
+- **Special Teams** - Ad-hoc groups for specific projects
+- **Small Groups** - Groups with just a few members
+- **Custom Selections** - Groups that don't fit automatic rule patterns
+
+### When to Use Automatic Groups
+
+- **Age-Based Groups** - Youth, Seniors, etc.
+- **Role-Based Groups** - All Worship Leaders, All Teachers, etc.
+- **Team-Based Groups** - All members of specific teams
+- **Dynamic Groups** - Groups that change as people join/leave teams or change roles
+
+### Rule Design Tips
+
+1. **Start Simple** - Begin with one rule, then add more if needed
+2. **Test Rules** - After creating an automatic group, check the member list to ensure it matches your expectations
+3. **Use Clear Names** - Name groups descriptively so others understand their purpose
+4. **Document Rules** - Use the description field to explain complex rule logic
+5. **Review Regularly** - Periodically review automatic groups to ensure rules are still accurate
+
+## Editing Groups
+
+To edit a group:
+
+1. Open the group
+2. Click **"Edit"**
+3. Modify:
+   - Name
+   - Description
+   - Group type (can switch between manual and automatic)
+   - Members (for manual groups)
+   - Rules (for automatic groups)
+   - Group admins
+4. Click **"Save"**
+
+<Warning>
+**Note**: Switching a group from automatic to manual (or vice versa) will clear the previous configuration. Make sure to note your rules or members before switching.
+</Warning>
+
+## Deleting Groups
+
+To delete a group:
+
+1. Open the group
+2. Click **"Delete"**
+3. Confirm deletion
+
+<Warning>
+**Warning**: Deleting a group cannot be undone. All group data, including rules and member lists, will be permanently removed.
+</Warning>
+
+## Permissions
+
+To create, edit, or delete groups, you must be:
+
+- **Owner** of the organization, OR
+- **Organization Admin**, OR
+- **Group Admin** (for the specific group)
+
+Regular members can view groups they're part of but cannot modify them.
+
+## Troubleshooting
+
+**Automatic group has no members:**
+- Check that your rules are correct
+- Verify that people in your organization actually match the rule criteria
+- Remember that all rules use AND logic - a person must match ALL rules
+
+**Manual group missing team members:**
+- Team membership in groups is based on current team membership
+- If someone joins a team after the group was created, you may need to refresh or re-add the team
+
+**Can't see Groups option:**
+- Check your permissions - you need Owner, Org Admin, or Group Admin access
+- Groups may be accessed from the People page or organization settings
+
+**Group membership not updating:**
+- For automatic groups, membership is calculated when you view the group
+- Try refreshing or viewing the group again
+- For manual groups, you must manually add/remove members

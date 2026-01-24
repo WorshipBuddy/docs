@@ -1,0 +1,160 @@
+---
+title: 'Creating Teams'
+description: 'Set up teams and ministries in your organization'
+---
+
+# Creating Teams
+
+Teams represent the different ministries and groups in your organization. Each team has specific positions (roles) that need to be filled for services. Examples include Worship Team, Ushers, Children's Ministry, Greeters, and more.
+
+## What are Teams?
+
+Teams are groups of people who serve together in a specific ministry. When you create a team, you define:
+
+- **Team Name** - The ministry name (e.g., "Worship Team", "Children's Ministry")
+- **Positions** - The specific roles within that team (e.g., "Lead Singer", "Piano", "Guitar")
+- **Position Quantities** - How many people are needed for each position
+- **Assignment Rules** - Whether team members can serve on multiple teams or hold multiple positions
+
+## Creating a Team
+
+To create a new team:
+
+1. Navigate to the **Organizations** section
+2. Click the **"Teams"** sub-tab
+3. Click **"Create Team"**
+4. Fill in the team information:
+
+### Basic Information
+
+- **Team Name** (required) - Choose a unique name for your team
+  - Examples: "Worship Team", "Ushers", "Children's Ministry", "Sound Team"
+  - <Warning>**Important**: Team names must be unique within your organization</Warning>
+  
+- **Description** (optional) - Add a brief description of what this team does
+  - This helps people understand the team's purpose
+  - Example: "Leads worship during Sunday services"
+
+### Team Assignment Rules
+
+- **Allow assignment with other teams** - Check this if team members can serve on multiple teams simultaneously
+  - **Checked**: No conflict warnings if someone serves on this team and another team on the same day
+  - **Unchecked**: You'll get warnings if someone is scheduled for multiple teams that don't allow cross-assignment
+  - Example: You might check this for "Cleaning Team" since cleaning doesn't conflict with "Ushers"
+
+### Volunteer Settings
+
+- **Allow people to volunteer** - Enable this to let people volunteer themselves for positions they have on this team
+  - **Checked**: People can volunteer for positions they're assigned to on this team
+  - **Unchecked**: Only schedulers can assign people (default)
+  - Useful for teams where people can proactively sign up for available slots
+
+### Assignment Confirmation Settings
+
+- **Require Accept/Decline** - Enable this to require people to confirm their assignments
+  - **Checked**: People scheduled for this team must accept or decline their assignment
+  - They'll receive notifications and can respond through the app or web interface
+  - Helps ensure people are committed and aware of their assignments
+  - **Unchecked**: Assignments are automatically accepted (default)
+
+When "Require Accept/Decline" is enabled, you can also configure:
+
+- **Auto Decline** - Automatically decline unconfirmed assignments before the service
+  - **Checked**: Unconfirmed assignments are automatically declined if not responded to
+  - **Unchecked**: Assignments remain pending until manually responded to
+  
+- **Days before service to auto-decline** - How many days before the service to auto-decline (1-30 days)
+  - Default: 7 days
+  - If a schedule is created within this window, aggressive reminders will be sent instead of auto-declining
+  - Example: If set to 7 days, assignments not confirmed 7 days before the service will be auto-declined
+
+### Positions
+
+Positions are the specific roles within the team. For each position, define:
+
+- **Position Name** (required) - The role name
+  - Examples: "Lead Singer", "Piano", "Guitar", "Drummer", "Sound Engineer"
+  
+- **Quantity** (required) - How many people are needed for this position
+  - Example: If you need 3 backup singers, enter "3"
+  - Example: If you need 1 lead singer, enter "1"
+  
+- **Priority** - Mark this position as priority
+  - **Checked**: Priority positions trigger alerts if unfilled or unconfirmed before a service
+  - The system checks every 6 hours and notifies managers about priority positions that need attention
+  - Use for critical positions that must be filled (e.g., "Lead Singer", "Sound Engineer")
+  - **Unchecked**: Standard position (no special alerts)
+  
+- **Allow assignment with other positions** - Check this if someone can hold multiple positions on this team
+  - **Checked**: Someone can serve in multiple positions (e.g., "Bible Reader" and "Piano" on the same day)
+  - **Unchecked**: Each position is independent
+  - Example: You might check this if someone can both read Scripture and play piano
+
+- **Remove** - Click to remove a position from the team
+
+### Adding Multiple Positions
+
+1. Fill in the first position's details
+2. Click **"Add Position"** to add another
+3. Repeat until all positions are defined
+4. Use **"Remove"** to delete any positions you don't need
+
+<Info>
+**Tip**: You can always add or remove positions later by editing the team. Start with the essential positions and expand as needed.
+</Info>
+
+5. Click **"Create Team"**
+
+## Team Examples
+
+### Worship Team
+
+- **Positions**: Lead Singer (1, Priority), Piano (1, Priority), Guitar (1), Drums (1), Backup Singers (3)
+- **Allow assignment with other teams**: Usually unchecked (worship team members typically only serve on worship)
+- **Allow assignment with other positions**: Usually checked (someone might sing and play piano)
+- **Require Accept/Decline**: Often enabled (ensures commitment for important roles)
+- **Priority positions**: Lead Singer and Piano (critical positions that must be filled)
+
+### Ushers
+
+- **Positions**: Usher (4), Head Usher (1)
+- **Allow assignment with other teams**: Usually checked (ushers might also serve on other teams)
+- **Allow assignment with other positions**: Usually unchecked (each usher has one role)
+
+### Children's Ministry
+
+- **Positions**: Teacher (2), Helper (3), Check-In (1)
+- **Allow assignment with other teams**: Usually unchecked (children's ministry is typically separate)
+- **Allow assignment with other positions**: Usually checked (a teacher might also help with check-in)
+
+## After Creating a Team
+
+Once your team is created, you can:
+
+- **[Edit the team](/ChurchBuddy/Setup/editing-teams)** - Modify name, description, positions, and settings
+- **Assign people** - Add team members and assign them to positions (see [Managing People](/ChurchBuddy/Setup/managing-people))
+- **Use in services** - Include the team when creating services
+- **Manage permissions** - Assign Team Admins and Schedulers for the team (see [Permissions](/ChurchBuddy/Setup/permissions))
+
+## Best Practices
+
+1. **Start Simple** - Create teams with essential positions first, then add more as needed
+2. **Use Clear Names** - Name teams and positions clearly so everyone understands them
+3. **Set Realistic Quantities** - Enter the actual number of people needed, not the maximum possible
+4. **Consider Assignment Rules** - Think about whether people can serve on multiple teams or hold multiple positions
+5. **Add Descriptions** - Helpful descriptions make teams easier to understand for new members
+6. **Use Priority Positions** - Mark critical positions (like Lead Singer, Sound Engineer) as priority to get alerts if they're unfilled
+7. **Enable Confirmation for Important Teams** - Use "Require Accept/Decline" for teams where commitment is critical
+8. **Set Auto-Decline Appropriately** - Use auto-decline to automatically free up positions if people don't confirm in time
+
+## Troubleshooting
+
+**Can't create team with that name:**
+- Team names must be unique within your organization
+- Check if a team with that name already exists
+- Try a slightly different name or add a location identifier (e.g., "Worship Team - Main Campus")
+
+**Need to change team settings later:**
+- You can edit teams anytime from the Teams page
+- Click on a team to edit its name, description, positions, and rules
+- See [Editing Teams](/ChurchBuddy/Setup/editing-teams) for details

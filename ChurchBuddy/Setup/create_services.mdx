@@ -1,0 +1,187 @@
+---
+title: 'Creating Services'
+description: 'Set up regular services and special gatherings'
+---
+
+# Creating Services
+
+Services are the individual meetings, gatherings, or events where your teams serve. Each service represents a specific date and time when teams need to be scheduled. Examples include Sunday morning services, Wednesday Bible studies, special events, and more.
+
+## What are Services?
+
+A service is a scheduled gathering that requires teams to serve. When you create a service, you define:
+
+- **When it happens** - Date and time
+- **Where it happens** - Location (defaults to your organization's address)
+- **Which teams serve** - Which ministries are involved
+- **Recurrence** - Whether it repeats (optional)
+
+After creating a service, you can schedule specific people to positions within the assigned teams.
+
+## Creating a Service
+
+To create a new service:
+
+1. Navigate to **Services** (from Calendar tab, or via More tab → Services)
+2. Click **"Create Service"** or **"Add Service"**
+3. Fill in the service details:
+
+### Basic Information
+
+- **Service Name (required)** - A descriptive name for the service
+  - Examples: "Sunday Morning Service", "Wednesday Bible Study", "Christmas Eve Service"
+  - Use clear, consistent naming so people can easily identify services
+
+- **Location** - Where the service takes place
+  - Defaults to your organization's address
+  - You can change it for any service
+  - Useful for multi-site churches or off-site events
+  - Examples: "Main Sanctuary", "Fellowship Hall", "Off-site: City Park"
+
+- **Start Date & Time** - When the service begins
+  - Click to open the date and time picker
+  - Select the date and time
+  - Example: Sunday, January 15, 2024 at 10:00 AM
+
+- **End Date & Time** - When the service is expected to end
+  - Click to open the date and time picker
+  - Select the date and time
+  - Example: Sunday, January 15, 2024 at 11:30 AM
+
+### Assigning Teams
+
+- **Assign Teams** - Select which teams will serve at this service
+  - Check the boxes next to teams that need to be scheduled
+  - Examples: Check "Worship Team", "Ushers", "Children's Ministry"
+  - You can select multiple teams
+  - Teams can be added or removed later by editing the service
+
+<Info>
+**Tip**: Only assign teams that actually need to serve. You can always add more teams later if needed.
+</Info>
+
+### Recurring Services
+
+If this service repeats regularly, you can set it to recur:
+
+1. Check **"This service recurs"** to enable recurrence
+2. Configure the recurrence pattern:
+
+   - **Recurrence Pattern** - Choose how it repeats
+     - **Weekly** - Repeats on specific days of the week
+     - Other patterns may be available depending on your setup
+
+   - **Repeat every X week(s) on** (for Weekly pattern)
+     - Enter how often it repeats (e.g., every 1 week, every 2 weeks)
+     - Example: "1" means every week, "2" means every other week
+
+   - **Days of the week** - Check which days the service occurs
+     - Examples: Check "Sunday" for weekly Sunday services
+     - You can select multiple days (e.g., Sunday and Wednesday)
+
+   - **End After** - When to stop creating instances
+     - Enter the number of occurrences (maximum 20)
+     - Example: "16" creates 16 service instances
+     - The system will create individual service instances for each occurrence
+
+<Info>
+**Note**: Recurring services create individual service instances. Each occurrence can be edited, scheduled, or deleted independently. This gives you flexibility to modify specific dates while keeping the recurring pattern.
+</Info>
+
+4. Click **"Create Service"**
+
+## Service Examples
+
+### Weekly Sunday Service
+
+- **Name**: "Sunday Morning Service"
+- **Location**: "Main Sanctuary" (or your org address)
+- **Start**: Sunday, 10:00 AM
+- **End**: Sunday, 11:30 AM
+- **Teams**: Worship Team, Ushers, Children's Ministry
+- **Recurring**: Yes, every 1 week on Sunday, End after 52 occurrences
+
+### Bi-Weekly Bible Study
+
+- **Name**: "Wednesday Bible Study"
+- **Location**: "Fellowship Hall"
+- **Start**: Wednesday, 7:00 PM
+- **End**: Wednesday, 8:30 PM
+- **Teams**: Teaching Team, Setup Team
+- **Recurring**: Yes, every 2 weeks on Wednesday, End after 26 occurrences
+
+### One-Time Special Event
+
+- **Name**: "Christmas Eve Service"
+- **Location**: "Main Sanctuary"
+- **Start**: December 24, 7:00 PM
+- **End**: December 24, 8:30 PM
+- **Teams**: Worship Team, Ushers, Children's Ministry, Sound Team
+- **Recurring**: No
+
+## After Creating a Service
+
+Once your service is created:
+
+1. **Schedule People** - Assign specific people to positions in the assigned teams
+   - See [Scheduling documentation](/ChurchBuddy/Scheduling/scheduling) for details
+   - Use bulk scheduling for multiple services
+   - Use auto-scheduling for automatic assignments
+
+2. **View Service Details** - See all teams, positions, and assignments
+   - Check availability of team members
+   - View scheduling warnings (conflicts, unavailability, fatigue)
+
+3. **Edit or Delete** - Modify service details or remove it if needed
+   - Edit individual occurrences of recurring services
+   - Delete specific dates or the entire recurring series
+
+4. **Check-In** - Set up check-in for the service (if enabled)
+   - See [Service Check-In documentation](/ChurchBuddy/Day-to-Day/service-check-in)
+
+5. **Export** - Export schedules for distribution
+   - See [Export documentation](/ChurchBuddy/Scheduling/export)
+
+## Best Practices
+
+1. **Use Consistent Naming** - Name services consistently so they're easy to identify
+   - Examples: "Sunday Service", "Sunday Evening", "Wednesday Study"
+   - Avoid dates in names for recurring services (they'll have dates automatically)
+
+2. **Set Realistic Times** - Use accurate start and end times
+   - Helps with scheduling and availability tracking
+   - Important for check-in windows and notifications
+
+3. **Assign All Needed Teams** - Include all teams that serve, even if you'll schedule them later
+   - Makes it clear which ministries are involved
+   - Helps with planning and communication
+
+4. **Use Recurring Services Wisely** - Set up recurring services for regular gatherings
+   - Saves time creating individual services
+   - Each occurrence can still be customized
+
+5. **Review Before Scheduling** - Double-check service details before scheduling people
+   - Verify date, time, location, and teams
+   - Easier to fix before assignments are made
+
+## Troubleshooting
+
+**Can't create service:**
+- Make sure you have permission (Owner or Organization Admin)
+- Verify all required fields are filled in
+- Check that at least one team is selected
+
+**Recurring service not creating instances:**
+- Verify the recurrence pattern is set correctly
+- Check that "End After" is set to a number (max 20)
+- Make sure the recurrence dates are in the future
+
+**Need to change a recurring service:**
+- You can edit individual occurrences without affecting others
+- To change the pattern, you may need to delete and recreate
+- Consider editing the specific dates you need to change
+
+**Service not showing up:**
+- Check the date range you're viewing
+- Past services (older than 30 days) may be hidden by default
+- Verify the service was created successfully

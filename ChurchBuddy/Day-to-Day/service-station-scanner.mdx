@@ -1,0 +1,124 @@
+---
+title: 'Service Station Scanner'
+description: 'Set up dedicated check-in stations for services using QR code scanning or manual lookup'
+---
+
+# Service Station Scanner
+
+The Service Station Scanner provides a dedicated check-in interface for services. Set up tablets or computers at check-in stations to scan QR codes or manually look up attendees.
+
+## Overview
+
+Service Station Scanner is designed for:
+
+- **Dedicated stations** - Set up permanent or temporary check-in points
+- **QR code scanning** - Fast check-in by scanning member QR codes
+- **Manual lookup** - Search for attendees by name when needed
+- **Multi-station support** - Run multiple stations for busy services
+
+## Setting Up a Station
+
+### Accessing the Scanner
+
+1. Navigate to **Service Station Scanner**
+2. Select your **Organization**
+3. Select the **Service** you're checking in for
+4. The scanner interface loads
+
+### Station URL
+
+You can bookmark the station URL for quick access:
+
+```
+/service-station-scanner/?org=YOUR_ORG_ID&service=SERVICE_ID
+```
+
+<Info>
+**Tip**: Save the URL as a bookmark or home screen shortcut on your check-in devices.
+</Info>
+
+## Check-in Methods
+
+### QR Code Scanning
+
+1. Select **Scan QR Code**
+2. Allow camera access when prompted
+3. Point the camera at the member's QR code
+4. The system automatically checks them in
+5. Confirmation appears on screen
+
+Members can display their QR code from the ChurchBuddy mobile app.
+
+### Manual Lookup
+
+1. Select **Manual Lookup**
+2. Type the person's name in the search box
+3. Select the correct person from results
+4. Click **Check In**
+
+Use manual lookup when:
+- Someone doesn't have their QR code
+- The QR code won't scan
+- Checking in guests without accounts
+
+## Station Interface
+
+### Check-in Confirmation
+
+When someone checks in, the screen shows:
+
+- **Person's name** - Confirms who was checked in
+- **Success indicator** - Green checkmark
+- **Ready for next** - Returns to scan mode automatically
+
+### Already Checked In
+
+If someone tries to check in twice:
+
+- Shows they're already checked in
+- Displays when they checked in
+- No duplicate entries created
+
+## Multi-Station Setup
+
+For large services, set up multiple stations:
+
+1. Each station uses the same service URL
+2. All check-ins sync to the same service record
+3. Stations can be at different entrances
+4. Total attendance aggregates automatically
+
+## Best Practices
+
+1. **Test before service** - Verify cameras and connectivity
+2. **Train volunteers** - Make sure station operators know both methods
+3. **Position stations well** - Place at natural entry points
+4. **Have backup plan** - Know how to do manual lookup if scanning fails
+5. **Use tablets** - Tablets work well as dedicated stations
+
+## Camera Tips
+
+For QR scanning:
+
+- Ensure good lighting
+- Hold device steady
+- Position QR code within the scanning area
+- Clean camera lens regularly
+- Test with different phones' QR brightness
+
+## Troubleshooting
+
+**Camera not working:**
+- Check browser permissions for camera access
+- Try refreshing the page
+- Use a different browser if needed
+
+**QR code not scanning:**
+- Improve lighting
+- Ask member to increase phone brightness
+- Use manual lookup as fallback
+
+**Slow check-ins:**
+- Check internet connectivity
+- Reduce distance between device and QR code
+- Consider multiple stations for high traffic

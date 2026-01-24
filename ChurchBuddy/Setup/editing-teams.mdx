@@ -1,0 +1,177 @@
+---
+title: 'Managing Teams'
+description: 'Edit teams, update positions, and configure team settings'
+---
+
+# Managing Teams
+
+After creating a team, you can modify its details, add or remove positions, update assignment rules, and manage team settings. Teams can be edited anytime to reflect changes in your ministry structure.
+
+## Editing a Team
+
+To edit an existing team:
+
+1. Navigate to the **Organizations** section
+2. Click the **"Teams"** sub-tab
+3. Click on the team card you want to edit
+4. A popup will appear with the team details
+5. Make your changes:
+   - **Team Name**
+   - **Description**
+   - **Allow assignment with other teams** checkbox
+   - **Positions** - Add, remove, or modify positions
+6. Click **"Update Team"** to save your changes
+
+<Info>
+**Note**: Only Owners, Organization Admins, and Team Admins (for their specific teams) can edit teams.
+</Info>
+
+## Managing Positions
+
+### Adding a Position
+
+1. Open the team for editing
+2. In the Positions section, click **"Add Position"** (if available) or fill in a new position row
+3. Enter:
+   - **Position Name** (e.g., "Lead Singer", "Piano")
+   - **Quantity** (how many people needed for this position)
+   - **Priority** - Check this for critical positions that must be filled
+   - **Allow assignment with other positions** (if applicable)
+4. The position will be added when you save the team
+
+### Editing a Position
+
+1. Open the team for editing
+2. Modify the position name, quantity, priority, or checkbox as needed
+3. Click **"Update Team"** to save changes
+
+### Priority Positions
+
+Priority positions trigger alerts if they're unfilled or unconfirmed before a service:
+
+- The system checks every 6 hours for priority positions that need attention
+- Managers receive notifications about unfilled or unconfirmed priority positions
+- Use priority for critical roles that must be filled (e.g., Lead Singer, Sound Engineer, Head Usher)
+- Priority positions help you proactively find replacements before services
+
+### Removing a Position
+
+1. Open the team for editing
+2. Find the position you want to remove
+3. Click the **"Remove"** button or icon for that position
+4. Click **"Update Team"** to save
+
+<Warning>
+**Warning**: Removing a position will also remove all assignments to that position in existing services. Make sure you want to do this before saving.
+</Warning>
+
+## Position Ordering
+
+The order of positions in a team matters for how they appear in scheduling. Positions are saved in the order you add them.
+
+<Info>
+**Tip**: Put the most important or frequently used positions first for easier access during scheduling.
+</Info>
+
+## Updating Team Settings
+
+### Team Description
+
+You can add or update a team description to provide context about the team's purpose and responsibilities.
+
+### Allow Assignment with Other Teams
+
+This checkbox controls whether team members can be scheduled on other teams at the same time without warnings.
+
+- **Checked** - No conflict warnings when scheduling team members on other teams simultaneously
+- **Unchecked** - The system will warn if someone is scheduled on this team and another team at the same time
+
+<Info>
+**Example**: If you check this for "Cleaning Team", members can be scheduled for cleaning and ushering on the same day without warnings, since these don't conflict.
+</Info>
+
+### Allow People to Volunteer
+
+Enable this setting to let people volunteer themselves for positions they have on this team.
+
+- **Checked** - People can proactively volunteer for available positions on this team
+- **Unchecked** - Only schedulers can assign people (default)
+
+<Info>
+**Use Case**: Useful for teams where people can sign up for available slots, like ushers or greeters who can choose which services they want to serve.
+</Info>
+
+### Require Accept/Decline
+
+Enable this to require people to confirm their assignments when scheduled.
+
+- **Checked** - People must accept or decline their assignments
+  - They receive notifications when assigned
+  - They can respond through the mobile app or web interface
+  - Helps ensure commitment and awareness
+- **Unchecked** - Assignments are automatically accepted (default)
+
+When "Require Accept/Decline" is enabled, you can configure additional settings:
+
+#### Auto Decline
+
+Automatically decline unconfirmed assignments before the service.
+
+- **Checked** - Unconfirmed assignments are automatically declined if not responded to
+- **Unchecked** - Assignments remain pending until manually responded to
+
+#### Auto Decline Days
+
+Set how many days before the service to auto-decline (1-30 days, default: 7).
+
+- If a schedule is created within this window, aggressive reminders will be sent instead of auto-declining
+- Example: If set to 7 days, assignments not confirmed 7 days before the service will be auto-declined
+- This helps free up positions early so you can find replacements
+
+<Info>
+**Best Practice**: Use auto-decline for teams where you need early confirmation. Set the days based on how much advance notice you need to find replacements.
+</Info>
+
+## Deleting a Team
+
+To delete a team:
+
+1. Navigate to the **Organizations** section
+2. Click the **"Teams"** sub-tab
+3. Open the team you want to delete
+4. Click the **"Delete Team"** button (usually in the edit popup)
+5. Confirm the deletion
+
+<Warning>
+**Warning**: Deleting a team cannot be undone. This will:
+- Remove the team from all services
+- Remove all position assignments for this team
+- Remove the team from any groups
+
+Make sure you want to permanently delete the team before confirming.
+</Warning>
+
+## Team Permissions
+
+Team permissions determine who can edit each team:
+
+- **Owner/Organization Admin** - Can edit all teams
+- **Team Admin** - Can edit only teams where they have Admin permissions
+- **Scheduler** - Cannot edit teams, only schedule people
+- **Regular Members** - Cannot edit teams
+
+## Best Practices
+
+1. **Update descriptions** - Keep team descriptions current and helpful
+2. **Review positions regularly** - Remove positions you no longer use
+3. **Check before deleting** - Verify a team isn't needed before deletion
+4. **Set conflict settings wisely** - Use "allow assignment with other teams" only when teams truly don't conflict
+5. **Mark priority positions** - Use priority for critical roles that must be filled to get proactive alerts
+6. **Enable confirmation for important teams** - Use "Require Accept/Decline" for teams where commitment is critical
+7. **Configure auto-decline appropriately** - Set auto-decline days based on how much advance notice you need
+8. **Enable volunteering when appropriate** - Allow people to volunteer for teams where self-signup makes sense
+
+
+
+
+

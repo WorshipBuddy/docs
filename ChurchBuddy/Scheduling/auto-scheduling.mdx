@@ -1,0 +1,112 @@
+---
+title: 'Auto-Scheduling'
+description: 'Automatically assign team members to services using the auto-scheduling feature'
+---
+
+# Auto-Scheduling
+
+Auto-Scheduling allows you to automatically assign team members to multiple services at once. This saves time when scheduling recurring services or when you need to fill many positions across multiple dates.
+
+## Accessing Auto-Scheduling
+
+1. Navigate to the **Calendar** section
+2. Click the **"Services"** sub-tab
+3. Click the **"Auto Schedule"** button (visible if you have scheduling permissions)
+
+## How Auto-Scheduling Works
+
+The auto-scheduling feature intelligently assigns people to positions based on:
+- **Position assignments** - Only assigns people who have the required position for each team
+- **Availability** - Skips people who are marked unavailable on the service date
+- **Conflict detection** - Respects team and position assignment rules (whether people can be assigned to multiple teams or positions)
+- **Priority positions** - Fills priority positions first (positions marked as priority in team settings)
+- **Load balancing** - Distributes assignments evenly across people to minimize over-scheduling
+- **Position quantities** - Fills all required slots for each position
+
+## Step 1: Choose Scope
+
+You can auto-schedule for either:
+
+### Date Range
+- Select a **Start Date** and **End Date**
+- All services within this date range will be included
+- Leave dates blank to include all upcoming services
+
+### Specific Services
+- Pick individual services from a list
+- More control over exactly which services to schedule
+- Use "Select all" or "Clear" buttons for quick selection
+
+## Step 2: Select Teams
+
+After choosing your scope:
+
+1. A list of teams will appear
+2. Select which teams you want to auto-schedule
+   - You'll only see teams you have permission to schedule
+   - Use "Select all" to choose all teams
+   - Use "Clear" to deselect all teams
+3. Click **"Continue"**
+
+## Step 3: Preview Assignments
+
+After selecting teams and clicking **"Continue"**:
+
+1. The system will analyze all the services and teams you selected
+2. It will automatically generate proposed assignments
+3. A **preview** will appear showing:
+   - All services that will be updated
+   - Each team and position with proposed assignments
+   - How many assignments were placed and how many couldn't be filled
+4. **You can edit assignments in the preview** before saving:
+   - Click on any assignment field to change it
+   - Type a person's name to search and select
+   - Leave fields empty to leave positions unfilled
+5. Click **"Back"** to return to team selection if needed
+6. Click **"Save Assignments"** when you're ready to apply the changes
+
+<Info>
+**Note**: Auto-scheduling may not fill every position if there aren't enough available people with the required positions. You can manually fill remaining positions in the preview or after saving.
+</Info>
+
+<Warning>
+**Important**: The preview shows proposed assignments but doesn't save them until you click **"Save Assignments"**. You can review and edit everything before saving.
+</Warning>
+
+## Tips for Best Results
+
+- **Check availability first** - Make sure people have marked their unavailability dates
+- **Verify positions** - Ensure people are assigned to the correct positions for each team
+- **Review after running** - Always review auto-assignments and make manual adjustments as needed
+- **Use date ranges carefully** - Start with a small date range to test, then expand if needed
+
+## Editing Assignments in Preview
+
+The preview allows you to make manual adjustments before saving:
+
+1. **Change assignments** - Click on any assignment field and type a person's name
+2. **Remove assignments** - Clear the field to leave a position unfilled
+3. **Add assignments** - Type a person's name in an empty field
+4. The system will validate that people have the required positions
+
+<Info>
+**Tip**: The preview is editable, so you can fine-tune assignments before saving. This is especially useful for:
+- Adjusting for special circumstances
+- Balancing workloads
+- Accounting for preferences
+- Filling positions that couldn't be auto-filled
+</Info>
+
+## After Saving
+
+After you click **"Save Assignments"**:
+
+1. The assignments are saved to all selected services
+2. You'll see a confirmation message with how many assignments were placed
+3. You can review the assignments in the Services view
+4. The system will show warnings if there are any conflicts
+
+<Info>
+**Tip**: Auto-scheduling is a great starting point. The preview step lets you review and adjust everything before committing the changes.
+</Info>
+

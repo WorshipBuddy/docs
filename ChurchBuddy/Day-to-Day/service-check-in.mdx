@@ -1,0 +1,310 @@
+---
+title: 'Service Check-In'
+description: 'Check people into services using QR codes, Matrix, or Manual methods'
+---
+
+# Service Check-In
+
+ChurchBuddy's service check-in system allows you to track attendance at services using multiple methods. You can check people in using QR codes, a visual Matrix interface, or manual search.
+
+## Overview
+
+Service check-in helps you:
+
+- **Track Attendance** - Know who attended each service
+- **Quick Check-In** - Use QR codes for fast, contactless check-in
+- **Visual Recognition** - Use Matrix check-in with photos
+- **Flexible Options** - Choose the method that works best for your service
+
+## Check-In Methods
+
+ChurchBuddy supports three check-in methods:
+
+### 1. QR Code Check-In
+
+QR code check-in uses unique, time-based QR codes that people can display on their mobile devices. Each QR code:
+
+- Works across all organizations the person belongs to
+- Expires after 2 minutes for security
+- Automatically refreshes every minute
+- Includes verification to prevent tampering
+
+### 2. Matrix Check-In
+
+Matrix check-in displays photos of people who haven't been checked in yet. You answer "Yes" or "No" to "Have you seen [person] today?" This method is great for:
+
+- Visual recognition
+- Quick check-in when you know people by sight
+- Services where people may not have their phones ready
+
+### 3. Manual Check-In
+
+Manual check-in lets you search for people by name or email and check them in directly. Use this method when:
+
+- QR codes aren't available
+- You need to check in someone else
+- You want to verify attendance manually
+
+## Enabling Check-In Methods
+
+Check-in methods are configured at the organization level:
+
+1. Navigate to the **People** section
+2. Click the **"Check-in"** sub-tab
+3. Enable the methods you want to use:
+   - **QR Code** - Enable QR code scanning
+   - **Matrix** - Enable Matrix check-in
+   - **Manual** - Enable manual check-in
+4. Configure additional settings (see below)
+5. Save your settings
+
+<Info>
+**Note**: You can enable multiple methods. People checking others in can choose which method to use.
+</Info>
+
+## QR Code Check-In
+
+### How QR Codes Work
+
+Each person has a universal QR code that:
+
+- Contains their email, name, and organization IDs
+- Includes a timestamp that changes every minute
+- Has a verification hash for security
+- Expires 2 minutes after generation
+- Works for all services in all their organizations
+
+### Getting Your QR Code
+
+To get your QR code:
+
+1. Open the ChurchBuddy mobile app
+2. Go to your **Profile** or **Settings**
+3. Find **"My QR Code"** or **"Check-In QR Code"**
+4. Your QR code will be displayed
+5. The code automatically refreshes every minute
+
+<Info>
+**Tip**: You can take a screenshot of your QR code, but remember it expires after 2 minutes. It's best to use the live QR code from the app.
+</Info>
+
+### Scanning QR Codes
+
+To check someone in using their QR code:
+
+1. Open the service check-in screen for the service
+2. Select **"QR Code"** method
+3. Point your device's camera at the person's QR code
+4. The system will:
+   - Verify the QR code is valid
+   - Check if the person is already checked in
+   - Check them in if valid and not already checked in
+5. You'll see a confirmation with the person's name
+
+### QR Code Security
+
+QR codes include several security features:
+
+- **Time-Based Expiration** - Codes expire after 2 minutes
+- **Verification Hash** - Prevents tampering or forgery
+- **Organization Validation** - Ensures the person belongs to your organization
+- **Automatic Refresh** - Codes update every minute
+
+<Warning>
+**Security Note**: QR codes are designed to prevent unauthorized check-ins. The time-based expiration and verification hash ensure that codes can't be copied and reused later.
+</Warning>
+
+### Auto-Add Users from QR Codes
+
+If someone scans a QR code but isn't in your organization, you can configure how to handle this:
+
+1. Navigate to the **People** section
+2. Click the **"Check-in"** sub-tab
+3. Find the **QR Code Check-in** section
+4. Choose **Auto-Add Mode**:
+   - **Automatic** - Automatically add the person to your organization
+   - **Verification** - Require confirmation before adding
+5. Optionally set **Auto-Add Tags** - Tags to apply to automatically added users
+6. Save settings
+
+<Info>
+**Note**: When a user is auto-added via QR code, they'll be added as a regular member with no special permissions. You can later assign them to teams and positions as needed.
+</Info>
+
+## Matrix Check-In
+
+Matrix check-in uses a visual interface to help you check people in by recognizing their photos.
+
+### How Matrix Check-In Works
+
+1. Open the service check-in screen
+2. Select **"Matrix"** method
+3. The system shows photos of people who haven't been checked in
+4. For each person, answer: **"Have you seen [name] today?"**
+5. Tap **"Yes"** to check them in, or **"No"** to skip (they'll come back later in the queue)
+
+### Matrix Check-In Features
+
+- **Photo Display** - Shows person's photo (if available) or initials
+- **Random Order** - People are shown in random order
+- **Progress Tracking** - Shows how many people remain
+- **Skip and Return** - Tap "No" to skip someone (they'll appear again later)
+
+### Photo Requirements
+
+For Matrix check-in to work best:
+
+- People should have photos uploaded to their profiles
+- Photos should be clear and recent
+- Google Photos direct image URLs work best (not share links)
+
+<Info>
+**Tip**: If someone doesn't have a photo, Matrix check-in will show their initials in a colored circle. You can still check them in using this method.
+</Info>
+
+### Using Matrix Check-In
+
+1. Open the service
+2. Go to **Check-In** → **Matrix**
+3. Review the person's photo and name
+4. If you've seen them today:
+   - Tap **"Yes"** (green button)
+   - They'll be checked in and removed from the queue
+5. If you haven't seen them:
+   - Tap **"No"** (red button)
+   - They'll be moved to the end of the queue
+6. Continue until everyone is checked in
+
+<Info>
+**Tip**: Matrix check-in is great for services where you can visually recognize people. It's faster than searching by name and works well even if people don't have their phones.
+</Info>
+
+## Manual Check-In
+
+Manual check-in lets you search for and check in people by name or email.
+
+### Using Manual Check-In
+
+1. Open the service check-in screen
+2. Select **"Manual"** method
+3. Use the search bar to find the person:
+   - Type their first name, last name, or email
+   - Results appear as you type
+4. Tap on the person to check them in
+5. You'll see a confirmation
+
+### Manual Check-In Features
+
+- **Search by Name** - Search first name, last name, or full name
+- **Search by Email** - Search by email address
+- **Quick Results** - See up to 20 matching results
+- **Direct Check-In** - Tap to check in immediately
+
+<Info>
+**Tip**: Manual check-in is useful when QR codes aren't working or when checking in someone who isn't present (like marking attendance from a sign-in sheet).
+</Info>
+
+## Viewing Check-Ins
+
+To see who has been checked in for a service:
+
+1. Open the service
+2. Go to **Check-Ins** or view check-in details
+3. You'll see a list showing:
+   - Person's name
+   - Check-in time
+   - Check-in method (QR, Matrix, Manual)
+   - Who checked them in (if applicable)
+   - Station ID (if using check-in stations)
+
+### Check-In Details
+
+Each check-in record includes:
+
+- **User Email** - Person who was checked in
+- **Service ID** - Which service they were checked in for
+- **Check-In Time** - When they were checked in
+- **Method** - How they were checked in (qr_scan, matrix, manual, station_qr, station_manual)
+- **Checked In By** - Email of person who performed the check-in
+- **Station ID** - Check-in station identifier (if applicable)
+- **Check-Out Status** - Whether they've been checked out
+
+## Check-In Permissions
+
+To check people into services, you typically need:
+
+- **Owner** or **Organization Admin** - Can check in anyone
+- **Team Admin** or **Scheduler** - May have check-in permissions for their teams
+- **Service-Specific Permissions** - Some organizations allow specific people to check in for specific services
+
+<Info>
+**Note**: Check-in permissions are configured at the organization level. Contact your organization admin if you need check-in access.
+</Info>
+
+## Check-In Stations
+
+Some organizations use check-in stations (like kiosks or dedicated devices). When checking in via a station:
+
+- The station ID is recorded with the check-in
+- This helps track which station was used
+- Useful for large services with multiple check-in points
+
+### Setting Up Check-In Stations
+
+Check-in stations are configured in organization settings. Each station has:
+
+- **Station ID** - Unique identifier
+- **Station Name** - Display name
+- **Location** - Where the station is located (optional)
+
+## Best Practices
+
+### Before the Service
+
+1. **Test Check-In Methods** - Make sure QR codes, Matrix, and Manual check-in all work
+2. **Prepare Devices** - Ensure check-in devices are charged and ready
+3. **Train Staff** - Make sure check-in staff know how to use all methods
+4. **Have Backup** - Always have Manual check-in as a backup
+
+### During the Service
+
+1. **Use Multiple Methods** - Offer QR code and Matrix for flexibility
+2. **Monitor Progress** - Check the check-in list periodically
+3. **Handle Issues Quickly** - If QR codes aren't working, switch to Manual
+4. **Be Patient** - Matrix check-in takes time but is thorough
+
+### After the Service
+
+1. **Review Check-Ins** - Verify the check-in list is accurate
+2. **Follow Up** - If someone was expected but not checked in, follow up
+3. **Export Data** - Export check-in data for records if needed
+
+## Troubleshooting
+
+**QR code not scanning:**
+- Make sure the QR code is clear and well-lit
+- Check that the code hasn't expired (refresh it)
+- Try Manual check-in as a backup
+- Ensure camera permissions are granted
+
+**Matrix check-in showing no photos:**
+- People may not have photos uploaded
+- Matrix will show initials if no photo is available
+- You can still use Matrix check-in with initials
+
+**Can't find someone in Manual search:**
+- Try searching by email instead of name
+- Check spelling
+- Verify the person is in your organization
+- They may already be checked in
+
+**Check-in not saving:**
+- Check your internet connection
+- Verify you have check-in permissions
+- Try refreshing and checking in again
+- Contact your organization admin if issues persist
+
+**Person already checked in:**
+- The system prevents duplicate check-ins for the same service on the same day
+- If someone needs to be checked in again, they may need to be checked out first
+- Check the check-in list to see when they were originally checked in

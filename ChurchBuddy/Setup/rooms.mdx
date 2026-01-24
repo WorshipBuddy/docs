@@ -1,0 +1,165 @@
+---
+title: 'Rooms & Resources'
+description: 'Manage rooms and resources with booking capabilities and approval workflows'
+---
+
+# Rooms & Resources
+
+The Rooms feature helps you manage physical spaces in your organization. Track room availability, accept booking requests, and manage resources.
+
+## Overview
+
+Rooms & Resources provides:
+
+- **Room inventory** - Catalog all your spaces
+- **Booking system** - Let people request room reservations
+- **Approval workflow** - Review and approve booking requests
+- **Conflict detection** - Prevent double-bookings
+- **Resource tracking** - Track equipment and amenities per room
+
+## Managing Rooms
+
+### Adding a Room
+
+1. Navigate to the **Calendar** section
+2. Click the **"Rooms"** sub-tab
+3. Click **Add Room**
+3. Enter room details:
+   - **Name** - Room identifier (e.g., "Fellowship Hall", "Room 201")
+   - **Room Type** - Category (Sanctuary, Classroom, Office, etc.)
+   - **Capacity** - Maximum occupancy
+   - **Building** - Which building (optional)
+   - **Floor** - Which floor (optional)
+   - **Color** - Display color for calendar views
+
+### Room Types
+
+Available room types:
+
+- **Sanctuary** - Main worship spaces
+- **Classroom** - Teaching and meeting rooms
+- **Office** - Administrative spaces
+- **Kitchen** - Food preparation areas
+- **Fellowship** - Social gathering spaces
+- **Outdoor** - Outdoor areas
+- **Storage** - Storage rooms
+- **Other** - Any other space type
+
+### Room Features
+
+Track what's available in each room:
+
+- **Accessible** - Wheelchair accessible
+- **WiFi** - Has wireless internet
+- **Kitchen** - Has kitchen facilities
+- **Climate Control** - Has heating/cooling
+- **Tables** - Number of tables
+- **Chairs** - Number of chairs
+- **AV Equipment** - Audio/visual capabilities
+
+## Booking Rooms
+
+### Requesting a Booking
+
+1. Open the Rooms section
+2. Find the room you want
+3. Click **Book Room**
+4. Enter booking details:
+   - **Date** - When you need the room
+   - **Start Time** - Booking start
+   - **End Time** - Booking end
+   - **Purpose** - What the room is for
+   - **Notes** - Additional information
+5. Submit the request
+
+### Booking Status
+
+Bookings can have these statuses:
+
+- **Pending** - Awaiting approval
+- **Approved** - Booking confirmed
+- **Declined** - Request was declined
+- **Cancelled** - Booking was cancelled
+
+## Approval Workflow
+
+### Room Approval Settings
+
+Configure which rooms require approval:
+
+1. Edit the room
+2. Under **Approval Settings**, toggle **Requires Approval**
+3. If enabled, bookings go to pending status
+4. If disabled, bookings are auto-approved
+
+### Reviewing Pending Requests
+
+1. Go to **Rooms** → **Pending Approvals**
+2. See all pending booking requests
+3. For each request, you can:
+   - **Approve** - Confirm the booking
+   - **Decline** - Reject the request (optionally add reason)
+
+<Info>
+**Note**: The pending approvals count shows in the navigation so you know when requests need attention.
+</Info>
+
+## Viewing Room Schedules
+
+### Grid View
+
+See all rooms as cards with key information:
+
+- Room name and type
+- Capacity
+- Features
+- Quick book button
+
+### List View
+
+See rooms in a table format:
+
+- Sortable columns
+- Compact view for many rooms
+- Quick access to details
+
+### Room Detail
+
+Click any room to see:
+
+- Full room information
+- Upcoming bookings
+- Booking calendar
+- Room features and resources
+
+## Conflict Management
+
+### Automatic Detection
+
+The system automatically detects:
+
+- **Double bookings** - Same room, overlapping times
+- **Conflicts** - Shows warning before booking
+
+### Viewing Conflicts
+
+1. Go to **Rooms** → **Conflicts**
+2. See any scheduling conflicts
+3. Resolve by cancelling or adjusting bookings
+
+## Best Practices
+
+1. **Complete room profiles** - Add all features and details
+2. **Set appropriate approval** - Require approval for high-demand spaces
+3. **Review pending requests promptly** - Don't leave requests waiting
+4. **Keep capacity accurate** - Important for safety compliance
+5. **Update availability** - Mark rooms unavailable during maintenance
+
+## Permissions
+
+| Role | View Rooms | Book Rooms | Approve Bookings | Manage Rooms |
+|------|-----------|------------|------------------|--------------|
+| Owner | ✓ | ✓ | ✓ | ✓ |
+| Org Admin | ✓ | ✓ | ✓ | ✓ |
+| Member | ✓ | ✓ | ✗ | ✗ |
+| Viewer | ✓ | ✗ | ✗ | ✗ |

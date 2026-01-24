@@ -52,70 +52,81 @@
         ]
       },
       {
-        "tab": "ScheduleBuddy",
+        "tab": "ChurchBuddy",
         "groups": [
           {
             "group": "Get Started",
             "pages": [
-              "ScheduleBuddy/Get Started/introduction",
-              "ScheduleBuddy/Get Started/login-account",
-              "ScheduleBuddy/Get Started/user-organizations"
+              "ChurchBuddy/Get Started/introduction",
+              "ChurchBuddy/Get Started/login-account",
+              "ChurchBuddy/Get Started/user-organizations"
             ]
           },
           {
             "group": "Setup",
             "pages": [
-              "ScheduleBuddy/Setup/create_org",
-              "ScheduleBuddy/Setup/create_team",
-              "ScheduleBuddy/Setup/editing-teams",
-              "ScheduleBuddy/Setup/add_people",
-              "ScheduleBuddy/Setup/managing-people",
-              "ScheduleBuddy/Setup/user-relations",
-              "ScheduleBuddy/Setup/create_services",
-              "ScheduleBuddy/Setup/permissions"
+              "ChurchBuddy/Setup/create_org",
+              "ChurchBuddy/Setup/create_team",
+              "ChurchBuddy/Setup/editing-teams",
+              "ChurchBuddy/Setup/add_people",
+              "ChurchBuddy/Setup/managing-people",
+              "ChurchBuddy/Setup/user-relations",
+              "ChurchBuddy/Setup/groups",
+              "ChurchBuddy/Setup/create_services",
+              "ChurchBuddy/Setup/rooms",
+              "ChurchBuddy/Setup/forms",
+              "ChurchBuddy/Setup/sunday-school",
+              "ChurchBuddy/Setup/permissions"
             ]
           },
           {
             "group": "Events",
             "pages": [
-              "ScheduleBuddy/Events/introduction",
-              "ScheduleBuddy/Events/creating-events",
-              "ScheduleBuddy/Events/registration-forms",
-              "ScheduleBuddy/Events/registration-responses",
-              "ScheduleBuddy/Events/event-services",
-              "ScheduleBuddy/Events/event-dashboard",
-              "ScheduleBuddy/Events/public-registration",
-              "ScheduleBuddy/Events/transportation",
-              "ScheduleBuddy/Events/housing",
-              "ScheduleBuddy/Events/meals",
-              "ScheduleBuddy/Events/check-in"
+              "ChurchBuddy/Events/introduction",
+              "ChurchBuddy/Events/creating-events",
+              "ChurchBuddy/Events/registration-forms",
+              "ChurchBuddy/Events/registration-responses",
+              "ChurchBuddy/Events/event-services",
+              "ChurchBuddy/Events/event-dashboard",
+              "ChurchBuddy/Events/public-registration",
+              "ChurchBuddy/Events/transportation",
+              "ChurchBuddy/Events/driver-dashboard",
+              "ChurchBuddy/Events/housing",
+              "ChurchBuddy/Events/host-dashboard",
+              "ChurchBuddy/Events/meals",
+              "ChurchBuddy/Events/check-in"
             ]
           },
           {
             "group": "Scheduling",
             "pages": [
-              "ScheduleBuddy/Scheduling/scheduling",
-              "ScheduleBuddy/Scheduling/auto-scheduling",
-              "ScheduleBuddy/Scheduling/service-views",
-              "ScheduleBuddy/Scheduling/advanced-services",
-              "ScheduleBuddy/Scheduling/warnings",
-              "ScheduleBuddy/Scheduling/export"
+              "ChurchBuddy/Scheduling/scheduling",
+              "ChurchBuddy/Scheduling/auto-scheduling",
+              "ChurchBuddy/Scheduling/service-views",
+              "ChurchBuddy/Scheduling/advanced-services",
+              "ChurchBuddy/Scheduling/warnings",
+              "ChurchBuddy/Scheduling/export"
             ]
           },
           {
             "group": "Day-to-Day",
             "pages": [
-              "ScheduleBuddy/Day-to-Day/dashboard",
-              "ScheduleBuddy/Day-to-Day/availability",
-              "ScheduleBuddy/Day-to-Day/app"
+              "ChurchBuddy/Day-to-Day/dashboard",
+              "ChurchBuddy/Day-to-Day/availability",
+              "ChurchBuddy/Day-to-Day/announcements",
+              "ChurchBuddy/Day-to-Day/service-check-in",
+              "ChurchBuddy/Day-to-Day/service-station-scanner",
+              "ChurchBuddy/Day-to-Day/timer",
+              "ChurchBuddy/Day-to-Day/crowd-meter",
+              "ChurchBuddy/Day-to-Day/app"
             ]
           },
           {
             "group": "Settings & Integrations",
             "pages": [
-              "ScheduleBuddy/Setup/organization-settings",
-              "ScheduleBuddy/Setup/worshipbuddy-integration",
-              "ScheduleBuddy/Setup/biblebuddy-integration"
+              "ChurchBuddy/Setup/organization-settings",
+              "ChurchBuddy/Setup/worshipbuddy-integration",
+              "ChurchBuddy/Setup/biblebuddy-integration"
             ]
           }
         ]

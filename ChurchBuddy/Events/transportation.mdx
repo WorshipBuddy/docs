@@ -1,0 +1,366 @@
+---
+title: 'Transportation Management'
+description: 'Manage vehicles, drivers, routes, and passenger assignments for event transportation'
+---
+
+# Transportation Management
+
+ChurchBuddy's transportation management system helps you coordinate ground transportation for your events. You can manage vehicles, drivers, routes, assign passengers, and use QR code scanning for check-in.
+
+## Overview
+
+Transportation management includes:
+- **Vehicles** - Manage vehicles available for transportation
+- **Drivers** - Manage drivers who operate vehicles
+- **Routes** - Create pickup routes with multiple stops
+- **Assignments** - Assign registrants to routes or mark them as self-driving
+- **QR Code Check-In** - Use registration QR codes for route check-in
+- **Dashboards** - Driver dashboard for route management
+
+## Setting Up Transportation
+
+Transportation is managed at the event level. To set up transportation for an event:
+
+1. Open your event
+2. Go to the **Transportation** tab in the event dashboard
+3. Start by creating vehicles and drivers, then create routes
+
+## Vehicles
+
+Vehicles represent the physical vehicles used for transportation (buses, shuttles, vans, cars, etc.).
+
+### Creating a Vehicle
+
+1. In the Transportation tab, click **"+ Add Vehicle"** or go to the Vehicles section
+2. Fill in the vehicle details:
+   - **Name** - Vehicle identifier (e.g., "Bus 1", "Shuttle Van A")
+   - **Vehicle Type** - Type of vehicle (bus, shuttle, van, car, etc.)
+   - **Capacity** - Maximum number of passengers (includes the driver)
+   - **Checked Bag Capacity** - Maximum number of checked bags
+   - **Carry-On Bag Capacity** - Maximum number of carry-on bags
+   - **License Plate** - Vehicle license plate number (optional)
+   - **Notes** - Additional notes about the vehicle (optional)
+3. Click **"Save"** to create the vehicle
+
+### Editing a Vehicle
+
+1. Find the vehicle in the Vehicles list
+2. Click the edit icon (pencil) on the vehicle card
+3. Update the fields you want to change
+4. Click **"Save"** to update
+
+<Warning>
+**Note**: You cannot delete a vehicle if it's assigned to any active routes. You'll need to remove it from all routes first or delete the routes.
+</Warning>
+
+### Vehicle Capacity
+
+Vehicle capacity includes the driver. For example, if a bus has a capacity of 40, it can hold 39 passengers plus 1 driver. When assigning passengers to routes that use this vehicle, the system will track capacity to prevent overbooking.
+
+## Drivers
+
+Drivers are people who operate vehicles for transportation.
+
+### Creating a Driver
+
+1. In the Transportation tab, go to the Drivers section
+2. Click **"+ Add Driver"**
+3. Fill in the driver details:
+   - **Name** - Driver's full name
+   - **Email** - Driver's email address (optional, for notifications)
+   - **Phone** - Driver's phone number (optional)
+   - **Vehicle** - Optionally link this driver to a specific vehicle
+   - **Notes** - Additional notes (optional)
+4. Click **"Save"** to create the driver
+
+### Driver Dashboard
+
+Drivers can access a special dashboard to view their assigned routes and passengers. The driver dashboard shows:
+- All routes assigned to the driver
+- Passenger list for each route
+- Pickup locations and times
+- Check-in status for each passenger
+- Route details (origin, dropoff location, departure/arrival times)
+
+To access the driver dashboard:
+1. Navigate to `/driver-dashboard/?org={org_id}&event={event_id}&driver={driver_id}`
+2. The dashboard will show all routes for that driver
+
+<Info>
+**Tip**: You can share the driver dashboard URL with drivers so they can view their routes and passengers on their mobile devices.
+</Info>
+
+## Routes
+
+Routes define ground transportation pickup routes with multiple stops. Each route has:
+- A name (e.g., "Airport Shuttle - 3pm Pickup")
+- Route type (arrival or departure)
+- Multiple ordered pickup locations
+- A dropoff location
+- Departure and arrival times
+- An assigned vehicle and driver
+- Optional capacity override
+- Optional QR code check-in (uses registration QR codes)
+
+### Creating a Route
+
+1. In the Transportation tab, go to the Routes section
+2. Click **"+ Add Route"**
+3. Fill in the route details:
+
+   **Basic Information:**
+   - **Route Name** - Descriptive name for the route
+   - **Route Type** - Choose "Arrival" or "Departure"
+   - **Origin** - Where the driver starts from (optional)
+   - **Dropoff Location** - Event location or custom address
+
+   **Pickup Locations:**
+   - Click **"+ Add Pickup Location"**
+   - Select location type:
+     - **Airport** - Use airport code (e.g., "CLT", "LAX")
+     - **Bus Station** - Station name
+     - **Train Station** - Station name
+     - **Address** - Street address
+   - Enter the location (airport code, station name, or address)
+   - Set the order/sequence (1, 2, 3, etc.) - determines the pickup order
+   - Add multiple pickup locations as needed
+
+   **Schedule:**
+   - **Departure DateTime** - When the vehicle leaves to pick up passengers (ISO datetime)
+   - **Arrival DateTime** - When the vehicle arrives at the event (ISO datetime)
+
+   **Vehicle & Driver:**
+   - **Vehicle** - Select a vehicle from your vehicles list
+   - **Driver** - Select a driver from your drivers list
+
+   **Capacity:**
+   - **Capacity Override** - Optionally override the vehicle's capacity for this route
+
+   **QR Code Check-In:**
+   - **Send QR Tickets** - Enable QR code check-in reminders for this route
+   - If enabled, passengers will be reminded to use their registration QR code for check-in when you send route notifications
+
+4. Click **"Save"** to create the route
+
+### Route Types
+
+- **Arrival** - Routes for picking up passengers arriving at the event
+- **Departure** - Routes for transporting passengers leaving after the event
+
+### Editing and Deleting Routes
+
+To edit a route:
+1. Find the route in the Routes list
+2. Click the edit icon
+3. Update the fields
+4. Click **"Save"**
+
+<Warning>
+**Note**: You cannot delete a route if registrants are assigned to it. You'll need to remove all assignments first.
+</Warning>
+
+### Viewing Route Passengers
+
+To see all passengers assigned to a route:
+1. Find the route in the Routes list
+2. Click **"View Passengers"** or the route name
+3. You'll see:
+   - List of all assigned passengers
+   - Check-in status for each passenger
+   - Contact information
+   - Total count and checked-in count
+
+## Assigning Passengers
+
+You can assign registrants to routes or mark them as self-driving.
+
+### Transportation Assignment Types
+
+- **Assigned Route** - Registrant is assigned to a specific route
+- **Self Car** - Registrant is driving themselves
+
+### Individual Assignment
+
+1. In the Transportation tab, go to the Assignments section
+2. Click **"+ Assign Transportation"** or find a registrant
+3. Select the registrant
+4. Choose transportation type:
+   - **Assigned Route** - Select a route from the dropdown
+   - **Self Car** - Mark as self-driving
+5. If assigned to a route, you can also:
+   - Set luggage counts (checked bags, carry-ons)
+   - Add notes
+6. Click **"Save"**
+
+### Bulk Assignment
+
+To assign multiple registrants at once:
+
+1. Go to the Assignments section
+2. Click **"Bulk Assign"** or **"Bulk Actions"**
+3. Select multiple registrants
+4. Choose transportation type:
+   - For **Assigned Route**: Select the route
+   - For **Self Car**: All selected will be marked as self-driving
+5. Optionally add:
+   - Luggage counts
+6. Click **"Assign"** to assign all selected registrants
+
+The system will:
+- Check capacity for route assignments
+- Skip registrants already assigned
+- Create assignments for all selected registrants
+
+### Capacity Management
+
+When assigning passengers to routes:
+- The system checks route capacity (or vehicle capacity if route capacity isn't set)
+- Capacity includes the driver
+- You'll see a warning if assigning would exceed capacity
+- The system prevents overbooking by counting unique registrants
+
+### Assignment Details
+
+Each assignment can include:
+- **Transportation Type** - assigned_route or self_car
+- **Route ID** - If assigned to a route
+- **Luggage** - Count of checked bags and carry-ons
+- **Notes** - Additional notes
+- **Check-in Status** - Whether the passenger has checked in
+- **Checked In At** - Timestamp of check-in
+- **Checked In By** - Who checked them in
+
+## QR Code Check-In for Routes
+
+Routes can use QR code check-in for passengers. Passengers use the same QR code they received when registering for the event.
+
+### Enabling QR Code Check-In
+
+When creating or editing a route:
+1. Find the **"QR Tickets"** section
+2. Enable **"Send QR Tickets"**
+3. Save the route
+
+When QR code check-in is enabled:
+- Passengers use their registration QR code (the same QR code they received when registering for the event)
+- When you send route notifications, the system will remind passengers to use their registration QR code for check-in
+- No separate QR codes are generated for routes
+
+### QR Code Check-In Process
+
+Passengers present their registration QR code at transportation check-in:
+1. Use the Transportation Scanner (see Transportation Scanner below)
+2. Select the route
+3. Scan the passenger's registration QR code (the same one from their event registration)
+4. The system verifies:
+   - The QR code is valid for this event
+   - The passenger is assigned to the selected route
+   - Then checks them in for transportation
+
+<Info>
+**Note**: Passengers use their registration QR code for transportation check-in. This is the same QR code they received in their registration confirmation email. No separate transportation QR codes are created.
+</Info>
+
+## Transportation Scanner
+
+The transportation scanner is used to check in passengers for routes using their registration QR codes.
+
+### Using the Transportation Scanner
+
+1. Navigate to `/transportation-scanner/?org={org_id}&event={event_id}`
+2. Select the route you want to check passengers in for
+3. Scan passengers' registration QR codes using your device's camera
+4. The system will:
+   - Verify the QR code is valid for this event
+   - Check if the passenger is assigned to the selected route
+   - Mark them as checked in for transportation
+   - Show confirmation
+
+### Scanner Features
+
+- Route selection dropdown
+- Camera-based QR code scanning
+- Real-time verification using registration QR codes
+- Check-in confirmation
+- List of checked-in passengers
+
+<Info>
+**Tip**: The transportation scanner works best on mobile devices with cameras. Passengers should use the same QR code they received when registering for the event (from their registration confirmation email).
+</Info>
+
+
+### Route Notifications
+
+To send notifications to passengers and drivers on a route:
+
+1. Find the route in the Routes list
+2. You'll see one or more notification buttons depending on the route settings:
+
+   **Send tickets and route info** (always available):
+   - Sends route information to all assigned passengers
+   - Sends route information to the driver (if assigned)
+   - Includes route details, pickup locations, times, and driver information
+
+   **Send Reminder/Confirmation** (if QR code check-in is enabled):
+   - Sends reminder emails to passengers about using their registration QR code for check-in
+   - Shows as "Resend Reminder" if already sent once
+   - Reminds passengers to use their registration QR code from their event registration
+
+   **Send to Driver** (if a driver is assigned and QR code check-in is enabled):
+   - Sends notification email to the assigned driver
+   - Includes passenger information and route details
+
+<Info>
+**Note**: The "Send tickets and route info" button sends comprehensive route information to both passengers and the driver in one action. The other buttons are for specific reminders or driver notifications.
+</Info>
+
+## Exports
+
+You can export transportation data for reporting or coordination:
+
+### Transportation Export
+
+1. Go to the Transportation tab
+2. Click **"Export"** or **"Export Data"**
+3. Choose export format (CSV, Excel)
+4. The export includes:
+   - All routes
+   - All assignments
+   - Passenger information
+   - Vehicle and driver assignments
+   - Check-in status
+
+## Best Practices
+
+1. **Plan ahead** - Create vehicles and drivers before creating routes
+2. **Use descriptive route names** - Include time and destination (e.g., "Airport Shuttle - 3pm Pickup")
+3. **Set accurate capacity** - Include driver in capacity calculations
+4. **Use QR code check-in** - Enable QR code check-in for faster check-in on event day (passengers use their registration QR code)
+5. **Test the scanner** - Before the event, test the transportation scanner to ensure it works
+6. **Share driver dashboards** - Give drivers access to their dashboards so they can see passenger lists
+7. **Monitor capacity** - Regularly check route capacity to avoid overbooking
+8. **Send notifications early** - Notify passengers about their routes well in advance
+9. **Export data** - Export transportation data as backup before the event
+
+## Troubleshooting
+
+**Can't delete a vehicle:**
+- The vehicle is assigned to one or more routes
+- Remove the vehicle from all routes first, or delete the routes
+
+**Can't assign passenger to route:**
+- Check if the route is at capacity
+- Verify the route exists and is active
+- Make sure the registrant is registered for the event
+
+**QR code not scanning:**
+- Ensure QR code check-in is enabled for the route
+- Verify the passenger is using their registration QR code (from their event registration)
+- Check that the passenger is assigned to the selected route
+- Make sure the QR code is for the correct event
+
+**Driver dashboard not showing routes:**
+- Verify the driver is assigned to routes
+- Check that the driver_id in the URL is correct
+- Ensure the event has active routes
+
