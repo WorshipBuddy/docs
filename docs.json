@@ -137,106 +137,106 @@
           {
             "group": "Get Started",
             "pages": [
-              "PresenterBuddy/introduction"
+              "PresenterBuddy Studio/introduction"
             ]
           },
           {
             "group": "Installation",
             "pages": [
-              "PresenterBuddy/installation/mac",
-              "PresenterBuddy/installation/windows",
-              "PresenterBuddy/installation/linux"
+              "PresenterBuddy Studio/installation/mac",
+              "PresenterBuddy Studio/installation/windows",
+              "PresenterBuddy Studio/installation/linux"
             ]
           },
           {
             "group": "Schedule",
             "pages": [
-              "PresenterBuddy/schedules/schedules",
-              "PresenterBuddy/schedules/schedule"
+              "PresenterBuddy Studio/schedules/schedules",
+              "PresenterBuddy Studio/schedules/schedule"
             ]
           },
           {
             "group": "Show",
             "pages": [
-              "PresenterBuddy/show/shows",
-              "PresenterBuddy/show/views",
-              "PresenterBuddy/show/editing",
-              "PresenterBuddy/show/items",
-              "PresenterBuddy/show/chords",
-              "PresenterBuddy/show/groups",
-              "PresenterBuddy/show/layouts",
-              "PresenterBuddy/show/tools",
-              "PresenterBuddy/show/slide_actions"
+              "PresenterBuddy Studio/show/shows",
+              "PresenterBuddy Studio/show/views",
+              "PresenterBuddy Studio/show/editing",
+              "PresenterBuddy Studio/show/items",
+              "PresenterBuddy Studio/show/chords",
+              "PresenterBuddy Studio/show/groups",
+              "PresenterBuddy Studio/show/layouts",
+              "PresenterBuddy Studio/show/tools",
+              "PresenterBuddy Studio/show/slide_actions"
             ]
           },
           {
             "group": "Drawer",
             "pages": [
-              "PresenterBuddy/drawer/drawer",
-              "PresenterBuddy/drawer/media",
-              "PresenterBuddy/drawer/overlays",
-              "PresenterBuddy/drawer/templates",
-              "PresenterBuddy/drawer/scripture",
-              "PresenterBuddy/drawer/calendar"
+              "PresenterBuddy Studio/drawer/drawer",
+              "PresenterBuddy Studio/drawer/media",
+              "PresenterBuddy Studio/drawer/overlays",
+              "PresenterBuddy Studio/drawer/templates",
+              "PresenterBuddy Studio/drawer/scripture",
+              "PresenterBuddy Studio/drawer/calendar"
             ]
           },
           {
             "group": "Outputs",
             "pages": [
-              "PresenterBuddy/outputs/output",
-              "PresenterBuddy/outputs/NDI®",
-              "PresenterBuddy/outputs/Multiple_outputs",
-              "PresenterBuddy/outputs/styles"
+              "PresenterBuddy Studio/outputs/output",
+              "PresenterBuddy Studio/outputs/NDI®",
+              "PresenterBuddy Studio/outputs/Multiple_outputs",
+              "PresenterBuddy Studio/outputs/styles"
             ]
           },
           {
             "group": "Remote",
             "pages": [
-              "PresenterBuddy/remote/connecting",
-              "PresenterBuddy/remote/remoteShow",
-              "PresenterBuddy/remote/stageShow",
-              "PresenterBuddy/remote/controlShow",
-              "PresenterBuddy/remote/outputShow",
-              "PresenterBuddy/remote/bitfocus_Companion"
+              "PresenterBuddy Studio/remote/connecting",
+              "PresenterBuddy Studio/remote/remoteShow",
+              "PresenterBuddy Studio/remote/stageShow",
+              "PresenterBuddy Studio/remote/controlShow",
+              "PresenterBuddy Studio/remote/outputShow",
+              "PresenterBuddy Studio/remote/bitfocus_Companion"
             ]
           },
           {
             "group": "Cloud",
             "pages": [
-              "PresenterBuddy/cloud/drive_API",
-              "PresenterBuddy/cloud/integrations"
+              "PresenterBuddy Studio/cloud/drive_API",
+              "PresenterBuddy Studio/cloud/integrations"
             ]
           },
           {
             "group": "Actions",
             "pages": [
-              "PresenterBuddy/actions/MIDI",
-              "PresenterBuddy/actions/importing",
-              "PresenterBuddy/actions/exporting"
+              "PresenterBuddy Studio/actions/MIDI",
+              "PresenterBuddy Studio/actions/importing",
+              "PresenterBuddy Studio/actions/exporting"
             ]
           },
           {
             "group": "Advanced",
             "pages": [
-              "PresenterBuddy/advanced/mirrors",
-              "PresenterBuddy/advanced/data_Storage",
-              "PresenterBuddy/advanced/troubleshooting"
+              "PresenterBuddy Studio/advanced/mirrors",
+              "PresenterBuddy Studio/advanced/data_Storage",
+              "PresenterBuddy Studio/advanced/troubleshooting"
             ]
           },
           {
             "group": "Tips",
             "pages": [
-              "PresenterBuddy/tips/styling",
-              "PresenterBuddy/tips/keyboard_Shortcuts",
-              "PresenterBuddy/tips/FAQ"
+              "PresenterBuddy Studio/tips/styling",
+              "PresenterBuddy Studio/tips/keyboard_Shortcuts",
+              "PresenterBuddy Studio/tips/FAQ"
             ]
           },
           {
             "group": "Formats",
             "pages": [
-              "PresenterBuddy/formats/.show",
-              "PresenterBuddy/formats/.project",
-              "PresenterBuddy/formats/.fsb"
+              "PresenterBuddy Studio/formats/.show",
+              "PresenterBuddy Studio/formats/.project",
+              "PresenterBuddy Studio/formats/.fsb"
             ]
           }
         ]
