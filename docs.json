@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "willow",
+  "theme": "mint",
   "name": "WorshipBuddy",
   "colors": {
-    "primary": "#0c245e",
-    "light": "#b5c4ff",
-    "dark": "#15803D"
+    "primary": "#0C245E",
+    "light": "#DCE4F8",
+    "dark": "#0A1A45"
   },
   "favicon": "/favicon.svg",
   "navigation": {
