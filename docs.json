@@ -132,6 +132,35 @@
         ]
       },
       {
+        "tab": "PresenterBuddy",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "PresenterBuddy/introduction"
+            ]
+          },
+          {
+            "group": "Installation",
+            "pages": [
+              "PresenterBuddy/installation"
+            ]
+          },
+          {
+            "group": "Getting Started",
+            "pages": [
+              "PresenterBuddy/getting-started"
+            ]
+          },
+          {
+            "group": "Using PresenterBuddy",
+            "pages": [
+              "PresenterBuddy/using-presenterbuddy"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "PresenterBuddy Studio",
         "groups": [
           {
