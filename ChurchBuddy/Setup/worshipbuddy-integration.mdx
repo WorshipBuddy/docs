@@ -20,6 +20,10 @@ The WorshipBuddy integration allows you to:
 **Note**: Currently, the integration only supports Google Drive. Audio files must be stored in publicly accessible Google Drive folders.
 </Info>
 
+## Accessing WorshipBuddy
+
+Primary access is via the **WorshipBuddy** button in the top navigation (visible when you have permission). You can also reach the page directly at `/org-worshipbuddy/?org={your_org_id}`.
+
 ## Access Requirements
 
 To access WorshipBuddy integration settings, you must be:
@@ -39,28 +43,27 @@ Owners and Admins can control who has access to WorshipBuddy features.
 
 ### Granting Team Access
 
-1. Go to **Settings** → **WorshipBuddy** section
-2. In the "Access Control" area, select teams that should have access
-3. All members of selected teams will gain access
-4. Choose the access level (View Only or Edit)
-5. Click **"Save Access Control"** to apply changes
+1. Click **WorshipBuddy** in the top navigation (or go to `/org-worshipbuddy/?org={your_org_id}`)
+2. In **Access Control**, select teams that should have access
+3. Set the org-wide **access level** radio: **View Only** or **Edit** (applies to all selected teams/users)
+4. Click **Save Access Control**
 
 ### Granting Individual Access
 
-1. Go to **Settings** → **WorshipBuddy** section
-2. In the "Access Control" area, select individual users
-3. Choose the access level (View Only or Edit)
-4. Click **"Save Access Control"** to apply changes
+1. Open the WorshipBuddy page
+2. In **Access Control**, select individual users
+3. Use the same org-wide **View Only** / **Edit** radio
+4. Click **Save Access Control**
 
 <Info>
-**Tip**: "View Only" allows users to see albums but not make changes. "Edit" allows users to create, modify, and delete albums.
+**View Only** / **Edit** is one setting for the whole org access list — not per team or user. **Only Owners and Organization Admins** can create, edit, or delete albums in the UI today regardless of saved access level.
 </Info>
 
 ## Songbook ID (Optional)
 
 You can link a WorshipBuddy Songbook ID to your organization:
 
-1. Go to **Settings** → **WorshipBuddy** section
+1. Click **WorshipBuddy** in the top navigation (or go to `/org-worshipbuddy/?org={your_org_id}`)
 2. Enter your Songbook ID in the "Songbook ID" field
 3. Click **"Save Songbook Settings"**
 
@@ -77,7 +80,7 @@ Albums are collections of audio files that will appear in WorshipBuddy's playlis
 1. In the WorshipBuddy settings page, find the **"Org Music Albums"** section
 2. Click **"+ Create Album"**
 3. Enter an album name
-4. Optionally add a cover image URL (must be from Google Drive, and the file must be named exactly "Album Cover" in PNG format)
+4. Optionally add a cover image URL (Google Drive, Dropbox, or direct image URLs supported; default cover used if omitted)
 5. Click **"Save Album"**
 
 ### Adding Audio Files to Albums
@@ -165,8 +168,8 @@ Once you've created albums and added audio files:
 - Ensure the songbook ID is correctly linked (if using)
 
 **Can't edit albums:**
-- Check your access level - you may only have "View Only" access
-- Only Owners, Admins, or users with "Edit" access can modify albums
+- Only **Owners** and **Organization Admins** can create or modify albums in the UI today
+- View Only / Edit access level controls nav visibility, not album editing for non-admins
 
 ## Music Albums Feature
 
@@ -178,7 +181,7 @@ The Music Albums feature is a core part of the WorshipBuddy integration. It allo
 - **Folder Exploration** - Browse folder structures to find audio files
 - **Live Sync** - Automatically sync folders so new files appear in albums
 - **Drag and Drop** - Easy file and folder management
-- **Album Reordering** - Control the order albums appear in WorshipBuddy
+- **Album Management** - Create, edit, and delete albums
 
 ### Getting Started with Music Albums
 
@@ -216,37 +219,30 @@ Only audio files are processed - other file types are ignored.
 
 ## Access Control Details
 
-### Access Levels
+### Access Levels (org-wide)
 
-**View Only:**
-- Users can see albums in WorshipBuddy
-- Users can play audio files
-- Users cannot create, edit, or delete albums
-- Users cannot add files to albums
+One **View Only** or **Edit** radio applies to all teams and users in the access list.
 
-**Edit:**
-- All "View Only" permissions
-- Users can create new albums
-- Users can edit album names and details
-- Users can add files and folders to albums
-- Users can delete albums (Owners/Admins only)
-- Users can reorder albums
+**View Only** — Users with WorshipBuddy nav access can see and play albums.
+
+**Edit** — Stored on the org record, but **only Owners and Organization Admins** can create, edit, or delete albums in the UI today.
 
 ### Team-Based Access
 
 When you grant team-based access:
-- All current members of the team gain access
-- New members added to the team automatically gain access
-- Members removed from the team lose access
-- Access level (View Only or Edit) applies to all team members
+- All current members of the team gain nav access
+- New team members automatically gain access; removed members lose access
+- The org-wide access level applies to everyone on the list
 
 ### Individual Access
 
+Individual grants use the same org-wide access level — there are not separate levels per person.
+
 When you grant individual access:
-- Only the specified user gains access
+- Only the specified user gains nav access
 - Access persists regardless of team membership
-- You can grant different access levels to different users
-- Access must be removed manually if needed
+- The org-wide View Only / Edit level applies
+- Remove access manually when no longer needed
 
 ## Album Organization
 
@@ -297,9 +293,8 @@ Choose based on:
 ### Album Cover Images
 
 You can add cover images to albums:
-- Must be from Google Drive
-- File must be named exactly "Album Cover"
-- Must be in PNG format
+- Paste a **Cover Image URL** (Google Drive, Dropbox, or direct image URLs)
+- Optional folder convention: name a file **Album Cover.png** inside the album folder for auto-discovery
 - Appears in WorshipBuddy's album display
 
 ## Integration with WorshipBuddy App

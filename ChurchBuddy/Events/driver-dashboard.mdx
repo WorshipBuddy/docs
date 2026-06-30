@@ -17,13 +17,17 @@ The Driver Dashboard shows drivers:
 
 ## Accessing the Driver Dashboard
 
-Drivers access their dashboard via a direct link:
+Drivers access their dashboard via a direct link with three required query parameters:
 
 ```
-/driver-dashboard/?org=YOUR_ORG_ID&event=EVENT_ID
+/driver-dashboard/?org=YOUR_ORG_ID&event=EVENT_ID&driver=DRIVER_ID
 ```
 
-Or through the event's transportation section when logged in.
+- **org** — Organization ID
+- **event** — Event ID
+- **driver** — Driver ID (from the event's transportation setup)
+
+Event coordinators can send this link to drivers from the transportation route management area. The page will not load without all three parameters.
 
 ## Dashboard Features
 
@@ -40,10 +44,11 @@ Each assigned route displays:
 
 For each passenger, drivers can see:
 
-- **Name** - Passenger's full name
-- **Phone Number** - Contact number (tap to call)
-- **Pickup/Dropoff Location** - Where to pick up or drop off
-- **Special Notes** - Any special requirements or instructions
+- **Name**, **phone**, and **email** (tap phone to call)
+- **Checked-in** badge when transportation check-in is recorded
+- Optional **flight info** and registration custom-field answers
+
+Route-level **pickup locations**, departure/arrival times, and dropoff are shown on the route card — not per passenger.
 
 ## Using the Dashboard
 
@@ -56,16 +61,9 @@ For each passenger, drivers can see:
 ### During the Route
 
 1. Use tap-to-call for passenger phone numbers
-2. Mark passengers as picked up (if feature enabled)
-3. Access navigation to addresses
+2. View passenger **checked-in** status (read-only — use the [Transportation Scanner](/ChurchBuddy/Events/transportation) for live check-in)
 
-## Print View
-
-The dashboard supports printing for offline reference:
-
-1. Click **Print** or use browser print
-2. Get a clean printed list of routes and passengers
-3. Take as backup in case of connectivity issues
+Use your browser's print function (Ctrl/Cmd+P) if you need a paper backup — there is no dedicated Print button in the dashboard.
 
 ## Best Practices
 

@@ -28,17 +28,21 @@ Announcements can have three statuses:
 **Note**: Only one announcement can be live (published and within its time window) at a time. If you publish a new announcement, make sure to archive or expire the previous one.
 </Info>
 
+## Who Sees Announcements
+
+- **Mobile app** — Live announcement on the org **Home** tab
+- **Web** — The main **Dashboard** page does **not** display announcements to members; announcements are managed under **Organization → Announcements**
+
 ## Creating Announcements
 
 To create an announcement:
 
-1. Navigate to the **Organizations** section
-2. Click the **"Announcements"** sub-tab
-3. Click **"Create Announcement"** or **"New"** button
-4. Build your announcement using components (see below)
-5. Set scheduling options (optional)
-6. Set status to **Draft** or **Published**
-6. Save the announcement
+1. Click **Organization → Announcements**
+2. Click the **+** button → **New Announcement**
+3. Choose **ChurchBuddy Only** or **ChurchBuddy and PresenterBuddy**
+4. **Drag components** from the library into the phone preview editor
+5. Set scheduling and status (**Draft** / **Published**)
+6. Save
 
 ## Announcement Components
 
@@ -49,10 +53,10 @@ Announcements are built using components. Each component has a type and data. Av
 Display a heading with customizable size and alignment.
 
 **Options:**
-- **Text** - The heading text
-- **Size** - Small, Medium, or Large
-- **Alignment** - Left, Center, or Right
-- **Color** - Text color (optional)
+- **Text** — The heading text
+- **Font Size (px)** — 12–72 pixel size control
+- **Alignment** — Left, Center, or Right
+- **Color** — Text color (optional)
 
 ### Text
 
@@ -93,6 +97,15 @@ Empty space to add spacing between components.
 **Options:**
 - **Height** - Height of the spacer in pixels
 
+### Image
+
+Display an image in the announcement.
+
+**Options:**
+- **Image URL** - Full URL of the image
+- **Alt Text** - Accessibility description
+- **Alignment** - Left, Center, or Right
+
 ### Card
 
 A card container with title and content.
@@ -118,18 +131,13 @@ When creating an announcement, you'll add components in order. The announcement 
 
 ### Adding Components
 
-1. Click **"Add Component"** or use the component selector
-2. Choose a component type
-3. Fill in the component's data/options
-4. The component is added to your announcement
-5. Repeat to add more components
+1. **Drag components** from the library into the phone preview (there is no **Add Component** button)
+2. Configure each component's options in the editor panel
+3. Repeat for additional components
 
 ### Reordering Components
 
-Components can typically be reordered by:
-- Dragging components up or down
-- Using up/down arrows
-- Moving components in the component list
+Use **Move Up** and **Move Down** arrow buttons on each component in the canvas (components are not draggable).
 
 ### Editing Components
 
@@ -140,7 +148,7 @@ Components can typically be reordered by:
 ### Removing Components
 
 1. Select the component
-2. Click **"Remove"** or the delete icon
+2. Click **Delete**
 3. Confirm removal
 
 ## Scheduling Announcements
@@ -180,7 +188,10 @@ Only one announcement can be live at a time. If you try to publish a second anno
 Organization members see announcements in:
 
 - **Mobile App** - Home tab shows the current live announcement
-- **Web Interface** - Dashboard or announcements section
+
+<Info>
+Web members do **not** see live announcements on the Dashboard — only mobile Home displays them to members. Admins manage announcements under **Organization → Announcements**.
+</Info>
 
 ### Announcement Display
 
@@ -201,7 +212,7 @@ Live announcements are displayed with:
 
 To edit an announcement:
 
-1. Navigate to the **Organizations** section
+1. Click **Organization** in the top navigation
 2. Click the **"Announcements"** sub-tab
 3. Find the announcement you want to edit in the sidebar
 4. Click on it to open the editor

@@ -62,28 +62,43 @@ ChurchBuddy supports various relationship types:
 - **brother-in-law** → **brother-in-law/sister-in-law**
 - **sister-in-law** → **brother-in-law/sister-in-law**
 
-### Generic
-- **related** - Generic relationship type (used as fallback)
+### Step-Family & Other (mobile)
+
+The mobile app also supports: **stepfather**, **stepmother**, **stepson**, **stepdaughter**, and **other**.
+
+On web, **related** appears as a display fallback but is not a selectable type in the dropdown.
 
 ## Adding a Relationship
 
 To add a relationship between two users:
 
-1. Go to **People** → Find the person you want to add a relationship to
-2. Open their profile or detail view
-3. Find the **Relations** or **Family** section
-4. Click **"+ Add Relation"** or **"Add Family Member"**
-5. Select the related person by their email address
-6. Choose the relationship type (how this person is related to them)
-7. Click **"Save"** or **"Add Relation"**
+### Web
+
+1. Go to **People** and open a person's detail page (`/org-person-detail/`)
+2. Scroll to the **Family Relations** section
+3. Click **Add Relation**
+4. Select the related person and choose the relationship type
+5. Click **Add Relation**
+
+### Mobile
+
+1. Go to **More → My Profile**
+2. Scroll to **Family**
+3. Tap **Add**
+4. Select a person and relationship type
+5. Tap **Add Relation**
+
+<Info>
+On mobile, users manage **their own** family relations from My Profile. Owners and Admins manage anyone's relations on the web person detail page.
+</Info>
 
 ### Example
 
-If John (john@example.com) wants to add his wife Jane (jane@example.com):
-1. Go to John's profile
-2. Click "+ Add Relation"
-3. Enter Jane's email: jane@example.com
-4. Select relationship type: "wife"
+If John wants to add his wife Jane:
+1. Open John's profile (web detail page or My Profile on mobile)
+2. Click **Add Relation**
+3. Select **Jane** from the person dropdown/list
+4. Choose relationship type **wife**
 5. Save
 
 The system will automatically:
@@ -122,6 +137,7 @@ The system uses a mapping to determine reciprocal relationships:
 | father-in-law/mother-in-law | son-in-law/daughter-in-law |
 | son-in-law/daughter-in-law | father-in-law/mother-in-law |
 | brother-in-law/sister-in-law | brother-in-law/sister-in-law |
+| stepfather, stepmother, stepson, stepdaughter, other | **related** (generic fallback — no typed inverse) |
 
 ## Viewing Relationships
 
@@ -129,7 +145,7 @@ Relationships appear in user profiles. To view relationships:
 
 1. Go to **People**
 2. Find and open a person's profile
-3. Look for the **Relations** or **Family** section
+3. Look for **Family Relations** (web person detail) or **Family** (mobile My Profile)
 4. You'll see:
    - List of all their relationships
    - Related person's name and email
@@ -148,9 +164,9 @@ Relationships are displayed showing:
 To remove a relationship:
 
 1. Go to the person's profile
-2. Find the **Relations** or **Family** section
+2. Find the **Family Relations** or **Family** section
 3. Find the relationship you want to remove
-4. Click the delete/remove icon or **"Remove Relation"**
+4. Click **Remove**
 5. Confirm the removal
 
 <Info>
@@ -159,11 +175,9 @@ To remove a relationship:
 
 ## Requirements
 
-To add a relationship:
-- Both users must exist in the organization
-- Both users must be in the same organization
-- You must have permission to edit user information
-- You cannot add a relationship to yourself
+**Web:** Owner or Organization Admin only — both people must exist in the same organization; you cannot relate a person to themselves.
+
+**Mobile:** Any user can add relations on **their own** My Profile.
 
 ## Use Cases
 
@@ -202,9 +216,8 @@ User relations are useful for:
 - To change a relationship type, remove the existing relationship first, then add it again with the new type
 
 **Can't find relationship section:**
-- Not all organizations may have this feature enabled
-- Check with your organization owner or admin
-- The feature may be available in person detail views depending on your organization's configuration
+- **Web:** Open the person from **People** → `/org-person-detail/` → **Family Relations**
+- **Mobile:** **More → My Profile → Family** (own relations only; viewing others is read-only under **More → People**)
 
 **Wrong relationship type:**
 - Remove the incorrect relationship

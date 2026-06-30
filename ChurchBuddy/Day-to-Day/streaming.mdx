@@ -1,0 +1,104 @@
+---
+title: 'Live Streaming'
+description: 'Create and manage YouTube live streams for your organization'
+---
+
+# Live Streaming
+
+ChurchBuddy supports live streaming through **YouTube**. Create streams, share public viewer links, and let members watch from the web or mobile app.
+
+<Info>
+Zoom stream **setup** is currently disabled in the UI. Existing Zoom streams may still be viewable. New streams use YouTube.
+</Info>
+
+## Overview
+
+Streaming features:
+
+- **YouTube integration** - Connect your organization's YouTube account
+- **Create streams** - Schedule live streams with title and settings
+- **Public viewer page** - Shareable link for anyone to watch
+- **Live chat** - Viewers can participate in YouTube chat through ChurchBuddy
+- **Viewer tracking** - See who's watching
+
+## Setup
+
+### Connect YouTube
+
+1. Click **Organization** in the top navigation
+2. Click the **Integrations** sub-tab
+3. Find **YouTube** and connect your account
+4. Follow the authorization flow
+
+Once connected, **Streaming** appears in the top navigation for **all roles** when any integration is connected. Creating streams still requires Owner/Admin or stream manager access inside the Streaming page.
+
+See [Integrations](/ChurchBuddy/Setup/integrations) for details.
+
+## Creating a Stream (Web)
+
+1. Click **Streaming** in the top navigation
+2. Click **Create Stream**
+3. Select **YouTube** as the provider
+4. Enter stream title and settings
+5. Create the stream
+
+You'll receive a public viewer URL:
+
+```
+https://church.worshipbuddy.org/s/{slug}/
+```
+
+## Watching Streams
+
+### Web
+
+- Organization members: **Streaming** in the top navigation
+- Public viewers: Use the shared `/s/{slug}/` link (no login required)
+
+### Mobile App
+
+If your organization has streaming enabled:
+
+1. Open the organization
+2. Tap **More → Streaming**
+3. Select a stream to watch
+4. Participate in live chat if enabled
+
+<Info>
+**Streaming** in the mobile More tab only appears when your organization has YouTube connected or active streams available.
+</Info>
+
+## Stream Managers
+
+Owners and Organization Admins can designate **Stream Managers** in integration settings. Stream managers can create and manage streams without full admin access.
+
+## Public Stream Viewer
+
+The public page (`/s/{slug}/`) provides:
+
+- Embedded YouTube player
+- Live chat (when enabled)
+- No login required — share the link freely
+
+## Best Practices
+
+1. **Connect YouTube before event day** - Test the integration in advance
+2. **Share the public link** - Post on social media, announcements, or email
+3. **Assign stream managers** - Delegate to your AV team
+4. **Test on mobile** - Verify the stream plays on phones and tablets
+5. **Monitor chat** - Moderate live chat during the service
+
+## Troubleshooting
+
+**Streaming nav not visible:**
+- YouTube must be connected under **Organization → Integrations** — nav appears for all roles when connected
+
+**Can't create streams:**
+- User must be Owner, Organization Admin, or a designated Stream Manager
+
+**Stream won't play:**
+- Verify the YouTube broadcast is live or scheduled correctly
+- Check YouTube account permissions
+
+**Mobile More tab missing Streaming:**
+- Organization needs an active YouTube connection or existing streams

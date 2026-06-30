@@ -1,0 +1,88 @@
+---
+title: 'Event SignUps'
+description: 'Create volunteer slot and item sign-up sheets for events'
+---
+
+# Event SignUps
+
+SignUps let you create sign-up sheets for volunteer slots, items, meals, or other opportunities within an event. Registrants and members sign up via a public link or while logged in.
+
+<Info>
+**Platform**: Web only for creating and managing sheets. Public sign-up pages work on any device.
+</Info>
+
+## Overview
+
+SignUps support:
+
+- **Volunteer slots** - Time-based or capacity-limited slots
+- **Item/meal sign-ups** - Bring an item, sign up for a meal slot
+- **Public links** - Share via URL, QR code, or embed
+- **Roster management** - View who signed up, export, email roster
+
+## Accessing SignUps
+
+1. Open the **Event Dashboard** for your event
+2. Click the **Logistics** tab
+3. Enable **SignUps** using the logistics toggle (if not already enabled)
+4. Click the **SignUps** sub-section
+
+<Info>
+SignUps must be enabled via the **SignUps** checkbox in the Logistics tab before the sub-section appears. You also need `logistics_signups_view` or admin permissions.
+</Info>
+
+## Creating a Sign-Up Sheet
+
+1. Click **+ New sign-up sheet**
+2. Configure the sheet:
+   - **Title** and description
+   - **Who can sign up** — **Mix — guests for open slots, members for restricted**, **Anyone with the link (no login)**, or **Logged-in members only**
+   - **Slots** - Add time slots or item slots with capacity limits
+3. Save the sheet
+
+## Sharing a Sign-Up Sheet
+
+1. Open the sheet in the SignUps section
+2. Click **Share**
+3. Options:
+   - **Copy link** - Public URL for the sign-up page
+   - **QR code** - For printing or displaying
+   - **Embed code** - For embedding in a website
+
+Public sign-up URL format:
+
+```
+https://church.worshipbuddy.org/signup/?org={org_id}&event={event_id}&sheet={sheet_id}
+```
+
+## Signing Up (Registrant View)
+
+On the public sign-up page, users can:
+
+1. View available slots and capacity
+2. Fill in their details (name, email, etc.)
+3. Claim a slot
+4. Cancel their sign-up (if allowed)
+
+Members logged into ChurchBuddy see their identity pre-filled.
+
+## Managing Roster
+
+From the SignUps section for each sheet:
+
+- **Roster** — Toggle inline roster view
+- **Export** — Download sign-up data as a spreadsheet
+- **Email** — Send the roster to coordinators (requires signups edit permission)
+- **Edit/delete sheet** - Modify or remove the sign-up sheet
+
+## Best Practices
+
+1. **Set clear slot descriptions** - Help people know what they're signing up for
+2. **Set appropriate capacity** - Prevent over-sign-up
+3. **Share early** - Send links with event communications
+4. **Monitor the roster** - Check fill rates and follow up on empty slots
+5. **Use mixed access carefully** - Members-only for internal volunteer roles; mixed for public item drives
+
+<Info>
+SignUps are separate from [Custom Forms](/ChurchBuddy/Setup/forms) (standalone org forms) and [Event Registration](/ChurchBuddy/Events/registration-forms) (main event registration).
+</Info>

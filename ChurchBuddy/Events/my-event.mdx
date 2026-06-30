@@ -1,0 +1,102 @@
+---
+title: 'My Event Portal'
+description: 'Registrant portal for viewing event details, schedule, and housing'
+---
+
+# My Event Portal
+
+The My Event portal lets registrants view their event information, check in, edit their registration, and see housing or transportation assignments.
+
+## Overview
+
+Registrants can:
+
+- View event details and schedule
+- See housing assignments (if applicable)
+- Self check-in with QR code
+- Edit registration (if allowed)
+- Access host contact information
+
+## Accessing My Event
+
+### Web
+
+After registering, registrants receive a confirmation email with a link to their event portal:
+
+```
+https://church.worshipbuddy.org/my-event/?org={org_id}&event={event_id}&registration={registration_id}&email={email}
+```
+
+All four query parameters are **required**. Registrants receive the complete link in their confirmation email.
+
+### Mobile App
+
+If a registrant is logged into the ChurchBuddy app:
+
+1. Open the **Dashboard** (org/event list)
+2. Registered events appear alongside organizations (from `registered_events` on the user account)
+3. Tap the event to open **My Event**
+
+Events whose end date was more than **7 days ago** are hidden from the Dashboard list — use the confirmation email link for older events.
+
+Org membership is **not** required — only that the event appears on the user's registered events list.
+
+Hosts assigned to housing locations can open the **Host Dashboard** from My Event when viewing **their own** registrant tab (not when viewing another household member's registration).
+
+## Portal Features
+
+### Event Information
+
+- Event name, dates, and location
+- Personal registration details
+- Registration status
+
+### Schedule
+
+View the event service schedule once services are added to the event and/or team assignments exist for the registrant. If nothing is ready yet, the portal shows “Schedule will be posted soon.”
+
+### Transportation
+
+When transportation is enabled, view assigned routes, pickup details, and flight info from registration answers.
+
+### Housing
+
+If assigned to a host:
+
+- Host name and contact information
+- Address and room details
+- Check-in status
+
+### Meals
+
+When meals are enabled for the event, view configured meal periods (or “Meal schedule coming soon” if none are set up yet).
+
+### Self Check-In
+
+Registrants with a valid registrant ID can always self check-in — there is no separate enable toggle.
+
+1. Open My Event
+2. Tap **Check In Now** or show your registration QR code
+3. Check-in is recorded on the event dashboard
+
+### Edit Registration
+
+If the event allows editing:
+
+1. Use the edit link from the confirmation email, or
+2. Edit from within My Event (if available)
+
+Changes follow the same rules as the [public registration](/ChurchBuddy/Events/public-registration) edit flow.
+
+## For Event Organizers
+
+Share the My Event link in confirmation emails (automatic) and event communications. Registrants don't need a ChurchBuddy account to use the web portal — the link in their email is sufficient.
+
+Mobile app access requires the registrant to be logged in with the event on their account's registered events list.
+
+## Best Practices
+
+1. **Enable edit responses** if registrants may need to update dietary or travel info
+2. **Test the portal** before opening registration
+3. **Communicate check-in instructions** in confirmation emails
+4. **Verify housing assignments** appear correctly for hosts and guests

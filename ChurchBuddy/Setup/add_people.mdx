@@ -21,9 +21,9 @@ When you add people to your organization:
 **Note**: People can view any service they're scheduled for, regardless of their permissions. This ensures they can always see their assignments.
 </Info>
 
-## Method 1: Import via Excel File
+## Method 1: Import via Excel File (Web Only)
 
-Bulk importing is the fastest way to add multiple people at once.
+Bulk file import is the fastest way to add multiple people at once. This method is available on **web only** — the mobile app supports manual multi-row entry only.
 
 ### Step 1: Download the Template
 
@@ -47,10 +47,10 @@ The template has three columns:
 ### Step 3: Import the File
 
 1. Go to **People** in your organization
-2. Click **"Import People"** or **"Add People"**
-3. Choose **"Import from Excel"** or drag and drop your file
-4. Select your completed Excel file
-5. Click **"Import People"**
+2. Click **Import People**
+3. Drag and drop your file onto **"Drop your CSV or Excel file here"**, or use manual entry in the same modal
+4. Supported formats: **CSV**, **.xlsx**, **.xls**
+5. Click **Import People**
 
 <Warning>
 **Important**: The import process may take a moment. Don't click "Import People" multiple times, even if it seems like nothing is happening. Wait for the import to complete.
@@ -68,14 +68,14 @@ After importing, you should see:
 If you only need to add a few people, or prefer to enter them one at a time:
 
 1. Go to **People** in your organization
-2. Click **"Add Person"** or **"Import People"** → **"Enter Manually"**
-3. Fill in the required information:
+2. Click **Import People**
+3. Click **Enter Manually Instead** in the import modal (web), or open the import modal on mobile
+4. Fill in for each row:
    - **First Name** (required)
    - **Last Name** (required)
    - **Email** (required)
-4. Click **"Add Row"** to add another person
-5. Repeat until all people are entered
-6. Click **"Import People"** or **"Add People"**
+5. Click **Add Row** (web) or **Add Another Person** (mobile) to add another person
+6. Click **Import People** (web) or **Import** (mobile)
 
 <Warning>
 **Important**: The import process may take a moment. Don't click the button multiple times, even if it seems like nothing is happening.
@@ -85,10 +85,9 @@ If you only need to add a few people, or prefer to enter them one at a time:
 
 Once people are added, several things happen automatically:
 
-1. **They're Added to Your Organization** - People are immediately added to your organization's member list with a "pending" status
+1. **They're Added to Your Organization** - People are immediately added to your member list. On web, unactivated invites show a **Pending** badge (`pending_invites`).
    - They appear in your People list right away
-   - They have a "pending" position until they log in for the first time
-   - You can assign them to positions even while they're pending
+   - You can assign them to positions even before they log in
 
 2. **Account Creation** - If they don't have a ChurchBuddy account, one is created automatically
    - Their account is linked to your organization
@@ -131,17 +130,15 @@ Once people are added, several things happen automatically:
 
 ## Assigning Positions
 
-After adding people, you'll want to assign them to positions so they can be scheduled:
+After adding people, assign positions on each person's detail page:
 
-1. Go to **People**
-2. Click on the person you want to assign
-3. In the **"Positions"** section, you'll see all available positions from all teams
-4. Check the boxes next to positions they can serve in
-   - Example: Check "Lead Singer" and "Piano" if they can do both
-5. Click **"Update Person"** to save
+1. Go to **People** and click a person (opens `/org-person-detail/`)
+2. Click **Edit Positions & Teams**
+3. Check positions they can serve in
+4. Save
 
 <Info>
-**Tip**: You can assign multiple positions to one person. This allows them to be scheduled for different roles depending on the service's needs.
+You cannot assign positions from the inline People list card — open the person detail page first.
 </Info>
 
 ## Next Steps

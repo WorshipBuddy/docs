@@ -40,21 +40,20 @@ Owners and Admins can control who has access to create and manage reading plans.
 
 ### Granting Team Access
 
-1. Go to **Settings** → **BibleBuddy** section
-2. In the "Access Control" area, select teams that should have access
-3. All members of selected teams will gain access
-4. Choose the access level (View Only or Edit)
-5. Click **"Save Access Control"** to apply changes
+1. Navigate to `/org-biblebuddy/?org={your_org_id}`
+2. In **Access Control**, select teams
+3. Set the org-wide **View Only** / **Edit** radio (one level for all grants)
+4. Click **Save Access Control**
 
 ### Granting Individual Access
 
-1. Go to **Settings** → **BibleBuddy** section
-2. In the "Access Control" area, select individual users
-3. Choose the access level (View Only or Edit)
-4. Click **"Save Access Control"** to apply changes
+1. Open the BibleBuddy page
+2. Select individual users in **Access Control**
+3. Use the same org-wide access level radio
+4. Click **Save Access Control**
 
 <Info>
-**Tip**: "View Only" allows users to see plans and progress but not create or edit plans. "Edit" allows users to create, modify, and delete reading plans.
+**View Only** / **Edit** is stored org-wide. **+ Create Plan** is hidden from non-admins. **+ Create Custom Plan** is visible to all users with page access and can be saved by any of them today. **Delete** buttons appear for all users with page access. **Edit Plan** shows "coming soon" for everyone — not yet implemented.
 </Info>
 
 ## Creating Reading Plans
@@ -101,16 +100,16 @@ A custom plan lets you choose specific books and chapters to include.
 All created plans appear in the "Organization Reading Plans" section. Each plan card shows:
 
 - **Plan Name**
-- **Start and End Dates**
-- **Reading Frequency** (e.g., "1 time per day")
-- **Organization Progress** - Overall progress bar showing how many chapters have been completed across all members
+- **Duration** or timeline setting and **reading frequency**
+- **Starts:** start date
+- **Organization Progress** — overall completion bar
 
 ## Plan Actions
 
 For each plan, you can:
 
-- **View Details** - See the full reading schedule, dates, and chapters
-- **View Organization Progress** - See individual member progress and overall completion
+- **Plan Details** — See the full reading schedule, dates, and chapters
+- **Org Progress** — See individual member progress and overall completion
 - **Edit Plan** - Modify plan settings (coming soon)
 - **Delete Plan** - Remove the plan (cannot be undone)
 
@@ -131,7 +130,7 @@ The organization progress bar shows:
 
 To see individual progress:
 
-1. Click **"Organization Progress"** on a plan
+1. Click **Org Progress** on a plan
 2. You'll see a list of organization members
 3. For each member, you can see:
    - How many chapters they've completed
@@ -153,9 +152,10 @@ To see individual progress:
 
 ## Troubleshooting
 
-**Can't see BibleBuddy in navigation:**
+**Can't find BibleBuddy:**
+- BibleBuddy is **not in the main org top navigation** on most pages (the nav link is commented out), but the **BibleBuddy page itself** shows a BibleBuddy nav button when you have access
+- Navigate directly to `/org-biblebuddy/?org={your_org_id}` while logged in
 - Check that you're an Owner, Admin, or have been granted individual/team access
-- Ask your organization's Owner or Admin to grant you access
 
 **Plans not appearing in BibleBuddy app:**
 - Make sure the plan has been created successfully
@@ -163,8 +163,9 @@ To see individual progress:
 - Plans may take a few moments to sync to the BibleBuddy app
 
 **Can't create or edit plans:**
-- Check your access level - you may only have "View Only" access
-- Only Owners, Admins, or users with "Edit" access can create/modify plans
+- **+ Create Plan** is Owner/Org Admin only (button hidden for others)
+- **+ Create Custom Plan** is available to all users with page access
+- **Edit Plan** is marked "coming soon" for all roles — not yet implemented
 
 **Progress not updating:**
 - Members must use the BibleBuddy app to track their reading

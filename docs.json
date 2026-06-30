@@ -58,6 +58,7 @@
             "group": "Get Started",
             "pages": [
               "ChurchBuddy/Get Started/introduction",
+              "ChurchBuddy/Get Started/web-vs-app",
               "ChurchBuddy/Get Started/login-account",
               "ChurchBuddy/Get Started/user-organizations"
             ]
@@ -74,7 +75,9 @@
               "ChurchBuddy/Setup/groups",
               "ChurchBuddy/Setup/create_services",
               "ChurchBuddy/Setup/rooms",
+              "ChurchBuddy/Setup/resources",
               "ChurchBuddy/Setup/forms",
+              "ChurchBuddy/Setup/workflows",
               "ChurchBuddy/Setup/sunday-school",
               "ChurchBuddy/Setup/permissions"
             ]
@@ -84,11 +87,14 @@
             "pages": [
               "ChurchBuddy/Events/introduction",
               "ChurchBuddy/Events/creating-events",
+              "ChurchBuddy/Events/event-dashboard",
               "ChurchBuddy/Events/registration-forms",
               "ChurchBuddy/Events/registration-responses",
+              "ChurchBuddy/Events/analytics",
               "ChurchBuddy/Events/event-services",
-              "ChurchBuddy/Events/event-dashboard",
+              "ChurchBuddy/Events/signups",
               "ChurchBuddy/Events/public-registration",
+              "ChurchBuddy/Events/my-event",
               "ChurchBuddy/Events/transportation",
               "ChurchBuddy/Events/driver-dashboard",
               "ChurchBuddy/Events/housing",
@@ -116,6 +122,7 @@
               "ChurchBuddy/Day-to-Day/announcements",
               "ChurchBuddy/Day-to-Day/service-check-in",
               "ChurchBuddy/Day-to-Day/service-station-scanner",
+              "ChurchBuddy/Day-to-Day/streaming",
               "ChurchBuddy/Day-to-Day/timer",
               "ChurchBuddy/Day-to-Day/crowd-meter",
               "ChurchBuddy/Day-to-Day/app"
@@ -125,6 +132,7 @@
             "group": "Settings & Integrations",
             "pages": [
               "ChurchBuddy/Setup/organization-settings",
+              "ChurchBuddy/Setup/integrations",
               "ChurchBuddy/Setup/worshipbuddy-integration",
               "ChurchBuddy/Setup/biblebuddy-integration"
             ]

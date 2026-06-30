@@ -5,108 +5,94 @@ description: 'Edit information, manage permissions, and view detailed profiles'
 
 # Managing People
 
-Once people are added to your organization, you can manage their information, assign them to teams and positions, set permissions, track relationships, and view comprehensive profiles with service participation analytics.
+Once people are added to your organization, you can manage their information, assign them to teams and positions, set permissions, track relationships, and view comprehensive profiles with service participation analytics (web person detail page).
 
 ## Viewing Person Details
 
-To view detailed information about a person:
+**Web (Owner / Organization Admin):**
 
-1. Go to the **People** page
-2. Click on the person's card
-3. A detailed view will show:
-   - Personal information (name, email)
-   - Assigned positions
-   - Team permissions and roles
-   - Relationship information (if any)
+1. Go to **People**
+2. Click a person's card — opens `/org-person-detail/`
+3. Review personal info, positions, team permissions, family relations, and analytics
 
-<Info>
-**Note**: The person detail view is accessible to Owners, Organization Admins, and Team Admins.
-</Info>
+**Web (Team Admin):**
+
+Team Admins see the **People** sub-tab only (not Groups, Forms, or Workflows). They **cannot click** person cards to open detail pages.
+
+**Mobile (Owner / Organization Admin):**
+
+1. Go to **More → People**
+2. Tap a person to open the detail modal
+3. Edit with **Save** when finished
+
+**Mobile (Team Admin):**
+
+Team Admins can open person profiles **read-only** — they cannot add, edit, or import people.
 
 ## Editing a Person
 
-To edit someone's information:
+**Web:**
 
-1. Go to the **People** page
-2. Click on the person you want to edit
-3. Make your changes:
-   - **First Name**
-   - **Last Name**
-   - **Email**
-   - **Assigned Positions**
-   - **Team Permissions**
-4. Click **"Update Person"** to save your changes
+1. Go to **People** and click the person (Owner/Org Admin)
+2. On the detail page, click **Edit Person**
+3. Update profile fields (name, email, phone, address, etc.)
+4. Click **Save Changes**
+
+Use **Edit Positions & Teams** (separate button) for positions, team permissions, and Organization Admin.
+
+**Mobile:**
+
+1. Go to **More → People** and tap the person
+2. Tap **Edit**
+3. Make changes and tap **Save**
 
 ### Updating Positions
 
-1. Open the person for editing
-2. In the **Positions** section, check or uncheck positions
-3. The person will be assigned to checked positions and removed from unchecked positions
-4. Click **"Update Person"** to save
+**Web:** On the person detail page, click **Edit Positions & Teams**, check positions, and save.
+
+Positions cannot be edited from the inline People list card — open the detail page first.
 
 ### Updating Team Permissions
 
-1. Open the person for editing
-2. In the **Team Permissions** section, modify permissions:
-   - Add or remove teams
-   - Change permission levels (Admin, Scheduler, Viewer)
-3. Click **"Update Person"** to save
+1. Open the person for editing (web detail page or mobile edit mode)
+2. In **Team Permissions**, add/remove teams or change levels (None, Viewer, Scheduler, Admin)
+3. Save
 
 <Info>
-**Note**: Only Owners and Organization Admins can modify team permissions. See the Permissions documentation for details on permission levels.
+Only Owners and Organization Admins can modify team permissions. See [Permissions](/ChurchBuddy/Setup/permissions) for details.
 </Info>
 
 ## Removing a Person from the Organization
 
-To remove someone from your organization:
+**Web:** Open the person detail page → **Remove from Organization** → confirm.
 
-1. Go to the **People** page
-2. Open the person you want to remove
-3. Click the **"Remove from Organization"** or **"Delete"** button
-4. Confirm the removal
+**Mobile:** Open the person → **Edit** → **Delete** → confirm.
 
 <Warning>
-**Warning**: Removing someone from the organization will:
-- Remove all their assignments from services
-- Remove their team permissions
-- Remove them from all groups
-- They will need to be re-invited to join again
-
-Make sure you want to permanently remove them before confirming.
+Removing someone will drop their service assignments, team permissions, and group memberships. They must be re-added to join again.
 </Warning>
 
 ## Viewing Assignments
 
-In the person detail view, you can see:
-- Which positions they're assigned to
-- Which teams they're part of
-- What permissions they have on each team
-- Their role (Owner, Admin, Team Admin, Scheduler, or Member)
+In the person detail view you can see positions, teams, permissions, and role (Owner, Admin, Team Admin, Scheduler, or Member).
 
 ## User Roles
 
-Each person has a role that determines their access level:
+- **Owner** — Full access (one per organization)
+- **Organization Admin** — Almost full access (cannot transfer ownership)
+- **Team Admin** — Manage specific teams
+- **Scheduler** — Schedule people for their teams
+- **Member** — Basic access; view own schedule
 
-- **Owner** - Full access to the organization (only one per organization)
-- **Organization Admin** - Almost full access (can't transfer ownership)
-- **Team Admin** - Can manage specific teams
-- **Scheduler** - Can schedule people for their teams
-- **Member** - Basic access, can view their own schedule
-
-See the Permissions documentation for detailed information about each role.
+See [Permissions](/ChurchBuddy/Setup/permissions) for details.
 
 ## Relationship Tracking
 
-ChurchBuddy can track relationships between people (family members, etc.). This feature may be available in the person detail view depending on your organization's configuration.
+Family relations are managed on each person's detail page (web) or in **My Profile** (mobile, own relations only). See [User Relations](/ChurchBuddy/Setup/user-relations).
 
 ## Best Practices
 
-1. **Keep information current** - Update email addresses and names if they change
-2. **Review permissions regularly** - Ensure people have appropriate access levels
-3. **Verify positions** - Check that people are assigned to correct positions
-4. **Communicate changes** - Notify people when you change their permissions or remove them
-
-
-
-
-
+1. **Keep information current** — Update email addresses and names when they change
+2. **Review permissions regularly** — Ensure appropriate access levels
+3. **Verify positions** — Confirm people are assigned to correct positions
+4. **Communicate changes** — Notify people when permissions change or they are removed

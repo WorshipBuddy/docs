@@ -76,13 +76,16 @@ Each person has a universal QR code that:
 
 ### Getting Your QR Code
 
-To get your QR code:
+**Web:** There is no QR display on the web person profile page. Use the mobile app QR for scanning.
 
-1. Open the ChurchBuddy mobile app
-2. Go to your **Profile** or **Settings**
-3. Find **"My QR Code"** or **"Check-In QR Code"**
-4. Your QR code will be displayed
-5. The code automatically refreshes every minute
+**Mobile app:**
+1. From the **Dashboard** (org list), tap **Settings** (⚙️ top right)
+2. Tap your **avatar/initials** to open your QR code
+3. The code refreshes automatically every **60 seconds** (expires after 2 minutes)
+
+<Info>
+The QR code is under **Dashboard → Settings**, not under the org header gear (which opens My Profile).
+</Info>
 
 <Info>
 **Tip**: You can take a screenshot of your QR code, but remember it expires after 2 minutes. It's best to use the live QR code from the app.
@@ -197,7 +200,7 @@ Manual check-in lets you search for and check in people by name or email.
 
 - **Search by Name** - Search first name, last name, or full name
 - **Search by Email** - Search by email address
-- **Quick Results** - See up to 20 matching results
+- **Quick Results** - See up to **10** matching results
 - **Direct Check-In** - Tap to check in immediately
 
 <Info>
@@ -231,15 +234,12 @@ Each check-in record includes:
 
 ## Check-In Permissions
 
-To check people into services, you typically need:
+Who can check people in depends on organization **People → Check-in** settings:
 
-- **Owner** or **Organization Admin** - Can check in anyone
-- **Team Admin** or **Scheduler** - May have check-in permissions for their teams
-- **Service-Specific Permissions** - Some organizations allow specific people to check in for specific services
+- **Owner / Organization Admin** — always allowed (all methods)
+- **Everyone else** — only if listed in the QR, Matrix, or Manual allowlists (by individual email or team)
 
-<Info>
-**Note**: Check-in permissions are configured at the organization level. Contact your organization admin if you need check-in access.
-</Info>
+Team Admin or Scheduler role alone does **not** grant check-in access unless explicitly allowlisted.
 
 ## Check-In Stations
 
@@ -251,11 +251,13 @@ Some organizations use check-in stations (like kiosks or dedicated devices). Whe
 
 ### Setting Up Check-In Stations
 
-Check-in stations are configured in organization settings. Each station has:
+Check-in stations are configured under **People → Check-in**, not Organization settings. Each station has:
 
-- **Station ID** - Unique identifier
+- **Station ID** - Used in the scanner URL (`?org=&station=`)
 - **Station Name** - Display name
 - **Location** - Where the station is located (optional)
+
+See [Service Station Scanner](/ChurchBuddy/Day-to-Day/service-station-scanner) for the scanner URL and flow.
 
 ## Best Practices
 

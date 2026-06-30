@@ -7,138 +7,121 @@ description: 'Set up and manage Sunday School classes, teachers, parents, and st
 
 The Sunday School module helps you manage children's ministry programs with dedicated portals for administrators, teachers, and parents.
 
+<Info>
+**Web**: Full Sunday School setup and all portals (Admin, Teacher, Parent).
+**Mobile**: Sunday School shows **"Coming Soon"** in the More tab — use the web app for Sunday School access.
+</Info>
+
 ## Overview
 
 Sunday School provides:
 
 - **Class Management** - Organize students into grade-based classes
 - **Teacher Assignment** - Assign teachers to specific classes
-- **Parent Access** - Let parents view their children's classes and progress
+- **Parent Access** - Parents view their children's classes and progress
 - **Curriculum Tracking** - Manage lessons and curriculum for each class
 - **Attendance** - Track student attendance per class
 
 ## Enabling Sunday School
 
-To enable Sunday School for your organization:
+1. Click **Organization** in the top navigation
+2. Click the **Sunday School** sub-tab
+3. Toggle **Enable Sunday School Features** on
+4. Assign **Sunday School Admins** (optional)
+5. Copy the portal link to share with admins/teachers/parents
 
-1. Navigate to the **Organizations** section
-2. Click the **"Sunday School"** sub-tab
-3. Toggle **Enable Sunday School** to on
-4. Configure your grades/classes
-5. Assign administrators
+Configure grades and classes in the **Admin Portal** (`/sunschool/admin/`) — not on the Organization → Sunday School settings tab.
 
 <Info>
-**Note**: Only Owners and Organization Admins can enable and configure Sunday School.
+Only Owners and Organization Admins can enable and configure Sunday School.
 </Info>
 
 ## User Portals
 
-Sunday School has three user portals, each with different access levels:
+Access portals at `/sunschool/?org={org_id}` or via the portal selector after enabling Sunday School.
 
-### Admin Portal
-
-The Admin Portal provides full control over Sunday School:
+### Admin Portal (`/sunschool/admin/`)
 
 - Manage all grades and classes
 - Add/remove students from classes
-- Assign teachers to classes
-- View all attendance records
-- Manage curriculum across all classes
-- Configure Sunday School settings
+- Assign teachers
+- View attendance records
+- Manage curriculum
 
-**Access**: Users listed as Sunday School administrators
+**Access**: Users listed as **Sunday School Admins** in Organization → Sunday School settings (not automatic for Owner/Org Admin unless added)
 
-### Teacher Portal
+### Teacher Portal (`/sunschool/teacher/`)
 
-Teachers can manage their assigned classes:
-
-- View students in their classes
-- Take attendance
+- View students in assigned classes
+- Take attendance on the class dashboard
 - Access curriculum and lesson plans
-- Communicate with parents
 - Track student progress
 
-**Access**: Users assigned as teachers to one or more classes
+**Access**: Users assigned as teachers to one or more classes (not granted automatically by Owner/Org Admin role)
 
-### Parent Portal
-
-Parents can view information about their children:
+### Parent Portal (`/sunschool/parent/`)
 
 - See which classes their children are in
 - View upcoming lessons
 - Check attendance records
-- Access any materials shared by teachers
 
-**Access**: Users with family relations to students in Sunday School
+**Access**: Users with family relations to enrolled students (not granted by teacher assignment)
+
+### Student Portal
+
+<Warning>
+The **Student Portal** is currently **disabled** in the portal selector. The route exists but shows a placeholder. Use Admin, Teacher, or Parent portals instead.
+</Warning>
 
 ## Setting Up Classes
 
-### Creating Grades/Classes
+### Creating Classes
 
-1. Go to **Sunday School** → **Admin Portal**
-2. Click **Add Grade** or **Add Class**
-3. Enter the class details:
-   - **Name** (e.g., "Kindergarten", "1st Grade", "Youth")
-   - **Description** (optional)
-   - **Age Range** (optional)
-4. Click **Save**
+1. Go to **Sunday School → Admin Portal**
+2. Click **+ Add Class**
+3. Enter name, description, and optional age range
+4. Save
 
-### Adding Students to Classes
+### Adding Students
 
-1. Open the class you want to manage
-2. Click **Add Students**
-3. Select students from your organization's people list
-4. Click **Add Selected**
+1. Open the class
+2. Click **+ Add Student**
+3. Select a student from the picker
+4. Click **Add** for each student (one at a time)
 
 <Info>
-**Tip**: Students must first be added as people in your organization before they can be enrolled in Sunday School classes.
+Students must first exist as people in your organization before enrolling in Sunday School.
 </Info>
 
 ### Assigning Teachers
 
 1. Open the class
-2. Click **Manage Teachers**
-3. Select users to assign as teachers
-4. Click **Save**
-
-Teachers will then have access to the Teacher Portal for that class.
+2. Go to the **Teacher** sub-tab
+3. Click **+ Add Teacher**
+4. Select teachers and save
 
 ## Taking Attendance
 
-Teachers can take attendance for their classes:
-
 1. Go to **Teacher Portal**
 2. Select the class
-3. Click **Take Attendance**
-4. Mark each student as present, absent, or late
-5. Click **Save Attendance**
+3. Open the **Attendance** sub-tab
+4. Mark each student **On Time**, **Late**, or **Absent**
+5. Save
 
-## Accessing Sunday School
+## Portal Access Summary
 
-Users access Sunday School through the portal selector:
+| Portal | How access is granted |
+|--------|----------------------|
+| **Admin** | Listed in **Sunday School Admins** (Organization → Sunday School) |
+| **Teacher** | Assigned as teacher to a class |
+| **Parent** | Family relation to an enrolled student |
+| **Student** | Disabled in portal selector |
 
-1. From your organization, click **Sunday School** in the navigation
-2. The portal selector shows which portals you have access to
-3. Click on your portal to enter
-
-<Info>
-**Note**: If a user only has access to one portal, they'll be automatically redirected to it.
-</Info>
-
-## Permissions
-
-| Role | Admin Portal | Teacher Portal | Parent Portal |
-|------|-------------|----------------|---------------|
-| Sunday School Admin | ✓ | ✓ | ✓ |
-| Assigned Teacher | ✗ | ✓ (own classes) | ✓ |
-| Parent | ✗ | ✗ | ✓ |
-| Organization Admin | ✓ | ✓ | ✓ |
-| Owner | ✓ | ✓ | ✓ |
+Owner and Organization Admin can **enable** Sunday School and **add SS admins**, but they do not automatically receive Teacher or Parent portal access unless they meet the criteria above.
 
 ## Best Practices
 
-1. **Organize by age** - Create classes that match your ministry's age groups
+1. **Organize by age** - Match your ministry's age groups
 2. **Assign multiple teachers** - Have backup teachers for each class
-3. **Keep rosters updated** - Regularly review and update class rosters
-4. **Communicate with parents** - Use the parent portal to share updates
-5. **Track attendance consistently** - Take attendance every session for accurate records
+3. **Keep rosters updated** - Review class rosters regularly
+4. **Track attendance consistently** - Take attendance every session

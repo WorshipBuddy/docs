@@ -1,21 +1,27 @@
 ---
 title: 'Viewing Services'
-description: 'Switch between card view and calendar view to see services your way'
+description: 'Use the Calendar and Services sub-tabs to view services on web and mobile'
 ---
 
 # Viewing Services
 
-The Services sub-tab (in the Calendar section) offers flexible viewing options so you can see your services in the format that works best for your workflow. Switch between Card View for detailed information or Calendar View for chronological context.
+On the web app, services appear in two places under **Calendar** in the top navigation:
 
-## Card View
+- **Calendar sub-tab** — Month, Week, or Day calendar views
+- **Services sub-tab** — Card grid of all services
 
-Card View displays services as individual cards in a grid layout. This is great for:
+There is no single toggle that switches between "Card View" and "Calendar View" on the Services sub-tab. Those are separate sub-tabs.
 
-- Quickly seeing service details
-- Comparing multiple services side-by-side
-- Easy access to service actions
+<Info>
+**Who can see which sub-tabs** depends on your role:
+- **Owner / Org Admin** — Calendar, Services, Events, Rooms, Resources
+- **Team Admin / Scheduler** — Calendar and Services only
+- **Member / Viewer** — Calendar only (Services sub-tab is hidden)
+</Info>
 
-### Card View Features
+## Services Sub-Tab (Card Grid)
+
+The **Services** sub-tab displays services as cards in a grid layout.
 
 Each service card shows:
 - **Service Name**
@@ -25,28 +31,28 @@ Each service card shows:
 - **Status indicators** (upcoming, past, next upcoming)
 
 Cards are organized:
-- **Upcoming services** at the top
-- **Past services** (dimmed) at the bottom
-- The **next upcoming service** is highlighted with a green border
+- A **featured row** of the next 3 upcoming services at the top; the **nearest** one has a green border
+- **Past services** (dimmed) in the main grid, followed by remaining upcoming services
 
-### Switching to Card View
+### Accessing the Services Sub-Tab
 
-1. Navigate to the **Calendar** section
-2. Click the **"Services"** sub-tab
-3. Click the **"Card View"** button in the view toggle area
-4. Services will display as cards
+1. Click **Calendar** in the top navigation
+2. Click the **Services** sub-tab
+3. Services display as cards automatically — no view toggle required
 
-## Calendar View
+From here you can also use action buttons such as **Schedule Team Members**, **Auto Schedule**, and (on the Calendar sub-tab only) **Export Schedule**.
 
-Calendar View shows services on a traditional calendar. This is great for:
+## Calendar Sub-Tab (Month / Week / Day)
 
-- Seeing services in chronological order
+The **Calendar** sub-tab shows services on a traditional calendar. This is useful for:
+
+- Seeing services in chronological context
 - Understanding service frequency
-- Visualizing service patterns over time
+- Visualizing patterns over time
 
 ### Calendar View Options
 
-You can view the calendar in three different timeframes:
+You can view the calendar in three timeframes:
 
 #### Month View
 - Shows an entire month at a time
@@ -65,49 +71,54 @@ You can view the calendar in three different timeframes:
 
 ### Calendar Navigation
 
-In calendar view, you can:
+In the Calendar sub-tab, you can:
 - Use **← Prev** and **Next →** buttons to navigate
-- Click **"Today"** to jump to the current date
-- Switch between Month, Week, and Day views using the view buttons
+- Click **Today** to jump to the current date
+- Switch between **Month**, **Week**, and **Day** using the view buttons at the top
 
-### Switching to Calendar View
+### Accessing the Calendar Sub-Tab
 
-1. Navigate to the **Calendar** section
-2. Click the **"Services"** sub-tab
-3. Click the **"Calendar View"** button in the view toggle area
-4. Select your preferred timeframe (Month, Week, or Day)
-5. Services will display on the calendar
+1. Click **Calendar** in the top navigation
+2. Click the **Calendar** sub-tab (this is the default when you open Calendar)
+3. Select **Month**, **Week**, or **Day** as needed
+
+<Info>
+**Export Schedule** appears on the **Calendar** sub-tab only, not on the Services sub-tab.
+</Info>
 
 ## Service Status Indicators
 
-Both views show service status:
+Both sub-tabs show service status:
 
-- **Upcoming Services** - Normal display, highlighted if it's the next upcoming service
-- **Past Services** - Dimmed/faded to show they've already occurred
-- **Next Upcoming Service** - Highlighted with a green border in card view
+- **Upcoming Services** — Normal display; featured row shows next 3 upcoming, nearest with green border
+- **Past Services** — Dimmed/faded to show they've already occurred
 
 ## Interacting with Services
 
-In both views, you can:
+From the **Services** sub-tab (Owner / Org Admin):
+- **Click a service card** to open the service detail page
 
-- **Click a service** to view/edit details (if you have permission)
-- **See service details** (name, time, location, teams)
-- **Access service actions** (edit, delete, schedule, etc.)
+From the **Calendar** sub-tab:
+- **Click a service** to switch to Services tab and scroll/highlight that card (does not open detail page directly)
+
+Team Admins and Schedulers use **Schedule Team Members** for assignments; service cards may not be clickable for them.
+
+## Mobile App
+
+On the ChurchBuddy mobile app, services are viewed from the **Calendar** tab:
+
+1. Tap a date to see services and events for that day
+2. Tap a service to view details, availability, or check-in options (based on your permissions)
+
+See the [Mobile App documentation](/ChurchBuddy/Day-to-Day/app) for mobile-specific navigation.
 
 ## Choosing the Right View
 
-Use **Card View** when:
-- You want to see detailed information about specific services
-- You're managing a small number of services
-- You prefer a list-like format
+Use the **Services sub-tab** when:
+- You want a list-like card grid of all services
+- You're scheduling, auto-scheduling, or managing services in bulk
 
-Use **Calendar View** when:
-- You want to see services in chronological context
+Use the **Calendar sub-tab** when:
+- You want to see services in chronological calendar context
 - You're planning over longer time periods
-- You prefer a traditional calendar layout
-- You want to see service frequency patterns
-
-
-
-
-
+- You need to export the schedule

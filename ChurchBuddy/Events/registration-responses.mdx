@@ -5,107 +5,57 @@ description: 'Viewing, managing, and exporting event registration responses'
 
 # Registration Responses
 
-Once people start registering for your event, you can view, manage, and export their responses through the Registration Responses tab.
+View, manage, and export registration responses from the Event Dashboard.
 
 ## Viewing Responses
 
-To view registration responses:
+1. Open the **Event Dashboard** for your event
+2. Click the **Registration** tab
+3. Open the **Registrations** section
 
-1. Open your event
-2. Click the **"Registration Responses"** tab
-3. You'll see a list of all registrations
+You'll see a list with **Submitted**, **Registrants**, **Services**, and **Actions** by default. Use **Columns** to show **Name** and **Email**.
 
 ## Response Information
 
-For each registration, you'll see:
+For each registration:
 
-- **Registrant Information** - Name, email, and contact details
-- **Responses** - Answers to all registration form questions
-- **Registration Date** - When they registered
-- **Edit Link** - Link to allow the registrant to edit their response (if editing is enabled)
+- **Registrant Information** — Name, email, contact details
+- **Responses** — Answers to all form questions
+- **Registration Date** — When they registered
+
+Registrants receive an edit link in their confirmation email when **Allow editing responses** is enabled.
 
 ## Editing Responses
 
-If you've enabled "Allow editing responses" in your registration form settings:
+**Registrants:** Use the edit link in their confirmation email to update answers or remove individual party members (when multiple registrations are allowed).
 
-1. Registrants receive a confirmation email with an edit link
-2. They can click the link to update their information
-3. They can also cancel their registration through the edit link
+**Owners / Organization Admins:** Click **Edit** in the Actions column — opens `/event-response/`.
 
-<Info>
-**Note**: You (as an admin) can also view responses but cannot edit them directly. Registrants must use their edit link to make changes.
-</Info>
+Users with granular `registration_edit` can edit the **Form Builder** but do not get the per-row **Edit** button on the registrations list.
+
+See also the [My Event portal](/ChurchBuddy/Events/my-event).
 
 ## Exporting Responses
 
-You can export all registration responses to a CSV file:
-
-1. Go to the **Registration Responses** tab
-2. Click **"Export to CSV"** or similar export button
-3. The CSV file will download with:
-   - Each question as a separate column
-   - Each registration as a row
-   - All response data included
+1. Open **Event Dashboard → Registration → Registrations**
+2. Click **Export CSV**
+3. The file downloads with each question as a column and each registration as a row
 
 <Info>
-**Tip**: CSV export is great for:
-- Creating mailing lists
-- Analyzing registration data
-- Importing into other systems (email marketing, spreadsheet analysis, etc.)
-- Sharing registration lists with team members
-</Info>
-
-## Filtering and Searching
-
-You can filter or search responses by:
-
-- **Name** - Find specific registrants
-- **Email** - Search by email address
-- **Question responses** - Filter by answers to specific questions
-- **Registration date** - Find registrations within a date range
-
-<Info>
-**Note**: Filtering options may vary depending on your event's registration form configuration.
+Use the **Columns** toggle to show or hide table columns. There is no search/filter bar in the registrations list today.
 </Info>
 
 ## Anonymous Submissions
 
-If you've enabled anonymous submissions:
-
-- Some registrations may not include name/email
-- These appear in your response list but with limited identifying information
-- You can still see their question responses
-
-<Warning>
-**Privacy Note**: Be careful when sharing exported CSV files. They contain personal information that should be handled according to your organization's privacy policy.
-</Warning>
+If anonymous submissions are enabled, registrants may hide their identity from **other registrants** — organizers still see name and email in the dashboard list and CSV export.
 
 ## Registration Statistics
 
-You may see statistics such as:
-
-- Total number of registrations
-- Registration trends over time
-- Response counts for specific questions
-- Other summary information
-
-## Managing Multiple Registrations
-
-If "Allow multiple registrations" is enabled:
-
-- People can register multiple times (for registering family members, etc.)
-- Each registration appears as a separate entry
-- You can see which registrations are from the same person (by email)
+The **Analytics** tab shows registration trends and summary statistics. See [Event Analytics](/ChurchBuddy/Events/analytics).
 
 ## Best Practices
 
-1. **Export regularly** - Create backups of your registration data
-2. **Review responses** - Check for any issues or incomplete information
-3. **Communicate with registrants** - Use exported emails to send event updates
-4. **Respect privacy** - Handle personal information according to your privacy policy
-5. **Verify information** - Check that critical information (dietary needs, transportation, etc.) is accurate
-
-
-
-
-
+1. **Export regularly** — Back up registration data
+2. **Review responses** — Check for incomplete or incorrect information
+3. **Communicate with registrants** — Use exported emails for event updates
+4. **Respect privacy** — Handle personal information appropriately

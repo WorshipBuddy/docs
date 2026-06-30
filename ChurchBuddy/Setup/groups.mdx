@@ -12,7 +12,7 @@ Groups allow you to organize people in your organization for targeted communicat
 Groups in ChurchBuddy help you:
 
 - **Organize Members** - Group people by role, team, age, or other criteria
-- **Targeted Communication** - Send emails to specific groups
+- **Push notifications** - Send mobile push to group members
 - **Automatic Management** - Use rules to automatically include/exclude people
 - **Flexible Organization** - Combine manual selection with automatic rules
 
@@ -40,15 +40,20 @@ Automatic groups use rules to dynamically determine membership. People are autom
 
 To create a new group:
 
-1. Go to **People** → **Groups** (or access Groups from your organization menu)
-2. Click **"Create Group"**
-3. Enter a **Group Name** (required)
-4. Optionally add a **Description**
-5. Choose **Group Type**:
+1. Click **People** in the top navigation
+2. Click the **Groups** sub-tab
+3. Click **Create Group**
+4. Enter a **Group Name** (required)
+5. Optionally add a **Description**
+6. Choose **Group Type**:
    - **Manual Group** - Select people and teams manually
    - **Automatic Group** - Use rules to determine membership
-6. Configure the group based on type (see sections below)
-7. Click **"Create"**
+7. Configure the group based on type (see sections below)
+8. Click **Create Group** (web) or **Create** (mobile)
+
+<Info>
+Groups is not in the top navigation bar. Access it via **People → Groups**. On mobile: **More → Groups** (Owner/Admin only).
+</Info>
 
 ## Manual Groups
 
@@ -68,7 +73,7 @@ For manual groups, you can add members in two ways:
 3. If someone is on multiple selected teams, they'll only appear once in the group
 
 <Info>
-**Note**: When you add a team to a group, all current members of that team are included. If someone joins or leaves the team later, you'll need to manually update the group membership.
+**Note**: When you add a team to a manual group, all current team members are included. Team-linked membership **updates automatically** when team permissions change — only individually selected users in **User Emails** are static until you edit the group.
 </Info>
 
 ### Editing Manual Groups
@@ -78,7 +83,7 @@ To add or remove members from a manual group:
 1. Open the group
 2. Click **"Edit"**
 3. Check or uncheck users/teams as needed
-4. Click **"Save"**
+4. Click **Update Group** (web) or **Save** (mobile)
 
 ## Automatic Groups
 
@@ -101,7 +106,7 @@ You can create rules based on:
 - **Marital Status** - Single, Married, Divorced, Widowed
 - **Position** - Positions the person holds
 - **Team** - Teams the person is part of
-- **Org Admin** - Whether the person is an organization admin
+- **Organization Admin** — Whether the person is an organization admin
 
 ### Operators by Field
 
@@ -180,28 +185,9 @@ To modify an automatic group:
 1. Open the group
 2. Click **"Edit"**
 3. Add, modify, or remove rules
-4. Click **"Save"**
+4. Click **Update Group** (web) or **Save** (mobile)
 
 The group membership will automatically update based on the new rules.
-
-## Group Admins
-
-You can assign group admins who can manage the group. Group admins can:
-
-- Edit group details
-- Add/remove members (for manual groups)
-- Modify rules (for automatic groups)
-- Delete the group
-
-### Assigning Group Admins
-
-1. When creating or editing a group, find the **"Group Admins"** section
-2. Select users by email to make them group admins
-3. Save the group
-
-<Info>
-**Note**: Group admins don't need to be Organization Admins or Team Admins. They only have permissions for the specific group they're assigned to.
-</Info>
 
 ## Viewing Groups
 
@@ -254,18 +240,9 @@ Click on any group to see:
 
 ## Editing Groups
 
-To edit a group:
+**Web:** Click the **Edit** icon on the group card. Modify name, description, type, members, or rules → **Update Group**.
 
-1. Open the group
-2. Click **"Edit"**
-3. Modify:
-   - Name
-   - Description
-   - Group type (can switch between manual and automatic)
-   - Members (for manual groups)
-   - Rules (for automatic groups)
-   - Group admins
-4. Click **"Save"**
+**Mobile:** Open the group → tap the **Edit** icon in the detail modal header → **Save**.
 
 <Warning>
 **Note**: Switching a group from automatic to manual (or vice versa) will clear the previous configuration. Make sure to note your rules or members before switching.
@@ -273,25 +250,38 @@ To edit a group:
 
 ## Deleting Groups
 
-To delete a group:
+**Web:** Click the **Delete** icon on the group card → confirm.
 
-1. Open the group
-2. Click **"Delete"**
-3. Confirm deletion
+**Mobile:** Open the group → tap the **Delete** icon → confirm.
 
 <Warning>
 **Warning**: Deleting a group cannot be undone. All group data, including rules and member lists, will be permanently removed.
 </Warning>
+
+## Push Notifications
+
+Send push notifications to group members:
+
+**Web:**
+1. Go to **People → Groups**
+2. Click the **Push Notifications** tab (not inside an individual group)
+3. Select one or more groups, enter your message, and send
+
+**Mobile:**
+1. Go to **More → Groups** (Owner/Admin)
+2. Tap the **notification FAB** on the groups list
+3. Select one or more groups, enter title and message, and send
+
+Members receive the notification on their mobile devices if they have the ChurchBuddy app installed and notifications enabled.
 
 ## Permissions
 
 To create, edit, or delete groups, you must be:
 
 - **Owner** of the organization, OR
-- **Organization Admin**, OR
-- **Group Admin** (for the specific group)
+- **Organization Admin**
 
-Regular members can view groups they're part of but cannot modify them.
+There is no separate Group Admin role in the current UI. Regular members and Team Admins do not have a Groups sub-tab.
 
 ## Troubleshooting
 
@@ -302,11 +292,11 @@ Regular members can view groups they're part of but cannot modify them.
 
 **Manual group missing team members:**
 - Team membership in groups is based on current team membership
-- If someone joins a team after the group was created, you may need to refresh or re-add the team
+- If the member list looks stale, refresh the page — new team members are included automatically
 
 **Can't see Groups option:**
-- Check your permissions - you need Owner, Org Admin, or Group Admin access
-- Groups may be accessed from the People page or organization settings
+- You need **Owner** or **Organization Admin** permissions
+- Access via **People → Groups** (web) or **More → Groups** (mobile)
 
 **Group membership not updating:**
 - For automatic groups, membership is calculated when you view the group

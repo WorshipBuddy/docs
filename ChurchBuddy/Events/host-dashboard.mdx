@@ -5,7 +5,7 @@ description: 'Dashboard for housing hosts to view their assigned guests and acco
 
 # Host Dashboard
 
-The Host Dashboard gives housing hosts a dedicated view of their assigned guests, including guest details, check-in status, and stay dates.
+The Host Dashboard gives housing hosts a dedicated view of their assigned guests, including guest details, arrival status, and stay dates.
 
 ## Overview
 
@@ -13,90 +13,90 @@ The Host Dashboard shows hosts:
 
 - **Assigned Guests** - All guests staying at their location
 - **Guest Details** - Names, contact info, and special needs
-- **Check-in Status** - Whether guests have checked in
+- **Arrival Status** - Whether guests have been marked arrived at the host location
 - **Stay Dates** - Arrival and departure dates
-- **Capacity** - How many guests vs. available space
+
+<Info>
+**Arrival status** is housing-specific — hosts mark when a guest **arrives at their home**, not general event QR check-in.
+</Info>
 
 ## Accessing the Host Dashboard
 
-Hosts access their dashboard via a direct link:
+### Web (hosts)
+
+Organizers email hosts a link to the **public host dashboard**:
 
 ```
-/host-dashboard/?org=YOUR_ORG_ID&event=EVENT_ID
+/public-host-dashboard/?org={org_id}&event={event_id}&location={location_id}&host_token={token}
 ```
 
-Or through the event's housing section when logged in.
+The `host_token` is required for **Mark Arrived** actions. Links are minted when organizers send host dashboard emails from the event housing section.
+
+<Warning>
+`/host-dashboard/?org=…&event=…&location=…` is the **logged-in admin/internal** view. It does not include **Mark Arrived** — that action lives on the public host dashboard with a valid `host_token`.
+</Warning>
+
+### Web (from My Event)
+
+When a logged-in user is the host for a housing location, **My Event** can mint a token and redirect to `/public-host-dashboard/` with `host_token`.
+
+### Mobile App
+
+Hosts open the Host Dashboard from **My Event** when they are assigned as a housing host for **their own** registrant tab.
 
 ## Dashboard Features
 
 ### Summary Statistics
 
-At the top, hosts see:
+- **Total Guests** — Assigned to this location
+- **Checked In** — Guests marked **arrived** at the host location
+- **Capacity** / **Current Occupancy** — Location limits and usage
 
-- **Total Guests** - Number of guests assigned
-- **Checked In** - How many have arrived
-- **Expected** - How many are still expected
+Guest cards show **Pending Check-in** or **✓ Checked In** (not a separate "Expected" summary stat).
 
 ### Guest Cards
 
 Each guest displays:
 
-- **Name** - Guest's full name
-- **Check-in Status** - Badge showing checked in or not
-- **Stay Dates** - When they arrive and depart
-- **Contact Info** - Phone number or email
-- **Dietary Restrictions** - Any food allergies or requirements
-- **Special Needs** - Accessibility or other requirements
-- **Notes** - Any additional information
+- **Name**
+- **Arrival status** - Marked arrived or expected
+- **Stay Dates** - Arrival and departure
+- **Contact Info** - Phone or email
+- **Dietary Restrictions** and **Special Needs**
+- **Notes**
 
-## Using the Dashboard
+### Mark Arrived
 
-### Before Guests Arrive
+**Web (public host dashboard):** Tap **Mark Arrived** next to each guest (requires `host_token` in the URL).
 
-1. Review your assigned guest list
-2. Note any dietary restrictions or special needs
-3. Check arrival dates and times
-4. Prepare accommodations accordingly
+**Mobile:** Tap **Mark Arrived** on each guest card in the Host Dashboard screen.
 
-### When Guests Check In
+## Notifying Guests (Mobile)
 
-The dashboard updates to show check-in status:
+Hosts can send **push notifications** to all guests assigned to their home:
 
-- **Green badge** - Guest has checked in to the event
-- **Yellow badge** - Guest hasn't checked in yet
+1. Open the Host Dashboard (mobile)
+2. Tap **Send Notification**
+3. Type your message (title is set automatically as "Message from your host")
+4. Send
+
+Guests receive a push notification on the ChurchBuddy mobile app if they have notifications enabled.
 
 <Info>
-**Note**: Check-in status reflects event check-in, not arrival at your home. Guests check in through the event's main check-in process.
+Push messaging to guests is a **mobile app** feature. Web public host dashboard supports viewing guests and **Mark Arrived**.
 </Info>
 
-### Guest Information Details
+## For Event Organizers
 
-Click on a guest card to see full details:
-
-- Complete contact information
-- All dietary restrictions and allergies
-- Special accommodation needs
-- Notes from event organizers
-- Emergency contact (if provided)
-
-## Print View
-
-Print your guest list for reference:
-
-1. The dashboard is print-optimized
-2. Use browser print function
-3. Get a clean list of all guest information
-
-## Communicating with Guests
-
-- Tap phone numbers to call directly
-- Tap email addresses to compose messages
-- Share your contact info through the event
+1. Assign guests to housing locations with a host email
+2. Click **Email Dashboard to Host** in the housing section to send the public link with `host_token`
+3. Share arrival instructions before the event
 
 ## Best Practices
 
-1. **Review early** - Check your guest list before they arrive
-2. **Accommodate needs** - Pay attention to dietary and special needs
-3. **Be available** - Guests may need to contact you
-4. **Coordinate arrivals** - Know when guests are expected
-5. **Prepare spaces** - Have accommodations ready based on guest count
+1. **Send the public link** — not the internal `/host-dashboard/` URL
+2. **Include all URL parameters** — org, event, location, and host_token
+3. **Review guest details** — Check dietary restrictions before guests arrive
+4. **Use mobile push for updates** — Send arrival instructions or schedule changes
+
+See also [Housing Management](/ChurchBuddy/Events/housing).

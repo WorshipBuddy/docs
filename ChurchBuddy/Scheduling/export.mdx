@@ -5,92 +5,60 @@ description: 'Export schedules to Word or Excel for sharing, printing, and backu
 
 # Exporting Schedules
 
-ChurchBuddy allows you to export your schedules to multiple formats, making it easy to share schedules with your team, print them for physical distribution, or create backups. You can export to Word documents (.docx) or Excel spreadsheets (.xlsx).
+ChurchBuddy allows you to export schedules to Word (.docx) or Excel (.xlsx) for sharing, printing, or backup.
 
 ## Accessing Export
 
-1. Navigate to the **Calendar** section
-2. Click the **"Services"** sub-tab
-3. Click the **"Export Schedule"** button
-4. A popup will appear with export options
+1. Click **Calendar** in the top navigation
+2. Click the **Calendar** sub-tab (not Services)
+3. Click **Export Schedule**
+4. The **Export Schedule Calendar** popup appears
+
+<Info>
+The Export button is only visible on the **Calendar** sub-tab, and only for users with scheduling permissions (Owner, Org Admin, Team Admin, or Scheduler).
+</Info>
 
 ## Selecting Services to Export
 
 In the export popup:
 
-1. A calendar preview shows all your services
-2. Check the checkbox next to each service you want to include in the export
-3. Use **"Select All"** to include all services
-4. Use **"Clear"** to deselect all services
-
-<Info>
-**Tip**: You can export just upcoming services, past services, or a custom selection based on your needs.
-</Info>
+1. A preview lists **upcoming** services only (past services are excluded)
+2. Check each service to include (no Select All/Clear buttons)
 
 ## Export Formats
 
-### Export to Word
+### Export to Word (.docx)
 
-Creates a Word document (.docx) with your schedule.
+- Each team on its own page
+- Dates as column headers; position names as rows; assignee names in cells
 
-**Format:**
-- Each team appears on its own page
-- Services are organized chronologically
-- Shows date, time, location, and all assignments
+### Export to Excel (.xlsx)
 
-**Steps:**
-1. Select the services you want to export
-2. Click **"Export to Word"**
-3. The file will download automatically
-4. Open it in Microsoft Word or any compatible word processor
+- Each team as a separate sheet/tab
+- Same layout: dates as columns, positions as rows, assignee names in cells
 
 <Info>
-**Tip**: Word export is great for printing schedules or sharing with people who prefer Word documents.
-</Info>
-
-### Export to Excel
-
-Creates an Excel spreadsheet (.xlsx) with your schedule.
-
-**Format:**
-- Each team appears as a separate sheet/tab
-- Services are listed in rows
-- Columns show date, time, location, and assignments
-
-**Steps:**
-1. Select the services you want to export
-2. Click **"Export to Excel"**
-3. The file will download automatically
-4. Open it in Microsoft Excel, Google Sheets, or any compatible spreadsheet program
-
-<Info>
-**Tip**: Excel export is great for data analysis, filtering, or importing into other systems.
+PDF export is not currently available in the UI.
 </Info>
 
 ## Export Permissions
 
-Only users with scheduling permissions can export:
 - Owners
 - Organization Admins
-- Team Admins (for their teams)
-- Schedulers (for their teams)
+- Team Admins
+- Schedulers
 
-## Export Best Practices
+<Info>
+The export includes **all organization teams** in the file — it is not filtered to only the teams you manage.
+</Info>
 
-1. **Export regularly** - Create backups of your schedules periodically
-2. **Include date ranges** - Export specific time periods (month, quarter, etc.) for easier organization
-3. **Use appropriate format** - Choose Word for printing, Excel for data work (you can save Word files as PDF if needed)
-4. **Name files clearly** - When downloading, save with descriptive names like "Schedule_January_2025.docx"
-5. **Review before sharing** - Check the exported file to ensure it looks correct before distributing
+## Best Practices
 
-## Sharing Exported Schedules
-
-After exporting, you can:
-- **Email** the file to team members
-- **Print** the schedule for physical distribution
-- **Upload** to cloud storage for team access
-- **Share** via messaging apps or collaboration tools
+1. **Export regularly** - Create periodic backups
+2. **Use Word for printing** - Use Excel for data analysis
+3. **Name files clearly** - e.g., `Schedule_January_2026.docx`
+4. **Review before sharing** - Check the file looks correct
 
 <Warning>
-**Privacy Note**: Be careful when sharing exported schedules. They contain personal information (names, emails) that should be handled according to your organization's privacy policy.
+Exported schedules contain names and personal information. Handle according to your organization's privacy policy.
 </Warning>

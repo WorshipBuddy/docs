@@ -1,0 +1,138 @@
+---
+title: 'Web vs Mobile'
+description: 'Which ChurchBuddy features are available on web and mobile'
+---
+
+# Web vs Mobile
+
+ChurchBuddy is available as a **web app** at [church.worshipbuddy.org](https://church.worshipbuddy.org) and as a **mobile app** (iOS and Android). Both use the same account and organization data.
+
+<Info>
+Download the app: [Apple App Store](https://apps.apple.com/ca/app/ChurchBuddy/id6747605543) · [Google Play](https://play.google.com/store/apps/details?id=org.worshipbuddycompany.ScheduleBuddyApp)
+</Info>
+
+## Account & Organizations
+
+| Feature | Web | Mobile |
+|---------|-----|--------|
+| Login (email + OTP) | ✓ | ✓ |
+| Create account | ✓ | ✓ |
+| Demo mode | ✗ | ✓ |
+| Create organization | ✓ | ✗ |
+| Join organization | ✓ | ✓ |
+| Switch organizations | ✓ | ✓ |
+| Registered events on dashboard | ✗ | ✓ (Dashboard list) |
+
+## Dashboard & Schedule
+
+| Feature | Web | Mobile |
+|---------|-----|--------|
+| Org home (pending assignments) | ✓ (Dashboard) | ✓ (Home tab — pending assignments only) |
+| Account org/event picker | ✗ | ✓ (Dashboard screen) |
+| My upcoming schedule | ✓ | ✓ (My Schedule tab) |
+| Set unavailability | ✓ | ✓ |
+| Accept/decline assignments | ✓ | ✓ (Home tab) |
+| Volunteer opportunities | ✓ | ✗ |
+| View live announcements | ✗ (web Dashboard has no announcement widget) | ✓ (Home tab) |
+
+## Scheduling & Services
+
+| Feature | Web | Mobile |
+|---------|-----|--------|
+| View services calendar | ✓ | ✓ (Calendar tab) |
+| Create/edit services | ✓ (Owner/Admin) | ✓ create/edit (Owner/Admin); delete web only |
+| Bulk schedule team members | ✓ | ✗ (use mobile Scheduler instead) |
+| Mobile scheduler (vertical list) | ✗ | ✓ |
+| Auto-scheduling | ✓ | ✗ |
+| Export schedule (Word/Excel) | ✓ | ✗ |
+
+## People & Teams
+
+| Feature | Web | Mobile |
+|---------|-----|--------|
+| View people | ✓ (Owner/Admin/Team Admin) | ✓ (Owner/Admin/Team Admin) |
+| Add/edit/remove people | ✓ (Owner/Admin) | ✓ (Owner/Admin only; Team Admins view-only) |
+| Import people (Excel/CSV file) | ✓ | ✗ |
+| Import people (manual multi-row) | ✓ | ✓ (Import People modal) |
+| Teams management | ✓ | ✓ |
+| Groups | ✓ (People → Groups) | ✓ (More → Groups, Owner/Admin) |
+| Workflows | ✓ | ✗ |
+| Custom forms | ✓ | ✗ |
+| User relations | ✓ | ✓ (My Profile) |
+
+## Calendar & Resources
+
+| Feature | Web | Mobile |
+|---------|-----|--------|
+| Rooms booking | ✓ (Owner/Admin) | ✗ |
+| Equipment resources | ✓ (Owner/Admin) | ✗ |
+| Events list | ✓ | ✓ (Calendar tab) |
+
+## Events & Logistics
+
+| Feature | Web | Mobile |
+|---------|-----|--------|
+| Create events | ✓ | ✗ |
+| Event Dashboard (full) | ✓ | Partial (Overview, Registration, Check-in, optional Transportation/Housing/Meals) |
+| Registration form builder | ✓ | ✗ |
+| Event SignUps builder | ✓ | ✗ |
+| Transportation/housing/meals admin | ✓ | Partial (mobile Event Dashboard when enabled + permitted) |
+| Registrant My Event portal | ✓ | ✓ |
+| Host dashboard | ✓ | ✓ (from My Event) |
+| QR/manual event check-in | ✓ | ✓ (My Event + Event Dashboard) |
+
+## Check-In & Attendance
+
+| Feature | Web | Mobile |
+|---------|-----|--------|
+| Service check-in (QR/Matrix/Manual) | ✓ | ✓ (permission-gated per org check-in settings) |
+| Service station scanner | ✓ (URL with `station` param) | ✗ (open URL in browser) |
+| Crowd meter (event meals) | ✓ (URL) | ✗ (open URL in browser) |
+| Timer | ✓ (URL `/timer/`) | ✗ |
+
+## Communication
+
+| Feature | Web | Mobile |
+|---------|-----|--------|
+| Announcements (admin) | ✓ | ✗ |
+| View live announcements | ✗ | ✓ (Home tab) |
+| Group push notifications | ✓ (People → Groups → Push Notifications tab) | ✓ (More → Groups) |
+| Push notification preferences | ✗ | ✓ (Dashboard → Settings → Notification Preferences) |
+| Host message to guests (push) | ✗ | ✓ |
+
+## Organization Settings
+
+| Feature | Web | Mobile |
+|---------|-----|--------|
+| Organization details | ✓ | Partial (name, ID, share, owner info, stats, leave org; delete org for Owner) |
+| Integrations (YouTube, Text in Church, PresenterBuddy) | ✓ | ✗ |
+| WorshipBuddy albums | ✓ | ✗ |
+| BibleBuddy reading plans | ✓ | ✗ |
+| Sunday School setup | ✓ | ✗ |
+| Sunday School portals | ✓ | Coming Soon (More tab alert; SS screens exist but are not linked) |
+
+## Streaming
+
+| Feature | Web | Mobile |
+|---------|-----|--------|
+| Create/manage streams | ✓ (Owner/Admin + stream managers) | ✓ (when `canManageStreams` — does not require YouTube connected) |
+| Watch streams + chat | ✓ | ✓ (when streams exist or YouTube connected) |
+| Public stream viewer | ✓ | ✓ (link) |
+
+## Not Currently Available
+
+These exist in code but are **disabled or not exposed** in the production UI:
+
+- **Giving / Stripe** — requires `STRIPE_ENABLED` on the server (off by default) plus per-user `giving_permission`; Giving sub-tab also requires Stripe onboarding complete
+- **Background checks (Checkr)** — requires `CHECKR_ENABLED` flag (off by default)
+- **Flight Tracker map dashboard** — UI button commented out; Flight Data tab in transportation still works
+- **Zoom stream setup** — commented out; existing Zoom streams still viewable
+- **Sunday School student portal** — commented out on web portal selector
+- **Group email blast UI** — commented out in Groups (push notifications work)
+
+## Which Should I Use?
+
+- **Web** — Organization setup, bulk scheduling, events, forms, workflows, rooms/resources, integrations, announcements
+- **Mobile** — Day-to-day schedule, availability, assignment confirmations, service check-in, streaming, push notifications, on-the-go event logistics
+
+Most teams use **both**: admins on web, volunteers and members on mobile.

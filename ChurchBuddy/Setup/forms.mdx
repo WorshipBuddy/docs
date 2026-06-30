@@ -12,70 +12,45 @@ Create custom forms for collecting information from your organization members or
 Custom Forms allow you to:
 
 - **Collect data** - Gather information for any purpose
-- **Multiple question types** - Text, dropdowns, checkboxes, and more
-- **Public or private** - Share publicly or restrict to members
-- **View responses** - See and export all submissions
+- **Multiple question types** - Text, number, yes/no, multiple choice, and more
+- **Visibility controls** - Show forms to all org members, specific groups, or specific people
+- **View responses** - See submissions in the Responses popup
+
+<Info>
+The public submit URL (`/form-submit/?org=…&form=…`) can be opened by anyone with the link. Visibility settings control which forms appear in the **People → Forms** list for logged-in users — not who can POST a submission if they have the URL.
+</Info>
 
 ## Creating a Form
 
 1. Navigate to the **People** section
 2. Click the **"Forms"** sub-tab
 3. Click **Create Form**
-3. Enter form details:
-   - **Title** - What the form is called
-   - **Description** - Explain the form's purpose (optional)
-4. Add questions to your form
-5. Save the form
+4. Enter **Form Name** and optional description
+5. Set **visibility**: Public (all org members), Specific Groups, or Specific People
+6. Optional **Form Settings** checkboxes:
+   - **Allow multiple submissions**
+   - **Allow editing responses**
+   - **Allow anonymous submissions**
+7. Add questions and save
 
 ## Question Types
 
-### Text Input
+The builder includes:
 
-Single-line text for short answers.
-
-**Use for**: Names, short responses, numbers
-
-### Text Area
-
-Multi-line text for longer answers.
-
-**Use for**: Comments, descriptions, feedback
-
-### Dropdown
-
-Select one option from a list.
-
-**Use for**: Selecting from predefined options (e.g., T-shirt size)
-
-### Radio Buttons
-
-Select one option with all options visible.
-
-**Use for**: Yes/No questions, choosing between a few options
-
-### Checkboxes
-
-Select multiple options.
-
-**Use for**: Multi-select questions (e.g., "Which services do you attend?")
-
-### Date
-
-Date picker for selecting a date.
-
-**Use for**: Birthdates, preferred dates, scheduling
-
-### Email
-
-Text input validated as an email address.
-
-**Use for**: Collecting contact emails
-
-### Phone
-
-Text input for phone numbers.
-
-**Use for**: Collecting contact numbers
+| Type | Use for |
+|------|---------|
+| **Text** | Short answers |
+| **Long Text** | Long answers |
+| **Email** | Email addresses |
+| **Phone** | Phone numbers |
+| **Number** | Numeric values |
+| **Date** | Date picker |
+| **Date & Time** | Date and time picker |
+| **Dropdown** | Single select from a list |
+| **Multi-Select** | Multi-select dropdown |
+| **Multiple Choice** | Single select (radio) |
+| **Checkboxes** | Multi-select |
+| **Yes/No** | Boolean questions |
 
 ## Building Your Form
 
@@ -104,53 +79,36 @@ Mark questions as required when you must have an answer. Optional questions can 
 
 ### Getting the Form Link
 
-1. Open your form
-2. Click **Share** or copy the form URL
-3. The URL format is: `/form-submit/?org=ORG_ID&form=FORM_ID`
+1. Open your form in **People → Forms**
+2. Click **Share Public Link**
+3. Copy the URL: `/form-submit/?org=ORG_ID&form=FORM_ID`
 
 ### Sharing Options
 
-- **Direct link** - Share the URL via email, text, or social media
-- **Embed** - Use the link in your website
-- **QR code** - Generate a QR code for the form URL
+- **Direct link** — Share the URL via email, text, or social media (copy from the Share Form popup)
+- **Open in browser** — Use **Open Form in New Tab** in the share popup to preview the submit page
 
 ## Viewing Responses
 
 ### Response List
 
-1. Open the form
-2. Click **Responses** or **View Submissions**
-3. See all submitted responses
+1. Open the form in **People → Forms**
+2. Click **Responses**
+3. Browse submissions in the popup
 
-### Response Details
+<Info>
+There is no CSV/Excel export button in the Responses popup — review submissions in the UI or use the API if you need bulk export.
+</Info>
 
-Each response shows:
+## Visibility (Not Submit Auth)
 
-- Submission date and time
-- All answers provided
-- Submitter information (if collected)
+When building a form, choose who **sees the form** in the org Forms list:
 
-### Exporting Responses
+- **Public** — all org members
+- **Specific Groups** — selected groups only
+- **Specific People** — selected individuals only
 
-Export responses for analysis:
-
-1. Go to form responses
-2. Click **Export**
-3. Download as CSV or Excel
-
-## Form Settings
-
-### Form Status
-
-- **Active** - Accepting submissions
-- **Closed** - No longer accepting submissions
-
-### Public Access
-
-Control who can submit:
-
-- **Public** - Anyone with the link can submit
-- **Members Only** - Requires login to submit
+Anyone with the **public submit link** can submit regardless of visibility setting.
 
 ## Use Cases
 
@@ -194,4 +152,4 @@ Allow members to submit prayer requests:
 3. **Provide helper text** - Explain what you're looking for when needed
 4. **Test your form** - Submit a test response before sharing
 5. **Review responses promptly** - Check submissions regularly
-6. **Close old forms** - Deactivate forms you're no longer using
+6. **Delete old forms** - Remove forms you're no longer using (there is no Active/Closed toggle)

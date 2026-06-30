@@ -11,28 +11,28 @@ Scheduling is the core of ChurchBuddy—assigning the right people to the right 
 
 ### 1. Bulk Scheduling (Recommended for Multiple Services)
 
-Bulk scheduling allows you to schedule people across multiple services at once, with automatic saving.
+Bulk scheduling opens a dedicated **Schedule Team Members** page where all upcoming services appear as horizontally scrollable cards. Changes auto-save as you work.
 
 **Steps:**
 1. Navigate to the **Calendar** section
-2. Click the **"Services"** sub-tab
-3. Click **"Schedule Team Members"** button
-4. You'll see three services at a time in a grid layout
-4. Use the arrow buttons (← →) to navigate between groups of services
-5. For each service and team:
+2. Click the **Services** sub-tab (or **Calendar** sub-tab — both have a **Schedule Team Members** button)
+3. Click **Schedule Team Members**
+4. You'll be taken to `/org-schedule-team/` — a full-page scheduler
+5. Scroll horizontally through service cards — each card shows one service with its teams and positions
+6. For each service and team:
    - Select users from the dropdown for each position
    - Changes are **automatically saved** as you make them
-7. Continue navigating through services until all are scheduled
+7. Continue through all upcoming services until scheduling is complete
 
 <Info>
-**Tip**: Bulk scheduling is great when you're scheduling many services at once. The auto-save feature means you don't need to remember to save each service.
+**Tip**: Bulk scheduling is great when you're scheduling many services at once. The auto-save feature means you don't need to click save for each service.
 </Info>
 
 **Bulk Scheduling Features:**
 - Auto-save functionality
-- See multiple services side-by-side
-- Easy navigation between service groups
+- All upcoming services visible as scrollable cards
 - Color-coded warnings for conflicts and unavailability
+- Can be filtered to a single event when opened from an Event Dashboard
 
 ### 2. Service-Specific Scheduling
 
@@ -40,16 +40,14 @@ Schedule people for a single service at a time with more detailed control.
 
 **Steps:**
 1. Navigate to the **Calendar** section
-2. Click the **"Services"** sub-tab
-3. Click on the specific service card you want to schedule
-4. A detailed popup will appear
-5. For each team in the service:
-   - Expand the team section
-   - Select users from dropdowns for each position
-6. Click **"Update Service"** to save your changes
+2. Click the **Services** sub-tab
+3. Click the service card (Owner/Org Admin) to open the **service detail page** (`/org-service-detail/`)
+4. Open the **Team Schedule** tab
+5. Assign people from each position dropdown (shows full warning colors: Team Conflict, Unavailable, fatigue)
+6. Click **Save Team Schedule**
 
 <Warning>
-**Note**: Unlike bulk scheduling, service-specific scheduling does NOT auto-save. You must click "Update Service" to save your changes.
+**Note**: Assignment changes on the service detail page do NOT auto-save — click **Save Team Schedule**. Use **Details** tab + **Update Service** for service metadata (name, time, location, teams).
 </Warning>
 
 **When to Use Service-Specific:**
@@ -61,44 +59,36 @@ Schedule people for a single service at a time with more detailed control.
 
 Let ChurchBuddy automatically assign people based on availability and positions. See the [Auto-Scheduling documentation](/ChurchBuddy/Scheduling/auto-scheduling) for details.
 
+### 4. Mobile Scheduler
+
+On the ChurchBuddy mobile app, schedulers can use **More → Scheduler** to assign people across all upcoming services in a vertical scrollable list. See the [Mobile App documentation](/ChurchBuddy/Day-to-Day/app#scheduler).
+
 ## Understanding Scheduling Warnings
 
-When scheduling, you may see color-coded indicators in the selection dropdowns:
+When using **Schedule Team Members** (`/org-schedule-team/`) or the **mobile Scheduler**, selection dropdowns show color-coded indicators:
 
-- **Red highlighting** - User has a conflict (already scheduled elsewhere on the same date)
+- **Red highlighting** — Team or position assignment conflict (cross-team or multi-position rules). Status label: **Team Conflict**
 - **Yellow highlighting** - User has marked this date as unavailable
 - **Blue highlighting (Fatigue)** - User has been scheduled frequently recently (light to dark blue indicates increasing fatigue levels)
 - **Hover for details** - Hover over highlighted names to see the specific reason
-
 <Info>
 **Tip**: Always check warnings, but remember they're informational. You can still schedule someone even if they're highlighted (for example, if the conflict is acceptable or fatigue is acceptable for that person).
 </Info>
 
 ## Viewing Availability While Scheduling
 
-Availability information is shown directly in the selection area when scheduling:
+In **Schedule Team Members** and the **mobile Scheduler**, dropdowns show available, unavailable (yellow), fatigue (blue), and conflict (red) states, sorted with available people first.
 
-- When you open a dropdown to select a person for a position, you'll see:
-  - **Available** - People who can serve (no highlighting)
-  - **Unavailable** - Highlighted in yellow if they've marked this date as unavailable
-  - **Fatigue** - Highlighted in blue shades (light to dark) if they've been scheduled frequently recently
-  - **Conflicts** - Highlighted in red if they have scheduling conflicts
-
-- The status text next to each person's name indicates their availability state
-- People are automatically sorted with available people first, then by fatigue level, then unavailable, then conflicts
-
-<Info>
-**Tip**: You can see availability directly in the selection dropdowns - no need for a separate view. This makes it easy to choose who to schedule while seeing their availability status at a glance.
-</Info>
+The service detail **Team Schedule** tab shows the same warning colors as bulk scheduling and the mobile Scheduler.
 
 ## Scheduling Best Practices
 
-1. **Check availability first** - Use the availability view to see who's free
+1. **Check availability first** - Review unavailability before assigning
 2. **Balance workloads** - Try to distribute assignments fairly across team members
 3. **Respect unavailability** - Only schedule people on unavailable dates if absolutely necessary
 4. **Communicate** - Let people know when they're scheduled, especially for new assignments
 5. **Review conflicts** - Pay attention to warnings and resolve conflicts when possible
-6. **Use bulk scheduling for efficiency** - When scheduling many services, bulk scheduling saves time
+6. **Use bulk scheduling for efficiency** - When scheduling many services, the Schedule Team Members page saves time
 
 ## Editing Existing Assignments
 
@@ -106,12 +96,12 @@ To change who's scheduled for a service:
 
 1. Open the service using either bulk scheduling or service-specific scheduling
 2. Change the selections in the dropdown menus
-3. Save your changes (auto-save for bulk, "Update Service" for service-specific)
+3. Save your changes (auto-save for bulk scheduler, **Save Team Schedule** on service detail)
 
 ## Removing Assignments
 
 To remove someone from a service:
 
 1. Open the service for scheduling
-2. For the position where they're assigned, select an empty option or "-" from the dropdown
+2. Clear the assignment using the **× clear** button on bulk scheduler, or clear the **Click to select or type name** field on service detail **Team Schedule**
 3. Save your changes

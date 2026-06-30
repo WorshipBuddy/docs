@@ -1,165 +1,91 @@
 ---
-title: 'Rooms & Resources'
-description: 'Manage rooms and resources with booking capabilities and approval workflows'
+title: 'Rooms'
+description: 'Manage rooms with booking capabilities and approval workflows'
 ---
 
-# Rooms & Resources
+# Rooms
 
-The Rooms feature helps you manage physical spaces in your organization. Track room availability, accept booking requests, and manage resources.
+The **Rooms** sub-tab under **Calendar** helps you manage physical spaces in your organization — booking, approval workflows, and conflict detection.
+
+<Info>
+**Platform**: Web only. For equipment and inventory, see [Equipment Resources](/ChurchBuddy/Setup/resources) — a separate **Resources** sub-tab under Calendar.
+</Info>
 
 ## Overview
 
-Rooms & Resources provides:
+Rooms provides:
 
 - **Room inventory** - Catalog all your spaces
-- **Booking system** - Let people request room reservations
+- **Booking system** - Request room reservations
 - **Approval workflow** - Review and approve booking requests
 - **Conflict detection** - Prevent double-bookings
-- **Resource tracking** - Track equipment and amenities per room
 
-## Managing Rooms
+## Accessing Rooms
 
-### Adding a Room
+1. Click **Calendar** in the top navigation
+2. Click the **Rooms** sub-tab
+3. Owners and Organization Admins only — the **Rooms** sub-tab is hidden from Team Admins, Schedulers, and Members
 
-1. Navigate to the **Calendar** section
-2. Click the **"Rooms"** sub-tab
-3. Click **Add Room**
-3. Enter room details:
-   - **Name** - Room identifier (e.g., "Fellowship Hall", "Room 201")
-   - **Room Type** - Category (Sanctuary, Classroom, Office, etc.)
+## Adding a Room
+
+1. Click **Add Room**
+2. Enter details:
+   - **Name** - e.g., "Fellowship Hall", "Room 201"
+   - **Room Type** - Sanctuary, Classroom, Office, Kitchen, Fellowship Hall, **Outdoor Space**, Storage, Other
    - **Capacity** - Maximum occupancy
-   - **Building** - Which building (optional)
-   - **Floor** - Which floor (optional)
+   - **Building** / **Floor** (optional)
    - **Color** - Display color for calendar views
-
-### Room Types
-
-Available room types:
-
-- **Sanctuary** - Main worship spaces
-- **Classroom** - Teaching and meeting rooms
-- **Office** - Administrative spaces
-- **Kitchen** - Food preparation areas
-- **Fellowship** - Social gathering spaces
-- **Outdoor** - Outdoor areas
-- **Storage** - Storage rooms
-- **Other** - Any other space type
+3. Save
 
 ### Room Features
 
-Track what's available in each room:
-
-- **Accessible** - Wheelchair accessible
-- **WiFi** - Has wireless internet
-- **Kitchen** - Has kitchen facilities
-- **Climate Control** - Has heating/cooling
-- **Tables** - Number of tables
-- **Chairs** - Number of chairs
-- **AV Equipment** - Audio/visual capabilities
+Track amenities: **Wheelchair Accessible**, **WiFi Available**, **Kitchen Facilities**, **Climate Control**, **Natural Light**, plus table/chair counts and AV Equipment.
 
 ## Booking Rooms
 
-### Requesting a Booking
-
-1. Open the Rooms section
-2. Find the room you want
-3. Click **Book Room**
-4. Enter booking details:
-   - **Date** - When you need the room
-   - **Start Time** - Booking start
-   - **End Time** - Booking end
-   - **Purpose** - What the room is for
-   - **Notes** - Additional information
-5. Submit the request
+1. Find the room
+2. Click **Book Room**
+3. Enter date, start/end time, purpose, and notes
+4. Submit the request
 
 ### Booking Status
 
-Bookings can have these statuses:
-
 - **Pending** - Awaiting approval
-- **Approved** - Booking confirmed
-- **Declined** - Request was declined
-- **Cancelled** - Booking was cancelled
+- **Approved** - Confirmed
+- **Declined** - Rejected
+- **Cancelled** - Cancelled
 
 ## Approval Workflow
 
-### Room Approval Settings
-
-Configure which rooms require approval:
+Configure per room whether bookings require approval:
 
 1. Edit the room
-2. Under **Approval Settings**, toggle **Requires Approval**
-3. If enabled, bookings go to pending status
-4. If disabled, bookings are auto-approved
+2. Toggle **Requires Approval**
+3. If enabled, bookings go to **Pending** until approved
 
-### Reviewing Pending Requests
+Review pending requests via **Pending Approvals** in the Rooms section.
 
-1. Go to **Rooms** → **Pending Approvals**
-2. See all pending booking requests
-3. For each request, you can:
-   - **Approve** - Confirm the booking
-   - **Decline** - Reject the request (optionally add reason)
+## Views
 
-<Info>
-**Note**: The pending approvals count shows in the navigation so you know when requests need attention.
-</Info>
+- **Grid View** - Room cards with key info
+- **List View** - Sortable table for many rooms
 
-## Viewing Room Schedules
+## Conflicts
 
-### Grid View
-
-See all rooms as cards with key information:
-
-- Room name and type
-- Capacity
-- Features
-- Quick book button
-
-### List View
-
-See rooms in a table format:
-
-- Sortable columns
-- Compact view for many rooms
-- Quick access to details
-
-### Room Detail
-
-Click any room to see:
-
-- Full room information
-- Upcoming bookings
-- Booking calendar
-- Room features and resources
-
-## Conflict Management
-
-### Automatic Detection
-
-The system automatically detects:
-
-- **Double bookings** - Same room, overlapping times
-- **Conflicts** - Shows warning before booking
-
-### Viewing Conflicts
-
-1. Go to **Rooms** → **Conflicts**
-2. See any scheduling conflicts
-3. Resolve by cancelling or adjusting bookings
-
-## Best Practices
-
-1. **Complete room profiles** - Add all features and details
-2. **Set appropriate approval** - Require approval for high-demand spaces
-3. **Review pending requests promptly** - Don't leave requests waiting
-4. **Keep capacity accurate** - Important for safety compliance
-5. **Update availability** - Mark rooms unavailable during maintenance
+The system detects double-bookings and shows warnings before confirming overlapping reservations. View conflicts under **Rooms → Conflicts**.
 
 ## Permissions
 
-| Role | View Rooms | Book Rooms | Approve Bookings | Manage Rooms |
-|------|-----------|------------|------------------|--------------|
-| Owner | ✓ | ✓ | ✓ | ✓ |
-| Org Admin | ✓ | ✓ | ✓ | ✓ |
-| Member | ✓ | ✓ | ✗ | ✗ |
-| Viewer | ✓ | ✗ | ✗ | ✗ |
+Rooms are **Owner / Organization Admin only**. Team Admins, Schedulers, Members, and Viewers do not see the **Rooms** sub-tab on Calendar.
+
+| Role | Access |
+|------|--------|
+| Owner / Org Admin | Full rooms management |
+| All other roles | No access |
+
+## Best Practices
+
+1. **Complete room profiles** - Add features and capacity
+2. **Set appropriate approval** - Require approval for high-demand spaces
+3. **Review pending requests promptly**
+4. **Keep capacity accurate** - Important for safety compliance

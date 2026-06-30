@@ -1,0 +1,101 @@
+---
+title: 'Integrations'
+description: 'Connect YouTube, Text in Church, and other services to your organization'
+---
+
+# Integrations
+
+Connect third-party services to extend ChurchBuddy. Manage integrations from **Organization → Integrations**.
+
+<Info>
+Some integrations (Giving/Stripe, Checkr background checks, Zoom) exist in code but are **disabled by default** and not shown unless enabled on the server. This page covers integrations available in the standard UI.
+</Info>
+
+## Accessing Integrations
+
+1. Click **Organization** in the top navigation
+2. Click the **Integrations** sub-tab
+3. Available to Owners and Organization Admins
+
+## YouTube (Streaming)
+
+Connect YouTube to enable live streaming.
+
+1. Find the **YouTube** card in Integrations
+2. Click **Connect**
+3. Authorize with your Google/YouTube account
+4. Once connected, **Streaming** appears in the top navigation (any connected integration — YouTube or Zoom — triggers the nav button)
+
+See [Live Streaming](/ChurchBuddy/Day-to-Day/streaming) for creating and sharing streams.
+
+### Stream Managers
+
+Assign users who can create streams without full admin access:
+
+1. In YouTube integration settings, add **Stream Managers**
+2. Selected users can access **Streaming** and create broadcasts
+
+## Text in Church
+
+Connect Text in Church to send SMS reminders and notifications.
+
+1. Find the **Text in Church** card
+2. Click **Connect** — opens the Text in Church OAuth flow in a popup window
+3. Complete authorization in Text in Church
+4. Configure default settings
+
+<Info>
+You may need to request developer API access from Text in Church support before connecting.
+</Info>
+
+Used for:
+- Team message notifications
+- Group SMS via **People → Groups → Text in Church** tab (visible only when Text in Church is connected)
+- Configurable notification workflows
+
+## WorshipBuddy
+
+WorshipBuddy integration is managed separately — not on the Integrations tab.
+
+- Access via top navigation **WorshipBuddy** button (when you have permission)
+- Or see [WorshipBuddy Integration](/ChurchBuddy/Setup/worshipbuddy-integration)
+
+## BibleBuddy
+
+BibleBuddy reading plans are managed on a dedicated page:
+
+- Direct URL: `/org-biblebuddy/?org={org_id}`
+- Not listed on the Integrations tab
+- Top navigation link is currently hidden — bookmark the URL or navigate directly
+
+See [BibleBuddy Integration](/ChurchBuddy/Setup/biblebuddy-integration).
+
+## PresenterBuddy
+
+Pair ChurchBuddy announcements with PresenterBuddy for slide sync:
+
+1. Find the **PresenterBuddy** card on the **Integrations** sub-tab
+2. Copy the **pairing code** and share it with your PresenterBuddy operator
+3. Toggle **sync enabled** to allow PresenterBuddy to read and write announcements
+4. Create announcements in **display mode: ChurchBuddy and PresenterBuddy** to design slides that sync to PresenterBuddy
+
+See also [Announcements](/ChurchBuddy/Day-to-Day/announcements) for slide editor details.
+
+## Disabled Integrations
+
+These require server-side feature flags and are not available in the default deployment:
+
+| Integration | Flag | Status |
+|-------------|------|--------|
+| **Stripe Giving** | `STRIPE_ENABLED=false` | Hidden from UI |
+| **Checkr Background Checks** | `CHECKR_ENABLED=false` | Hidden from UI |
+| **Zoom Streaming (new)** | N/A | Connect UI commented out |
+
+Do not document these as user-facing features until enabled in your environment.
+
+## Best Practices
+
+1. **Connect before you need them** - Set up YouTube before your first live stream
+2. **Limit stream managers** - Only assign to trusted AV team members
+3. **Test SMS** - Send a test message after connecting Text in Church
+4. **Review connected accounts** - Periodically audit which services are linked

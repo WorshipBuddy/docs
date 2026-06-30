@@ -22,7 +22,11 @@ After creating a service, you can schedule specific people to positions within t
 
 To create a new service:
 
-1. Navigate to **Services** (from Calendar tab, or via More tab → Services)
+1. Click **Calendar** in the top navigation, then the **Services** sub-tab
+
+<Info>
+On mobile, create services from the **Calendar** tab in **Services** view (not My Schedule) — tap a date → **Add Service**. The add button appears only for **Owner / Organization Admin**.
+</Info>
 2. Click **"Create Service"** or **"Add Service"**
 3. Fill in the service details:
 
@@ -62,33 +66,14 @@ To create a new service:
 
 ### Recurring Services
 
-If this service repeats regularly, you can set it to recur:
+**Web:** Check **This service recurs**, select weekdays, and set **End After** (max **16** occurrences — UI label “Max 16 weeks”; creates up to **20** service instances). The web builder uses weekday selection only — repeat interval is ignored.
 
-1. Check **"This service recurs"** to enable recurrence
-2. Configure the recurrence pattern:
+**Mobile:** Supports Daily, Weekly, and Monthly patterns with up to **20** occurrences (including true bi-weekly intervals).
 
-   - **Recurrence Pattern** - Choose how it repeats
-     - **Weekly** - Repeats on specific days of the week
-     - Other patterns may be available depending on your setup
-
-   - **Repeat every X week(s) on** (for Weekly pattern)
-     - Enter how often it repeats (e.g., every 1 week, every 2 weeks)
-     - Example: "1" means every week, "2" means every other week
-
-   - **Days of the week** - Check which days the service occurs
-     - Examples: Check "Sunday" for weekly Sunday services
-     - You can select multiple days (e.g., Sunday and Wednesday)
-
-   - **End After** - When to stop creating instances
-     - Enter the number of occurrences (maximum 20)
-     - Example: "16" creates 16 service instances
-     - The system will create individual service instances for each occurrence
-
-<Info>
-**Note**: Recurring services create individual service instances. Each occurrence can be edited, scheduled, or deleted independently. This gives you flexibility to modify specific dates while keeping the recurring pattern.
-</Info>
-
-4. Click **"Create Service"**
+1. Check **This service recurs**
+2. Select days of the week (web) or pattern (mobile)
+3. Set **End After** occurrences
+4. Click **Create Service**
 
 ## Service Examples
 
@@ -99,7 +84,7 @@ If this service repeats regularly, you can set it to recur:
 - **Start**: Sunday, 10:00 AM
 - **End**: Sunday, 11:30 AM
 - **Teams**: Worship Team, Ushers, Children's Ministry
-- **Recurring**: Yes, every 1 week on Sunday, End after 52 occurrences
+- **Recurring**: Yes, every 1 week on Sunday, End after 16 occurrences (web max window)
 
 ### Bi-Weekly Bible Study
 
@@ -108,7 +93,7 @@ If this service repeats regularly, you can set it to recur:
 - **Start**: Wednesday, 7:00 PM
 - **End**: Wednesday, 8:30 PM
 - **Teams**: Teaching Team, Setup Team
-- **Recurring**: Yes, every 2 weeks on Wednesday, End after 26 occurrences
+- **Recurring**: Yes, every 2 weeks on Wednesday, End after 16 occurrences (**mobile only** — web ignores repeat interval)
 
 ### One-Time Special Event
 
@@ -169,11 +154,10 @@ Once your service is created:
 **Can't create service:**
 - Make sure you have permission (Owner or Organization Admin)
 - Verify all required fields are filled in
-- Check that at least one team is selected
 
 **Recurring service not creating instances:**
 - Verify the recurrence pattern is set correctly
-- Check that "End After" is set to a number (max 20)
+- Check that "End After" is set (web max **16**, mobile max **20**)
 - Make sure the recurrence dates are in the future
 
 **Need to change a recurring service:**
@@ -183,5 +167,5 @@ Once your service is created:
 
 **Service not showing up:**
 - Check the date range you're viewing
-- Past services (older than 30 days) may be hidden by default
+- Past services: web **Services** tab shows ~**120 days** back; mobile **My Schedule → Past Schedule** shows **30 days** of your personal assignments (org Calendar → Services has no past-day cutoff)
 - Verify the service was created successfully

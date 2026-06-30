@@ -1,0 +1,62 @@
+---
+title: 'Workflows'
+description: 'Automate people management tasks with visual workflows'
+---
+
+# Workflows
+
+Workflows let you automate actions when people join teams, are added to the organization, or meet other conditions. Build visual workflow graphs in the People section.
+
+<Info>
+**Platform**: Web only. Workflows are at **People → Workflows**.
+</Info>
+
+## Overview
+
+Workflows help you:
+
+- **Automate onboarding** - Trigger actions when people are added
+- **Team-based automation** - Run workflows when team membership changes
+- **Visual builder** - Connect trigger, condition, and action nodes
+- **Track execution** - View workflow run history and stats
+
+## Accessing Workflows
+
+1. Click **People** in the top navigation
+2. Click the **Workflows** sub-tab
+3. Available to Owners and Organization Admins
+
+## Creating a Workflow
+
+1. Click **Create Workflow**
+2. Name your workflow
+3. Build the graph using nodes:
+   - **Triggers** - What starts the workflow (e.g., person added, team joined)
+   - **Conditions** - Rules that must be met
+   - **Actions** - What happens (e.g., send email, add to group)
+4. Connect nodes by linking outputs to inputs
+5. Save and enable the workflow
+
+## Workflow Dashboard
+
+The **People → Dashboard** sub-tab can include a **Workflow Status** widget (picker label: **Workflow Health**) showing execution counts per workflow. Add it manually from the dashboard widget picker — it is not included by default.
+
+## Managing Workflows
+
+- **Edit** - Modify nodes and connections
+- **Enable/Disable** - Turn workflows on or off without deleting
+- **Delete** - Remove a workflow permanently
+
+Execution counts appear via the optional **Workflow Health** dashboard widget — there is no per-workflow log viewer in the UI.
+
+## Best Practices
+
+1. **Start simple** - One trigger, one action, then expand
+2. **Test with a small group** - Verify behavior before enabling org-wide
+3. **Name clearly** - Describe what the workflow does
+4. **Review execution counts** - Check the Workflow Health dashboard widget periodically
+5. **Disable when not needed** - Avoid unintended automation
+
+<Warning>
+Workflows can send emails and modify data automatically. Review carefully before enabling.
+</Warning>

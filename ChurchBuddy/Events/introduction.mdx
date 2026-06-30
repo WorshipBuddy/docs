@@ -39,43 +39,46 @@ Events include:
 - Create events with templates or from scratch
 - Set event details (name, dates, location)
 - Control visibility (public or private)
-- Set event status (draft, published, archived)
+- Set event status (Draft, Published, Active, Completed, Archived)
 
 ### Registration
 - Custom registration forms with unlimited questions
 - Multiple question types (text, dropdown, checkboxes, etc.)
 - Registration open/close dates
 - Allow editing of responses
-- Allow anonymous submissions
+- Allow anonymous submissions — Registrants can hide identity from others; name and email are still required on the form
 
 ### Services
 - Add services directly to events
 - Services are managed within the event context
-- Schedule teams for event services through the event interface
+- Schedule teams for event services through **Event Dashboard → Services → Schedule Teams** (opens `/org-schedule-team/?org=…&event=…`). Calendar → Schedule Team without an `event=` parameter only shows org-wide services, not event-only services.
 - Share service schedules publicly
 
 ### Logistics (Optional)
-- **Transportation** - Manage routes, drivers, vehicles
-- **Housing** - Coordinate accommodations
-- **Meals** - Plan meal periods and attendance
+- **Transportation** - Manage routes, drivers, vehicles, flight data from registrations
+- **Housing** - Coordinate accommodations and host dashboards
+- **Meals** - Plan meal periods, attendance, and crowd meter
 - **Check-in** - Track arrival and departure
+- **SignUps** - Volunteer slot and item sign-up sheets
 
-### Dashboard
-- Operational dashboard for managing events
-- View registrations and responses
-- Manage logistics
-- Track event status
+### Registrant Portal
+- **My Event** - Registrants view their info, schedule, and self check-in
+- **Public registration** - Shareable registration links
+
+### Dashboard & Analytics
+- **Event Dashboard** - Central hub with Overview, Services, Registration, Logistics, Analytics tabs
+- **Analytics** - Registration trends and statistics
 
 ## Getting Started
 
-To get started with events:
-
-1. [Create an event](/ChurchBuddy/Events/creating-events) - Start with a template or blank event
-2. [Set up registration](/ChurchBuddy/Events/registration-forms) - Build your registration form
-3. [Add event services](/ChurchBuddy/Events/event-services) - Schedule services for your event
-4. [Manage the event](/ChurchBuddy/Events/event-dashboard) - Use the dashboard to coordinate
+1. [Create an event](/ChurchBuddy/Events/creating-events)
+2. [Set up registration](/ChurchBuddy/Events/registration-forms)
+3. [Use the Event Dashboard](/ChurchBuddy/Events/event-dashboard)
+4. [Add event services](/ChurchBuddy/Events/event-services)
+5. [Set up SignUps](/ChurchBuddy/Events/signups) (optional)
+6. [Share public registration](/ChurchBuddy/Events/public-registration)
 
 <Info>
-**Note**: Events are managed by Owners and Organization Admins. Team Admins and Schedulers can schedule people for event services but cannot create or edit events.
+**Note**: Events are created and edited by **Owners and Organization Admins** (Calendar → Events). Team Admins and Schedulers do **not** see the Events sub-tab — they cannot self-navigate to Event Dashboard → Schedule Teams without a shared link or explicit event dashboard permission.
 </Info>
 
