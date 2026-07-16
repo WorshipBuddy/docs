@@ -1,104 +1,133 @@
 ---
 title: 'Transportation Management'
-description: 'Manage vehicles, drivers, routes, and passenger assignments for event transportation'
+description: 'Manage vehicles, drivers, routes, and passenger assignments with live flight tracking, a live vehicle map, and QR check-in'
 ---
 
 # Transportation Management
 
-Coordinate ground transportation: vehicles, drivers, routes, passenger assignments, and QR check-in using registration QR codes.
+Coordinate ground transportation: vehicles, drivers, routes, and passenger assignments, with live flight tracking, a live GPS vehicle map, driver ETAs, and QR check-in using registration QR codes.
 
 ## Setting Up Transportation
 
-1. **Event Dashboard → Logistics**
-2. Enable **Transportation** under **Enable Services**
-3. Open the **Transportation** sub-section
+1. Open the **Event Dashboard**
+2. On **Overview**, use the **Add a module** card to enable **Transportation**
+3. Open the **Transportation** module from the rail
 4. Add vehicles and drivers, then create routes
+
+The Overview shows a **Get transportation set up** checklist (add vehicles, add drivers, create routes, assign passengers) that disappears once everything is in place.
 
 ## Vehicles
 
-Click **+ Add Vehicle** and set name, type, capacity (includes driver), bag capacities, license plate, and notes.
+Click **+ Add Vehicle** and set:
 
-You cannot delete a vehicle assigned to active routes.
+- **Vehicle Type** and **Vehicle Name/Identifier**
+- **Total seats (including driver)**
+- **License Plate**, **VIN**, **Notes**
+- Optional **Luggage capacity** (checked bags, carry-on bags)
+- Optional **GPS tracker & live map** (tracker IMEI, protocol, live-tracking toggle, map color)
+
+You cannot delete a vehicle assigned to active routes. Seat capacity includes the driver.
 
 ## Drivers
 
-Add drivers with name, email, phone, optional linked vehicle, and notes.
+Click **+ Add Driver** and set name, email, phone, an optional linked personal vehicle, and notes.
 
 ### Driver Dashboard
+
+Send drivers their dashboard link:
 
 ```
 /driver-dashboard/?org={org_id}&event={event_id}&driver={driver_id}
 ```
 
-Shows routes, passengers, pickup times, and check-in status for that driver.
-
-## Flight Data
-
-**Logistics → Transportation → Flight Data** lists arrivals, departures, and luggage from registration responses — not live flight tracking. The standalone Flight Tracker map page is not linked from the UI.
+It shows their routes, vehicle, pickup/drop-off, passengers, and a Google Maps route. When passengers have flights, each shows a live flight status pill and timing, and the dashboard can show a **live ETA to the drop-off** from the driver's current location. See [Driver Dashboard](/ChurchBuddy/Events/driver-dashboard).
 
 ## Routes
 
-Click **+ Create Route** (not "+ Add Route").
+Click **+ Create Route** and configure:
 
-Configure:
+- Trip type: **Arrival** or **Departure**
+- **Vehicle** and **Driver** (both required)
+- **Starting point** (where the driver leaves from)
+- Ordered **Pickup Locations** (Airport, Bus Station, Train Station, or Address) — use **+ Add stop**
+- **Drop-off Location**
+- **Departure Time** and **Arrival Time** (a smart-scheduling helper can estimate times from your stops)
+- **Route Name** and optional **Capacity** override
+- **Send QR tickets & reminder emails** — passengers get a QR ticket and reminders
 
-- Route name, type (Arrival/Departure), origin, dropoff
-- Ordered pickup locations (airport, bus/train station, or address)
-- Departure and arrival datetimes
-- Vehicle and driver
-- Optional capacity override
-- **Enable reminder emails for this route** — reminds passengers to use their registration QR code at check-in
-
-### Viewing Passengers
-
-Passengers appear inline under each route as **Assigned Passengers (N)** — there is no separate **View Passengers** button.
+Passengers appear inline on each route card under **Assigned Passengers (N)**.
 
 ## Assigning Passengers
 
-Assignments use **drag-and-drop**:
+You have several ways to assign:
 
-1. Find **Unassigned Registrants** in the Transportation section
-2. **Drag registrants onto a route** to assign them
+- **Drag-and-drop** — Drag registrants from **Unassigned Registrants** onto a route
+- **Assign** — Click **Assign** on an unassigned card to pick a route from a menu
+- **Assign all shown** — Bulk-assign everyone currently shown, filling routes and stopping at seat capacity
+- **Search** — Filter unassigned registrants by name or email
 
-There is no **+ Assign Transportation** modal or **Bulk Assign** button for transportation (Bulk Assign exists for housing only).
+Bulk assignment enforces seat capacity and marks routes **Full** when they fill. Passengers use their **registration QR code** for transportation check-in — there are no separate route QR codes.
 
-Passengers use their **registration QR code** for transportation check-in — no separate route QR codes.
+## Flight Tracking
+
+The **Flight Data** tab reads arrival, departure, and luggage details from registration responses and adds **live flight status** (via public ADS-B data) at no cost:
+
+- A colored **live status pill** per flight (Scheduled, At gate, Departed, In flight, Landing soon, Landed) with an **ETA**
+- **Delay detection** — when a flight is running 15+ minutes late, the row flags the delay and offers a **Notify driver** button that emails the route's driver
+- **Manage Airports** — maintain the event's airport list (code, label, coordinates) used for ETAs
+- **Live Flight Map** — opens the full flight dashboard for the event
+
+### Airport question on registration
+
+When transportation is enabled, the public registration form can include an **Arrival Airport** dropdown built from your event's airport list, with an "Airport not listed" option that reveals a free-text field. This keeps flight data clean for tracking.
+
+## Live Vehicle Map
+
+If your vehicles have GPS trackers, the **Live Vehicle Map** shows them in real time:
+
+- Live positions from an OBD2/GPS tracker (connected through Traccar using each tracker's IMEI)
+- **Zone alerts** — email people when a tracked vehicle enters, leaves, or exits geofenced zones
+- Map controls for **Recenter**, **Refresh**, and **Full screen**
+
+The GPS tracker fields live in the vehicle modal's optional **GPS tracker & live map** section.
 
 ## Transportation Scanner
 
-`/transportation-scanner/?org={org_id}&event={event_id}`
+Share the scanner link for QR check-in at pickup/drop-off:
 
-1. Enter **Your Name**
+```
+/scan/?mode=transportation&org={org_id}&event={event_id}
+```
+
+<Info>
+The legacy `/transportation-scanner/` link still works and redirects to `/scan/?mode=transportation`.
+</Info>
+
+1. Enter your name
 2. Select the route
 3. Scan registration QR codes
-4. System verifies assignment and records check-in
+4. The system verifies the assignment and records check-in
 
 ## Route Notifications
 
-When a route has a driver and assigned passengers:
-
-- **Send tickets and route info** — Sends route details to passengers and the driver
-
-The route checkbox **Enable reminder emails for this route** controls QR reminder emails — there are no separate **Send Reminder** or **Send to Driver** buttons beyond the combined send action.
-
-## Export
-
-There is no transportation **Export** button in the event dashboard UI today.
+On a route with a driver and passengers, **Send tickets and route info** emails QR tickets to passengers and the route details to the driver. Flight delays can be sent to a driver individually with **Notify driver** from the Flight Data tab.
 
 ## Best Practices
 
 1. Create vehicles and drivers before routes
-2. Use descriptive route names with time and destination
-3. Test the transportation scanner before event day
-4. Share driver dashboard URLs with `driver=` parameter
-5. Monitor route capacity (driver counts toward vehicle capacity)
+2. Add the **Arrival Airport** question so flight tracking has clean data
+3. Add tracker IMEIs to vehicles to light up the live map and driver ETAs
+4. Use **Assign all shown** to fill routes quickly, then adjust
+5. Watch **Flight Data** for delays and use **Notify driver** proactively
 
 ## Troubleshooting
 
-**Can't delete vehicle:** Remove from all routes first.
+**No live flight status:** Confirm registrants entered flight numbers and the arrival airport, and that the airport is in **Manage Airports**.
 
-**Can't assign passenger:** Route may be at capacity; confirm registrant is registered.
+**Live map empty:** Confirm the vehicle has a tracker IMEI, live tracking is enabled, and the tracker is reporting through Traccar.
 
-**QR not scanning:** Passenger must use registration QR and be assigned to the selected route.
+**Can't delete vehicle:** Remove it from all routes first.
 
-**Driver dashboard empty:** Verify `driver=` ID and route assignments.
+**QR not scanning:** The passenger must use their registration QR and be assigned to the selected route.
+
+**Driver dashboard empty:** Verify the `driver=` ID and route assignments.

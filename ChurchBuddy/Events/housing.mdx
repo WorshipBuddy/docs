@@ -1,45 +1,54 @@
 ---
 title: 'Housing Management'
-description: 'Manage housing locations and assign guests to hosts for your events'
+description: 'Create housing locations, auto-assign guests to hosts, track occupancy, and share host dashboards'
 ---
 
 # Housing Management
 
-ChurchBuddy's housing system helps you coordinate accommodations for events: create locations, assign guests to hosts, track occupancy, and share host dashboards.
+ChurchBuddy's housing system coordinates accommodations for events: create locations, assign guests (by hand or with Smart Auto-Assign), track occupancy at a glance, email details to guests and hosts, and share host dashboards.
 
 ## Overview
 
-- **Housing locations** — Houses, rooms, dormitories
-- **Drag-and-drop assignments** — Assign registrants to locations
-- **Bulk Assign** — Assign many registrants at once via modal
-- **Host dashboard** — Public link with `host_token` for hosts
+- **Housing locations** — Houses, apartments, rooms, dormitories, or hotels
+- **Smart Auto-Assign** — One click to place unassigned guests using your rules
+- **Drag-and-drop and Bulk Assign** — Manual assignment when you want control
+- **At-a-glance overview** — Needs-attention banner and occupancy-by-location bars
+- **Host dashboards** — Public link with a `host_token` for each host
+- **Guest & host emails** — Send housing details to guests and dashboards to hosts
 - **Export** — CSV export of housing data
 
 ## Setting Up Housing
 
-1. Open **Event Dashboard → Logistics**
-2. Enable **Housing** under **Enable Services** (Owner/Org Admin)
-3. Click the **Housing** sub-section
+1. Open the **Event Dashboard**
+2. On **Overview**, use the **Add a module** card to enable **Housing** (Owner / Org Admin)
+3. Open the **Housing** module from the rail
+
+If you have no locations yet, a first-run setup card walks you through it: **Add location**, **Share host form**, and **Open settings**.
+
+## Housing Overview
+
+The Overview gives you the state of housing at a glance:
+
+- A **needs-attention banner** when guests still need housing (with **Auto-Assign** and **Bulk assign** shortcuts), or an **Everyone has housing** success banner when all placed
+- **Occupancy by location** bars showing how full each location is
+- Quick actions: **Manage Locations**, **View Assignments**, **Settings**, **Bulk Assign**, **Export**
 
 ## Housing Locations
 
 ### Creating a Location
 
-1. Click **Add Location**
-2. Fill in details:
+Click **Add Location**. The modal uses progressive disclosure so the essentials come first:
 
-   **Basic:** Name, location type (house/room/dormitory), optional room type, address, phone
+**Essentials:** Location Name, Address, Capacity
 
-   **Capacity:** Capacity, optional overbook limit
+**More options:** Type (House, Apartment, Room, Dormitory, Hotel), Amenities, Earliest Check-in, Latest Check-out, Gender Restriction (None / Male only / Female only / Mixed), Phone, Overbook Limit (%), Cost per Night, Accessible flag, Notes
 
-   **Host:** Host name, email, phone; **Share Guest Info with Host** checkbox
+**Host information (optional):** Host Name, Host Phone, Host Email, **Share guest info with host**, and granular visible-fields toggles (Name, Email, Phone, Dietary, Special needs, Show address) that control what the host sees
 
-   **Details:** Amenities, gender restriction, accessible flag, check-in/out dates, cost per night, notes
-
-3. Save
+The **Address** field uses Google Places autocomplete and shows the driving distance from the event venue as you type.
 
 <Info>
-There is no **Host Requires Account** or **Host Account Email** field in the location modal — hosts use the public dashboard link with `host_token`.
+**Type** vs **Room type**: *Type* is the kind of place (house, apartment, dormitory, hotel). A location can also carry a room/sleeping-arrangement note that appears on the host dashboard. Hosts use the public dashboard link with a `host_token` — there's no separate host account.
 </Info>
 
 ### Editing / Deleting
@@ -48,27 +57,44 @@ Use the edit or delete controls on each location card. Deleting a location does 
 
 ### Occupancy
 
-**Current occupancy** updates automatically when assignments change.
+**Current occupancy** updates automatically when assignments change, and is enforced against capacity and the overbook limit.
 
 ## Assigning Guests
 
-The Housing UI uses **drag-and-drop**:
+### Smart Auto-Assign
 
-1. Open **Logistics → Housing**
-2. Registrants appear in an unassigned list
-3. **Drag registrants onto a location** to assign them
-4. Or click **Bulk Assign** to assign multiple registrants to one location in a modal
+Click **Auto-Assign** (in the needs-attention banner or the Assignments board) to open a preview of suggested placements. The matcher weighs your rules:
 
-Each assignment tracks registrant IDs, location, check-in/out dates, party-together flag, special needs, and cost.
+- Gender restrictions on a location
+- Accessibility needs
+- Keeping a party together
+- A host's maximum number of guests
+- A bonus for honoring requested roommates
+- Tight, efficient packing within capacity
 
-### Host Links
+Review the **Suggested placements**, use **Select all** or pick individually, then **Apply selected**. Capacity is re-checked per location as it applies, and anything it couldn't place is listed under **Could not place** with a reason.
 
-On each location with a host:
+### Manual assignment
 
-- **Email Dashboard to Host** — Emails the public host dashboard URL
+You can always assign by hand:
+
+1. Registrants appear in the **Unassigned Registrants** list (with a **Search name or email** box)
+2. **Drag a registrant onto a location** to assign them, or
+3. Click **Bulk Assign** to place several registrants into one location at once
+
+Assignment and unassigned cards show quick attribute chips — gender, party size, accessible, and roommate-requested — so you can match people correctly.
+
+### Per-location actions
+
+On each location card:
+
+- **Email Housing Details to Guests** — Emails assigned guests the host, address, map link, and check-in/out dates (shown when the location has guests)
+- **Email Dashboard to Host** — Emails the host their public dashboard link
 - **Copy Public Link** / **Copy Internal Link** — Copy dashboard URLs
 
-See [Host Dashboard](/ChurchBuddy/Events/host-dashboard) for the public URL format.
+## Housing Registration Questions
+
+Housing adds one consolidated **Housing Details** preset to your registration form: **Gender**, **Accessibility Needs**, and **Preferred Roommate(s)** (all optional). These answers feed Smart Auto-Assign directly, so the more registrants fill in, the better auto-assignment works.
 
 ## Host Dashboard
 
@@ -78,26 +104,28 @@ Send hosts the public link (includes `host_token`):
 /public-host-dashboard/?org={org_id}&event={event_id}&location={location_id}&host_token={token}
 ```
 
-When the host opens the link they see location info, assigned guests, and (if **Share Guest Info with Host** is enabled) guest contact details.
+Hosts see location info and directions, check-in/out dates, amenities, and their assigned guests — including contact details, dietary restrictions, and special needs when **Share guest info with host** is enabled. When guests have flight info, the host dashboard also shows a flight status pill and estimated arrival. Hosts can **Mark Arrived** for each guest. See [Host Dashboard](/ChurchBuddy/Events/host-dashboard).
+
+## Hosting Sign-Up (Public)
+
+You can collect hosts from the public **Register Your Home** form, which uses address autocomplete and creates a housing location from each submission.
 
 ## Exporting Housing Data
 
-1. Go to **Logistics → Housing**
-2. Click **Export**
-3. Downloads **CSV** only (`/housing/export?format=csv`)
+Click **Export** to download housing data as **CSV**.
 
 ## Best Practices
 
-1. Create locations before registration opens
-2. Set accurate capacity and overbook limits
-3. Use **Bulk Assign** for large groups
-4. **Email Dashboard to Host** early so hosts can prepare
-5. Export CSV before event day as backup
+1. Create locations before registration opens, with accurate capacity and rules
+2. Ask the **Housing Details** questions so Smart Auto-Assign has data to work with
+3. Use **Auto-Assign** first, then fine-tune by drag-and-drop
+4. **Email Housing Details to Guests** and **Email Dashboard to Host** early
+5. Export CSV before event day as a backup
 
 ## Troubleshooting
 
-**Capacity exceeded:** Check occupancy vs capacity and overbook limit.
+**Auto-Assign left people unplaced:** Check the **Could not place** reasons — usually capacity, gender restrictions, or accessibility.
 
-**Can't assign guest:** Verify registration and location capacity.
+**Capacity exceeded:** Check occupancy vs capacity and the overbook limit.
 
-**Host dashboard empty:** Enable **Share Guest Info with Host** and confirm assignments exist for that location.
+**Host dashboard empty:** Enable **Share guest info with host** and confirm assignments exist for that location.

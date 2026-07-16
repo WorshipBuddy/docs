@@ -5,59 +5,84 @@ description: 'Using the event dashboard to manage event operations'
 
 # Event Dashboard
 
-The Event Dashboard is the central hub for managing an event. It opens at `/event-dashboard/?org={org_id}&event={event_id}` when you click an event from **Calendar → Events**.
+The Event Dashboard is the central hub for managing an event. It opens at `/event-dashboard/?org={org_id}&event={event_id}` when you open an event from the **Events** page.
 
 ## Accessing the Event Dashboard
 
-1. Click **Calendar** in the top navigation
-2. Click the **Events** sub-tab
-3. Click on your event
-4. The Event Dashboard opens with its tab navigation
+1. Click **Events** in the top navigation
+2. Click your event's card
+3. The Event Dashboard opens with its module rail
 
-## Dashboard Tabs
+## The Module Rail
 
-The Event Dashboard has five core tabs, plus a **Settings** tab for **Owner / Org Admin only**:
+The dashboard is organized as a **module rail** — a list of workspaces you switch between. Modules appear based on what's enabled for the event and your permissions.
 
-| Tab | Purpose |
-|-----|---------|
-| **Overview** | Event summary, stat cards, quick actions |
-| **Services** | Event services, team scheduling, public schedule sharing |
+| Module | Purpose |
+|--------|---------|
+| **Overview** | Event summary, stat cards, quick actions, and the **Add a module** card |
 | **Registration** | Form builder, registrant list, CSV export |
-| **Logistics** | Transportation, Housing, Meals, Check-In, SignUps |
+| **Schedule** | Event services, team scheduling, public schedule sharing |
+| **Transportation** | Vehicles, drivers, routes, assignments, live flight tracking, live vehicle map, QR check-in |
+| **Housing** | Locations, host assignments, Smart Auto-Assign, bulk assign, host dashboards |
+| **Meals** | Meal schedules, menus, dietary/allergy tracking, headcounts, live service, crowd meter |
+| **SignUps** | Volunteer slot and item/meal sign-up sheets with templates, sharing, and a check-in kiosk |
+| **Check-in** | Check-in tools, logs, and scanner links |
 | **Analytics** | Registration trends and event statistics |
-| **Settings** | Event configuration (**Owner / Org Admin only** — not shown to granular permission editors) |
+| **Share** | The **Share Center** — one hub of copyable public links: registration link, event/flight dashboards, crowd meter, housing registration form, and the registration/transportation scanners |
+| **Settings** | Event configuration (**Owner / Org Admin only**) |
+
+**Core** modules (Overview, Registration, Schedule, Analytics, Share, Settings) are always present. The **logistics** modules (Transportation, Housing, Meals, SignUps) only appear once enabled. **Check-in** is available without enabling.
 
 <Info>
-**Note**: Logistics sub-sections only appear for features you've enabled (transportation, housing, meals, signups). Enable toggles in Logistics are only visible to **Owners and Organization Admins**. Check-In appears when you have `logistics_checkin_view` permission or are Owner/Admin. Event dashboard tabs are filtered by granular permissions.
+Modules are filtered by granular permissions. Enabling a logistics module is **Owner / Org Admin only**; **Settings** is only shown to Owners and Org Admins.
 </Info>
 
-## Overview Tab
+## Enabling Logistics Modules
 
-The Overview tab shows:
+Turn logistics modules on from the **Overview**:
+
+1. Open the **Add a module** card on Overview
+2. Click **Transportation**, **Housing**, **Meals**, or **SignUps**
+
+Changes save automatically and the module appears in the rail. To turn a module off again, use the same card.
+
+## Overview
+
+The Overview shows:
 
 ### Event Header
-- **Event Name**
-- **Dates** - Start and end dates
-- **Location**
-- **Status Badge** - Draft, Published, Active, Completed, or Archived
+- **Event Name**, **Dates**, **Location**, and a **Status Badge** (Draft, Published, Active, Completed, or Archived)
 
 ### Quick Stats
 
-Stat cards above the tabs show counts such as:
+Stat cards show counts such as:
 
 - **Registrations** and **Total Registrants**
 - **Services**
 - **Need Transportation**, **Need Housing**, **Need Meals** (from registration answers)
 
-Registration trends and charts are on the **Analytics** tab — not in the Overview stat cards.
+Registration trends and charts live on the **Analytics** module.
 
-### Quick Actions
-- Manage Services
-- View Registrations
-- Manage Logistics
-- Event Settings (**Owner / Org Admin only**)
+### Add a module
 
-## Services Tab
+The **Add a module** card enables or disables the logistics modules for this event (Owner / Org Admin only).
+
+## Registration
+
+Two areas within Registration:
+
+### Form Builder
+- Build and edit the registration form
+- Configure registration settings (dates, multiple registrations, editing)
+- Add logistics template questions (available once the matching logistics module is enabled)
+- Share the registration link via **Share Link**
+
+### Registrations
+- View all registration responses
+- Export to CSV
+- Toggle visible columns with **Columns**
+
+## Schedule
 
 - View all services in the event
 - **Schedule Teams** on each service card — opens bulk scheduling filtered to this event's services (**Owner / Org Admin only**)
@@ -68,54 +93,23 @@ Registration trends and charts are on the **Analytics** tab — not in the Overv
 Event services don't appear in **Calendar → Services**. They are managed only within this event.
 </Info>
 
-## Registration Tab
+## Logistics Modules
 
-Two areas within Registration:
+Each logistics area has its own module and dedicated guide:
 
-### Form Builder
-- Build and edit the registration form
-- Configure registration settings (dates, multiple registrations, editing)
-- Add logistics template questions (after services are enabled under **Logistics → Enable Services**)
-- Share the registration link via **Share Link**
-
-### Registrations
-- View all registration responses
-- Export to CSV
-- Toggle visible columns with **Columns**
-
-## Logistics Tab
-
-Logistics contains sub-sections (buttons along the top):
-
-| Sub-section | Purpose |
-|-------------|---------|
-| **Transportation** | Vehicles, drivers, routes, assignments, flight data from registrations |
-| **Housing** | Locations, host assignments, bulk assign |
-| **Meals** | Meal periods, attendance, crowd meter links |
-| **Check-In** | Check-in settings, logs, scanner links |
-| **SignUps** | Volunteer slot and item/meal sign-up sheets |
-
-See dedicated docs for each area:
 - [Transportation](/ChurchBuddy/Events/transportation)
 - [Housing](/ChurchBuddy/Events/housing)
 - [Meals](/ChurchBuddy/Events/meals)
 - [Check-In](/ChurchBuddy/Events/check-in)
 - [Event SignUps](/ChurchBuddy/Events/signups)
 
-## Analytics Tab
+## Analytics
 
-View registration trends, response breakdowns, and event statistics. Useful for tracking registration pace and analyzing registrant data as the event approaches.
+View registration trends, response breakdowns, and event statistics — useful for tracking registration pace as the event approaches.
 
-## Event Settings
+## Settings
 
-From the dashboard header:
-
-1. Click **Settings**
-2. Modify event details, registration settings, and service configurations
-
-<Info>
-Only Owners and Organization Admins can access event settings.
-</Info>
+Open **Settings** in the rail to modify event details, registration settings, status, and visibility, or to delete the event. Owners and Organization Admins only.
 
 ## Event Status Workflow
 
@@ -127,12 +121,12 @@ Only Owners and Organization Admins can access event settings.
 
 ## Mobile App
 
-Users with **event dashboard permissions** (Owner, Org Admin, or granular services/registration/logistics access — not analytics-only or signups-only) can open **Operations** from the Calendar tab.
+Users with **event dashboard permissions** (Owner, Org Admin, or granular services/registration/logistics access — not analytics-only or signups-only) can open **Operations** for an event.
 
 ## Best Practices
 
-1. **Use the dashboard** - It's your central hub for event management
-2. **Check regularly** - Review registrations and logistics as the event approaches
-3. **Update status** - Keep event status current (draft → published → archived)
-4. **Export data** - Regularly export registration data for backup
-5. **Use Logistics sub-sections** - Enable only the logistics features you need
+1. **Use the module rail** - Switch between workspaces as you manage the event
+2. **Enable only what you need** - Add logistics modules from **Add a module**
+3. **Check regularly** - Review registrations and logistics as the event approaches
+4. **Update status** - Keep event status current (draft → published → archived)
+5. **Export data** - Regularly export registration data for backup

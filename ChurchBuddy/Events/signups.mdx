@@ -1,53 +1,85 @@
 ---
 title: 'Event SignUps'
-description: 'Create volunteer slot and item sign-up sheets for events'
+description: 'Create volunteer slot and item sign-up sheets for events, with templates, custom questions, sharing, and check-in'
 ---
 
 # Event SignUps
 
-SignUps let you create sign-up sheets for volunteer slots, items, meals, or other opportunities within an event. Registrants and members sign up via a public link or while logged in.
+SignUps let you create sign-up sheets for volunteer slots, items, meals, chaperones, rides, housing, and other opportunities within an event. Registrants and members sign up via a public link or while logged in. You can start from a ready-made template, add custom questions, share the sheet several ways, and run a login-free check-in kiosk at the event.
 
 <Info>
-**Platform**: Web only for creating and managing sheets. Public sign-up pages work on any device.
+**Platform**: Web only for creating and managing sheets. Public sign-up and check-in pages work on any device.
 </Info>
 
 ## Overview
 
 SignUps support:
 
-- **Volunteer slots** - Time-based or capacity-limited slots
-- **Item/meal sign-ups** - Bring an item, sign up for a meal slot
-- **Public links** - Share via URL, QR code, or embed
-- **Roster management** - View who signed up, export, email roster
+- **Volunteer slots** — Time-based or capacity-limited slots (day, role, time, capacity)
+- **Item / meal lists** — Bring-a-thing lists with quantities
+- **Quick-start templates** — Pre-filled sheets built from data your event already has (menu, meal periods, housing locations, routes, vehicles)
+- **Custom questions** — Ask each person extra questions when they sign up
+- **Reminders** — Optional automated reminders to people who signed up
+- **Sharing hub** — Public sign-up link, QR code, downloadable QR image, website embed, a leader "manage" link, and a check-in kiosk link
+- **Roster management** — View who signed up, export, email the roster
+- **Check-in** — A login-free kiosk for checking volunteers in and out at the event
 
 ## Accessing SignUps
 
 1. Open the **Event Dashboard** for your event
-2. Click the **Logistics** tab
-3. Enable **SignUps** using the logistics toggle (if not already enabled)
-4. Click the **SignUps** sub-section
+2. On **Overview**, use the **Add a module** card to enable **SignUps** (if not already on)
+3. Open the **SignUps** module from the rail
 
 <Info>
-SignUps must be enabled via the **SignUps** checkbox in the Logistics tab before the sub-section appears. You also need `logistics_signups_view` or admin permissions.
+SignUps must be enabled for the event before the section appears. You also need `logistics_signups_view` or admin permissions.
 </Info>
 
 ## Creating a Sign-Up Sheet
 
-1. Click **+ New sign-up sheet**
-2. Configure the sheet:
-   - **Title** and description
-   - **Who can sign up** — **Mix — guests for open slots, members for restricted**, **Anyone with the link (no login)**, or **Logged-in members only**
-   - **Slots** - Add time slots or item slots with capacity limits
-3. Save the sheet
+Click **+ New sign-up sheet**. You'll see a **template gallery** — pick a template to pre-fill a sheet, or start from scratch.
+
+### Start from a template
+
+Templates pull from data your event already has, so you don't build slots by hand. If a module has no data yet, the sheet is still created with a sensible starting point and a note explaining what to add.
+
+**General**
+- **Volunteer slots** — A blank day / role / time / capacity sheet
+- **Item / meal list** — A blank bring-a-thing list with quantities
+
+**Meals**
+- **Bring a dish** — Auto-fills a claim list from your event menu items
+- **Cafeteria volunteers** — One serving shift per meal period on your schedule
+
+**Housing**
+- **Request housing** — People claim a spot from your housing locations
+- **Chaperone sign-up** — A chaperone slot for each housing location (members only)
+- **Host a home** — Volunteers offer space in their home
+
+**Transportation**
+- **Volunteer drivers** — Recruit drivers, one slot per route (members only)
+- **Ride / shuttle sign-up** — Seats fill from your vehicles and routes
+
+After you pick a template, the normal sheet builder opens with everything filled in — edit anything before saving.
+
+### Build a sheet
+
+Whether you start blank or from a template, configure:
+
+- **Title** and description
+- **Who can sign up** — **Mix** (guests can take open slots, members required for restricted slots), **Anyone with the link** (no login), or **Logged-in members only**. In **Mix** mode, use the per-row **Members** toggle to mark which slots require a member login.
+- **Slots / items** — Time slots or item rows with capacity (or quantity) limits
+- **Custom questions** — Click **+ Add question** to ask each person extra questions (for example "Vehicle & number of seats" or "Phone number"); mark questions required as needed
+- **Reminders** — Choose an automated reminder schedule (or none)
+
+Save the sheet.
 
 ## Sharing a Sign-Up Sheet
 
-1. Open the sheet in the SignUps section
-2. Click **Share**
-3. Options:
-   - **Copy link** - Public URL for the sign-up page
-   - **QR code** - For printing or displaying
-   - **Embed code** - For embedding in a website
+Open the sheet and click **Share** to open the sharing hub. Every link the sheet supports is in one place:
+
+- **Sign-up link** — The public URL people use to sign up. Copy it, or use the **QR code** and **Download PNG** to print or display it, or grab the **Embed on your website** snippet.
+- **Manage link (for a leader)** — Hand this to a ministry leader so they can edit slots, view the roster, and run check-in for this sheet — no account needed. (Admin only.)
+- **Check-in kiosk link** — A login-free kiosk for checking volunteers in and out at the event. Open it on a tablet at the door. Use **Open kiosk** to launch it. (Admin only.)
 
 Public sign-up URL format:
 
@@ -59,29 +91,39 @@ https://church.worshipbuddy.org/signup/?org={org_id}&event={event_id}&sheet={she
 
 On the public sign-up page, users can:
 
-1. View available slots and capacity
-2. Fill in their details (name, email, etc.)
-3. Claim a slot
+1. View available slots, items, and remaining capacity
+2. Fill in their details and answer any custom questions
+3. Claim a slot or item
 4. Cancel their sign-up (if allowed)
 
-Members logged into ChurchBuddy see their identity pre-filled.
+Members logged into ChurchBuddy see their identity pre-filled. Members-only slots require a login even on a public link.
 
-## Managing Roster
+## Managing the Roster
 
 From the SignUps section for each sheet:
 
-- **Roster** — Toggle inline roster view
+- **Roster** — Toggle the inline roster view, grouped by day, with fill counts and each person's answers
 - **Export** — Download sign-up data as a spreadsheet
 - **Email** — Send the roster to coordinators (requires signups edit permission)
-- **Edit/delete sheet** - Modify or remove the sign-up sheet
+- **Check-in** — Open the check-in kiosk for this sheet
+- **Edit / Delete sheet** — Modify or remove the sheet
+
+## Check-In
+
+SignUps includes a login-free **check-in kiosk** for the event, plus a manager console in the leader/portal view.
+
+- **Kiosk** (open on a door tablet): people search for their name and check themselves in or out, and walk-ins can be added. If the sheet is linked to transportation, the kiosk can show a view-only live vehicle map.
+- **Manager console** (in the leader manage view): the same attendance tools plus manager-only actions — manually add someone and, for transportation-linked sheets, drag-assign a person to a vehicle.
 
 ## Best Practices
 
-1. **Set clear slot descriptions** - Help people know what they're signing up for
-2. **Set appropriate capacity** - Prevent over-sign-up
-3. **Share early** - Send links with event communications
-4. **Monitor the roster** - Check fill rates and follow up on empty slots
-5. **Use mixed access carefully** - Members-only for internal volunteer roles; mixed for public item drives
+1. **Start from a template** — Let the event's menu, routes, or housing pre-fill the sheet for you
+2. **Set clear slot descriptions** — Help people know what they're signing up for
+3. **Set appropriate capacity** — Prevent over-sign-up
+4. **Ask only what you need** — Add custom questions sparingly to keep sign-up fast
+5. **Share early** — Send links with event communications and turn on reminders
+6. **Use the kiosk at the door** — Check volunteers in and out without logins
+7. **Use mixed access carefully** — Members-only for internal volunteer roles; mixed for public item drives
 
 <Info>
 SignUps are separate from [Custom Forms](/ChurchBuddy/Setup/forms) (standalone org forms) and [Event Registration](/ChurchBuddy/Events/registration-forms) (main event registration).

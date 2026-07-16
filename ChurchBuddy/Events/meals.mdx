@@ -1,31 +1,33 @@
 ---
 title: 'Meals Management'
-description: 'Manage meal periods, menus, and crowd counting for event meals'
+description: 'Plan meal periods and menus, track dietary needs and allergies, count honest headcounts, run live service, and check people in'
 ---
 
 # Meals Management
 
-Organize event meals: meal periods, menu items, cost tracking, caterer export, and crowd meter links.
+Organize event meals end to end: build a meal schedule, add menus, see an honest expected headcount for every meal, surface dietary needs and allergies, export a caterer packet, run live service counts, and check people in.
 
 ## Setting Up Meals
 
-1. **Event Dashboard → Logistics**
-2. Enable **Meals** under **Enable Services**
-3. Open the **Meals** sub-section
+1. Open the **Event Dashboard**
+2. On **Overview**, use the **Add a module** card to enable **Meals**
+3. Open the **Meals** module from the rail
+
+At the top of the section you'll find **Add Meal Period**, **Generate Schedule**, **Live Service**, **Export for Caterer**, and **Open Crowd Meter**, plus summary cards for **Meal Periods**, **Total Expected Meals**, **Total Budget**, **Estimated Cost**, and **Total Actual Cost**.
 
 ## Meal Periods
 
 Click **Add Meal Period** and configure:
 
-- **Name**, **Date**, **Start Time**, **End Time**
+- **Period Name**, **Date**, **Start Time**, **End Time**
 - **Location** (optional)
 - **Capacity** (optional)
 
-Edit or delete via controls on each period card.
+Edit or delete via the controls on each period card. Each card shows the meal's time and location, its **Expected** headcount, a short dietary summary, an allergy count, and a **Check-in** button.
 
-<Info>
-There is no manual **Record Attendance** / **Mark Attendance** UI in the meals dashboard. Use **Crowd Meter** for live line counting at meal service.
-</Info>
+### Generate Schedule
+
+Click **Generate Schedule** to bulk-create a full schedule at once. It adds **Breakfast**, **Lunch**, and **Dinner** for every day of the event, using per-meal default times and an optional default location that you set in the modal. It skips any period that already exists for the same date and meal name, so it's safe to re-run.
 
 ## Menu
 
@@ -33,35 +35,69 @@ Each meal period has a **Menu** section:
 
 1. Expand the period
 2. Click **+ Add Item**
-3. Set item name, description, and dietary tags
+3. Set **Item Name**, **Description**, **Cost per Serving**, and **Dietary Tags** (comma-separated)
+
+Turn on **Show menu to registrants** to let registrants see the menu and dietary tags for that meal in their [My Event](/ChurchBuddy/Events/my-event) portal.
+
+## Expected Headcount
+
+Every meal shows an **Expected** number that is transportation-aware — it counts who is actually on-site for that meal window, not just everyone registered. If a registrant's transportation answers say they arrive after a meal or depart before it, they aren't counted for that meal. Registrants without arrival/departure info are counted for every meal. This single honest number drives the period cards, the totals, the caterer export, and live service.
+
+## Dietary & Allergies
+
+At the top of the Meals section, **Dietary at a glance** aggregates registration answers into:
+
+- Dietary chips (vegetarian, vegan, and other restrictions) with the number of guests affected
+- An **Allergy watch-list (kitchen safety)** that attaches names to each allergy so the kitchen knows exactly who and what
+
+Each period card also shows its top dietary labels and an allergy count. Dietary data is read automatically from registration answers — no extra data entry.
+
+## Export for Caterer
+
+Click **Export for Caterer** to open a preview built from live event data:
+
+- Per-period **expected headcount**
+- Dietary breakdown and named allergy watch-list
+- Menu line items with cost per serving and a per-period food total
+- A grand food total across the event
+
+From the preview you can **Download CSV** or **Print / PDF** a caterer packet.
+
+## Live Service
+
+Click **Live Service** during meal service to see, for each period, the **served / expected** count, a progress bar, and a **NOW** highlight on the meal that's currently happening. Use the inline **+** and **−** buttons to adjust the live count on each crowd-meter line.
+
+## Check-In
+
+Each meal period has a **Check-in** button that opens a roster for that meal. Search by name or email, then mark each person **Served**. The header shows a running served count, and rows flag dietary tags and allergies so servers can spot special needs at a glance.
 
 ## Crowd Meter
 
-Each meal period includes a **Crowd Meter** section with links to:
+Use **Open Crowd Meter** (top of the Meals section) to open the live line-counting tool, or copy its link to share with line volunteers:
 
 ```
 /crowd-meter/?org={org_id}&event={event_id}
 ```
 
-Use **Open Crowd Meter** (top of Meals section) or per-period links to count people in meal lines. See [Crowd Meter](/ChurchBuddy/Day-to-Day/crowd-meter).
+See [Crowd Meter](/ChurchBuddy/Day-to-Day/crowd-meter).
 
-## Export for Caterer
+## Cost Tracking
 
-1. Go to **Logistics → Meals**
-2. Click **Export for Caterer**
-3. Choose **CSV** or **JSON** in the confirm dialog
-
-Includes meal periods, menu, and registrant dietary data for kitchen planning.
+- **Estimated Cost** is auto-calculated from your menu cost-per-serving times the expected headcount, and is labeled **Auto**.
+- **Total Budget** and **Total Actual Cost** are yours to set manually via the summary cards.
 
 ## Best Practices
 
-1. Create all meal periods before the event
-2. Add menu items with dietary tags
-3. Share Crowd Meter links with line volunteers
-4. Export for caterer before large meal services
+1. Use **Generate Schedule** to lay down every meal, then adjust
+2. Add menu items with **Cost per Serving** and dietary tags so cost and dietary views work
+3. Watch the **Allergy watch-list** before large services
+4. Export for the caterer using the honest expected headcount
+5. Run **Live Service** and **Check-in** at the door to track real counts
 
 ## Troubleshooting
 
-**Crowd Meter not loading:** Verify org and event IDs in the URL.
+**Expected count looks low:** Registrants' transportation answers may place them off-site for that meal window. Check their arrival/departure times.
 
-**Export empty:** Ensure meal periods exist and registrants answered dietary questions on the registration form.
+**Export or dietary panel empty:** Ensure meal periods exist and registrants answered dietary questions on the registration form.
+
+**Crowd Meter not loading:** Verify org and event IDs in the URL.

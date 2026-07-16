@@ -1,11 +1,11 @@
 ---
 title: 'Check-In System'
-description: 'Check in registrants using QR codes and manage check-in data'
+description: 'Check in registrants using QR codes and the unified scanner'
 ---
 
 # Check-In System
 
-ChurchBuddy's event check-in uses QR codes from registration confirmation emails. Manage check-in from **Event Dashboard → Logistics → Check-In** (not a top-level dashboard tab).
+ChurchBuddy's event check-in uses QR codes from registration confirmation emails. Manage check-in from the **Check-in** module in the event dashboard's module rail.
 
 <Info>
 **Platform**: Web for dashboard check-in and scanner pages. Mobile supports event check-in for admins with permissions and self check-in via My Event.
@@ -16,11 +16,11 @@ ChurchBuddy's event check-in uses QR codes from registration confirmation emails
 The check-in system includes:
 
 - **QR codes** — Generated per registrant in confirmation emails
-- **Quick Check-In** — Name/email search in the dashboard Check-In section
-- **Registration Scanner** — Standalone web scanner at `/registration-scanner/?org={org_id}&event={event_id}`
+- **Quick Check-In** — Name/email search in the dashboard **Check-in** module
+- **Unified Scanner** — A single scanner page at `/scan/` with a mode for each kind of check-in
 - **Check-In logs** — Recent check-ins visible in the dashboard
 
-There are **no toggles** to enable/disable QR vs manual methods — staff choose the tool they use.
+There are **no toggles** to enable/disable QR vs manual methods — staff choose the tool they use. The **Check-in** module is available without enabling it (unlike the logistics modules).
 
 ## How QR Codes Work
 
@@ -30,28 +30,52 @@ Registrants can display the QR on their phone, print it, or use **Check In Now**
 
 ## Dashboard Check-In
 
-**Event Dashboard → Logistics → Check-In**
+Open the event's **Check-in** module from the module rail:
 
 1. Use **Quick Check-In** — search by name or email and check in from results
-2. Click **Scan QR Code** — opens a modal with **Open Scanner in New Tab** or **Copy Link** (not a direct navigation)
+2. Click **Scan QR Code** — opens the scanner (or copy the link to open it on another device)
 3. Review recent check-in activity in the logs list
 
 **Add Check-In Station** is **Owner / Org Admin only** — granular check-in permission users can use Quick Check-In and the scanner but cannot add stations.
 
-## Registration Scanner
+## The Unified Scanner
 
-URL: `/registration-scanner/?org={org_id}&event={event_id}`
+All scanning happens on one page:
 
-On load, choose a path:
+```
+/scan/?mode={mode}
+```
 
-### Station Setup (recommended for fixed stations)
+The scanner supports several modes:
 
-1. **Station Setup** — select an existing station from the dropdown (create stations first in **Logistics → Check-In → Add Check-In Station**)
-2. Choose method:
+| Mode | Label | Use |
+|------|-------|-----|
+| `registration` | Registration check-in | Scan registrant QR tickets to check in |
+| `transportation` | Transportation | Scan transportation tickets by route |
+| `service` | Service check-in | Check in people to a service |
+| `service-station` | Service station | Station-based service check-in |
+| `signup-kiosk` | Sign-up kiosk | Volunteer self check-in/out (token link) |
+
+<Info>
+Legacy scanner links (`/registration-scanner/`, `/transportation-scanner/`, `/signup-checkin/`, `/service-checkin-scanner/`, `/service-station-scanner/`) continue to work and redirect to `/scan/` automatically, preserving their `org` and `event` parameters.
+</Info>
+
+<Tip>
+Opening `/scan/` without a mode (or with an unrecognized one) shows a picker listing every scanner mode, so you can choose the right one on the device. Add your event context (e.g. `&org=&event=`) to the link and pick a mode.
+</Tip>
+
+### Registration check-in mode
+
+Open `/scan/?mode=registration&org={org_id}&event={event_id}`. On load, choose a path:
+
+**Station Setup (recommended for fixed stations)**
+
+1. **Station Setup** — select an existing station from the dropdown (create stations first in the **Check-in** module via **Add Check-In Station**)
+2. Choose a method:
    - **QR Scanner** — camera scan
    - **Search by Name** — search by name or email, then check in
 
-### Scanner Mode (roving staff)
+**Scanner Mode (roving staff)**
 
 1. **Scanner** — enter your **Scanner Name**
 2. Use the **QR Scanner** flow to scan codes
@@ -72,10 +96,10 @@ When a valid registrant is checked in:
 
 Log entries include registrant info, check-in time, station ID, who checked them in, and method (`qr_scan` or manual search).
 
-View logs in **Logistics → Check-In** on the event dashboard.
+View logs in the **Check-in** module on the event dashboard.
 
 <Info>
-There is no **Check Out** button or **Export Check-In Data** button in the event dashboard UI today. Use Registration tab CSV export for registrant lists if needed.
+There is no **Check Out** button or **Export Check-In Data** button in the event dashboard UI today. Use the Registration module's CSV export for registrant lists if needed.
 </Info>
 
 ## Best Practices
